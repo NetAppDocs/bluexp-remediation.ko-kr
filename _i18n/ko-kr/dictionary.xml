@@ -1,0 +1,734 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blocks>
+  <block id="8c56922858331beaa2fea4df2fc792c6" category="summary">Cloud Manager를 사용하면 _existing_resources에 태그를 적용하여 이러한 리소스를 구성 및 관리할 수 있습니다. 태그는 리소스를 그룹화하여 애플리케이션, 환경, 지역, 청구 코드, 클라우드 공급자 등을 식별하는 데 사용할 수 있는 메타데이터입니다. 있습니다.</block>
+  <block id="bed434cdb82938c37e10ec775ee39334" category="doc">태그 지정에 대해 자세히 알아보세요</block>
+  <block id="40fa3ed3deb11f4523fb01c3e53cd533" category="paragraph">태그는 * 태그 키 * 와 * 태그 값 * 으로 구성됩니다. 예를 들어 "환경"이라는 태그 키를 만든 다음 "프로덕션" 및 "테스트"의 태그 값을 추가할 수 있습니다. 리소스에 적용한 후에는 키/값 쌍과 일치하는 리소스를 빠르게 검색하고 볼 수 있습니다.</block>
+  <block id="3ebce6b779786d56694bbe904777f9b7" category="inline-link-macro">작성하는 Cloud Manager 서식 파일</block>
+  <block id="c076b5a8076ba06e9f4f25544552b0f8" category="paragraph">작업 환경 또는 Azure NetApp Files 볼륨을 생성할 때 태그 키/값 쌍을 _new_resources에 추가할 수 있습니다. 에서 태그 키/값 쌍을 정의할 수도 있습니다 <block ref="cccec4231e26dd3cfde8f707c64ce7d6" category="inline-link-macro-rx"></block> 스토리지 관리자 및 DevOps 엔지니어용</block>
+  <block id="126a062727c3057b3a937eb69aaa1597" category="paragraph">태그 지정 서비스를 사용하여 새 태그를 추가할 수 있으며 기존 태그를 변경하거나 삭제할 수 있습니다.</block>
+  <block id="98f770b0af18ca763421bac22b4b6805" category="section-title">피처</block>
+  <block id="5e30e27f68a75ca7a2e3182f2dd12b16" category="paragraph">태깅 서비스는 다음과 같은 기능과 이점을 제공합니다.</block>
+  <block id="3ea3f03a9826c525b7f8e89cf5f45bb0" category="list-text">사용자 환경에서 사용하는 용어와 일치하는 태그 키 및 태그 값을 만듭니다</block>
+  <block id="39aff6391798a3cbbbd4f8b8cd74dc8c" category="list-text">환경의 리소스를 구성하여 보다 쉽게 모니터링하고 관리할 수 있습니다</block>
+  <block id="9a9d09dff347b4f762cb3ea1cb1761a1" category="list-text">리소스 유형별로 태그 키와 태그 값을 추가, 제거 및 편집합니다</block>
+  <block id="4aeb19e9643ca4bd7c08134d7f5d73ad" category="list-text">AWS 및 Azure에서 고객 환경에 있는 ONTAP 리소스 및 리소스에 태그를 지정합니다.</block>
+  <block id="8c3c2e38ab977ab43a9ebd00e29973df" category="section-title">가격 및 라이센스</block>
+  <block id="15a9a77c4cf2e80203ba12f1c0e8550c" category="paragraph">리소스에 태그를 지정하려면 라이센스가 필요하지 않으며 모든 Cloud Manager 사용자가 Account Admin 또는 Workspace Admin 역할을 사용하여 무료로 액세스할 수 있습니다.</block>
+  <block id="9b3643d929067c43445625ecc4b23130" category="section-title">태그를 지정할 수 있는 리소스입니다</block>
+  <block id="b087cfd5a6751cde85bc43abdbea1db3" category="paragraph">다음 리소스에 태그를 적용할 수 있습니다.</block>
+  <block id="27703c8f150ac4bb0a3a83a7857353af" category="cell">제공합니다</block>
+  <block id="c2ba7e785c49050f48da9aacc45c2b85" category="cell">서비스</block>
+  <block id="be8545ae7ab0276e15898aae7acfbd7a" category="cell">리소스</block>
+  <block id="253b40ae359ba25b56231803430c4873" category="cell">ONTAP</block>
+  <block id="117bdbda976fe8b3212bc3b6327a0a1b" category="cell">Cloud Volumes ONTAP</block>
+  <block id="4d69d42719426a48d653efcd0d9add65" category="cell">스토리지 VM 볼륨을 집계합니다</block>
+  <block id="342ce22b061856522db3129652a55efb" category="cell">사내 ONTAP</block>
+  <block id="7450cfde7058dc5e1f7909d0280fd7ae" category="cell">Azure NetApp Files</block>
+  <block id="bd7a9717d29c5ddcab1bc175eda1e298" category="cell">볼륨</block>
+  <block id="808c50beba133531e42fe04b9b13b86d" category="cell">NetApp - 서비스</block>
+  <block id="d8e87c0927539672f54462c837be0b7f" category="cell">동기화</block>
+  <block id="fbc97786af4bf30dc5b07809a950792c" category="cell">관계</block>
+  <block id="4847e034bb0a55fcbc8a3380d6a3ab80" category="cell">설치하고</block>
+  <block id="81b22456f78954c460ce2f531b5e048f" category="cell">EC2</block>
+  <block id="44418c8dd436ba2904b49d544d4c90b8" category="cell">인스턴스 보안 그룹 서브넷 볼륨 VPC</block>
+  <block id="3a580f142203677f1f0bc30898f63f53" category="cell">Azure를 지원합니다</block>
+  <block id="a623a8d0366bf079411aa30be45b2d10" category="cell">컴퓨팅</block>
+  <block id="0f8732d258fffa0be0320d1a4e5bdccb" category="cell">스냅샷 가상 머신</block>
+  <block id="eec89088ee408b80387155272b113256" category="cell">네트워크</block>
+  <block id="6c096562a66b477196cc713915b16952" category="cell">보안 그룹 가상 네트워크</block>
+  <block id="dd23acac46f17cbfd4d5541f8ee3c7a1" category="cell">리소스 그룹</block>
+  <block id="8c4aa541ee911e8d80451ef8cc304806" category="cell">스토리지</block>
+  <block id="add55592acf21be3b81edc0cbd46b3c5" category="cell">저장소 계정</block>
+  <block id="c731f72e1d22a7c5e01a7cb789a8885e" category="cell">GCP</block>
+  <block id="d9a17c1c9e8ef6866e4dbeef41c741b2" category="cell">인스턴스</block>
+  <block id="30edf70db68aa84f05d3e72326807b0c" category="cell">버킷</block>
+  <block id="ab2bc7358191e02d5aacdd2ddaa4233d" category="inline-link">AWS 문서: Amazon EC2 리소스에 태그 달기</block>
+  <block id="aa00eddbc27bae0a6cb4210ab565c4df" category="paragraph">AWS EC2 태그에 대한 자세한 내용은 을 참조하십시오<block ref="9bd250e03cdf80384a24635f16673602" category="inline-link-rx"></block>.</block>
+  <block id="d25af39a1cc1d41b4b78226055c6969d" category="inline-link">Azure 문서: Azure 리소스에 태그 달기</block>
+  <block id="cd3891a596fb71f2018f9febccdc9311" category="paragraph">Azure 태그에 대한 자세한 내용은 을 참조하십시오<block ref="132818a7eea2f1dd8c5e1c57244359ed" category="inline-link-rx"></block>.</block>
+  <block id="044bd5bc02d27eb17ed3cc5a11be4f3b" category="inline-link">Google 클라우드 문서: Google Cloud 리소스에 태그 달기</block>
+  <block id="3b0992b7e8536fc1e15651502081b6e6" category="paragraph">Google 레이블에 대한 자세한 내용은 을 참조하십시오<block ref="5b102b4e66babd115f4b84c9458d0cfc" category="inline-link-rx"></block>.</block>
+  <block id="ee68e5b99222bbc29a480fcb0d1d6ee2" category="section-title">필수 구성 요소</block>
+  <block id="2e555eb89efbc4fa0651bd1f644cf78e" category="section-title">AWS Connector 사용 권한을 확인합니다</block>
+  <block id="ede60e0200bc22484e50c25ec183617f" category="paragraph">Cloud Manager 버전 3.9.10 이상을 사용하여 Connector를 만든 경우 모두 설정됩니다. 이전 버전의 Cloud Manager를 사용하여 Connector를 생성한 경우 Cloud Manager IAM 역할에 필요한 몇 가지 권한을 추가하여 AWS EC2 인스턴스에 태그를 지정해야 합니다.</block>
+  <block id="f684df81e4cb924eb887af3d63731c28" category="section-title">Azure Connector 권한을 확인합니다</block>
+  <block id="55e86ad3487f5a74e4a7f3adf4c7d04c" category="paragraph">Cloud Manager 버전 3.9.10 이상을 사용하여 Connector를 만든 경우 모두 설정됩니다. 이전 버전의 Cloud Manager를 사용하여 Connector를 생성한 경우 Cloud Manager Operator IAM 역할에 필요한 몇 가지 권한을 추가하여 Azure 리소스에 태그를 지정해야 합니다.</block>
+  <block id="2a6cf45576e45e1753cb8e4a3218f9bf" category="section-title">태그 규칙 및 제한 사항</block>
+  <block id="310e25dd524b7da8c8ff6eb8edf50e5f" category="paragraph">태그 키 및 태그 값을 만들 때 다음 규칙이 적용됩니다.</block>
+  <block id="47c6baf2a93fb70987f8d50230d68450" category="list-text">최대 키 길이: 128자</block>
+  <block id="00b61ace6d8de8337a462fc4b2ca3c47" category="list-text">최대 키 값 길이: 256자</block>
+  <block id="ccf8bf5880815b88f3f09c36d316225e" category="list-text">유효한 태그 및 태그 값 문자: 문자, 숫자, 공백 및 특수 문자(_, @, &amp;, * 등)</block>
+  <block id="451514576a381fcadab95c07d22ca563" category="list-text">태그는 대/소문자를 구분합니다.</block>
+  <block id="392a91200b1b67f84f30feca1ddfdf35" category="list-text">리소스당 최대 태그 수: 30</block>
+  <block id="377d030d59bcd66d28017369cb57f768" category="list-text">리소스별로 각 태그 키는 고유해야 합니다</block>
+  <block id="ddddcee4ac303defe9ce2211f2d4acc6" category="section-title">태그 예제</block>
+  <block id="897356954c2cd3d41b221e3f24f99bba" category="cell">키</block>
+  <block id="c82a6100dace2b41087ba6cf99a5976a" category="cell">값</block>
+  <block id="aa9f9a8454a370443372f6259447844e" category="cell">봉투</block>
+  <block id="0c36db035cf92c76b7ade068ae9b8d68" category="cell">운영 테스트</block>
+  <block id="269e78d1f721be5126be1f09bb4b091b" category="cell">부서</block>
+  <block id="f6ab9ceccae969405a9121790a11420d" category="cell">재무 판매 엔지니어링</block>
+  <block id="b6f4a2ec6356bbd56d49f2096bf9d3d3" category="cell">소유자</block>
+  <block id="329185ee9cca0721a94429c99d157bdf" category="cell">관리 스토리지</block>
+  <block id="29a899084977c92604a3d26b10f54ca5" category="summary">애플리케이션 템플릿 및 태깅의 새로운 기능에 대해 알아보십시오.</block>
+  <block id="79c7b182e7e188861d00e5c2e6128d94" category="doc">애플리케이션 템플릿 및 태깅의 새로운 기능</block>
+  <block id="42b5df730d6616520195746bafa566eb" category="section-title">2022년 3월 3일</block>
+  <block id="750accbcb5f7845669ac5669ec7c505f" category="section-title">이제 템플릿을 만들어 특정 작업 환경을 찾을 수 있습니다.</block>
+  <block id="6aa300e24ddf3ee5a99bbb1cf5bb4a72" category="inline-link-macro">자세한 내용을 보려면 여기를 클릭하십시오</block>
+  <block id="ac8cf21a43287b3320eadc26dc46e2c7" category="paragraph">"기존 자원 찾기" 작업을 사용하면 작업 환경을 확인한 다음 볼륨 만들기와 같은 다른 템플릿 작업을 사용하여 기존 작업 환경에서 쉽게 작업을 수행할 수 있습니다. <block ref="3f0db9ccbd4470dc6418f8b2c27bf220" category="inline-link-macro-rx"></block>.</block>
+  <block id="eb256592f50cf81901c9060f4f530714" category="section-title">AWS에서 Cloud Volumes ONTAP HA 작업 환경을 구축할 수 있는 역량</block>
+  <block id="6eed6fdcaa0bf2c22f0c8e78ff686d29" category="inline-link-macro">Cloud Volumes ONTAP 작업 환경에 대한 템플릿을 만드는 방법을 알아봅니다</block>
+  <block id="6bdac40b84678366207c23a1f065fcfd" category="paragraph">AWS에서 Cloud Volumes ONTAP 작업 환경을 구축하기 위한 기존 지원이 확장되어 단일 노드 시스템 외에 고가용성 시스템을 구축할 수 있습니다. <block ref="cd0284b4ef2d7bb07ef04a4c4b7f4a15" category="inline-link-macro-rx"></block>.</block>
+  <block id="9fe54dabf8677a2dd216b421ca613a20" category="section-title">2022년 2월 9일</block>
+  <block id="a209c13ddcd9cf86d87b010a08e4eb6e" category="section-title">이제 템플릿을 구축하여 특정 기존 볼륨을 찾은 다음 Cloud Backup을 활성화할 수 있습니다.</block>
+  <block id="98b343467576e58f6658965bc67f83c1" category="paragraph">새로운 "리소스 찾기" 작업을 사용하면 Cloud Backup을 설정할 모든 볼륨을 식별한 다음 클라우드 백업 작업을 사용하여 해당 볼륨에 대한 백업을 설정할 수 있습니다.</block>
+  <block id="5f7aca397c1159eec8840243c23d21ef" category="paragraph">현재 Cloud Volumes ONTAP 및 온프레미스 ONTAP 시스템의 볼륨에 대한 지원이 제공됩니다. <block ref="669569957f8d1752c3d36c9709b3f805" category="inline-link-macro-rx"></block>.</block>
+  <block id="f113b79a4bb13850776b0f197bc567c4" category="section-title">2021년 10월 31일</block>
+  <block id="4ae195844f422b6b1648655974f47ef9" category="section-title">이제 동기화 관계에 태그를 지정하여 쉽게 액세스할 수 있도록 관계를 그룹화하거나 분류할 수 있습니다.</block>
+  <block id="049ebb609707e4c76f578eb98777ffdc" category="inline-link-macro">리소스 태깅에 대해 자세히 알아보십시오</block>
+  <block id="ed96aae04d87996c1167c958ef57d92d" category="paragraph"><block ref="c58eac1aa8c871fffca9a439e5057057" category="inline-link-macro-rx"></block>.</block>
+  <block id="a4ff224d7ed6d77fb230202cc45ed6fa" category="section-title">2021년 10월 11일</block>
+  <block id="381310632f9a1c2882832a480711e4cf" category="section-title">이제 기존 템플릿의 복제본을 만들 수 있습니다.</block>
+  <block id="addd83032f7bc85573c2d778fbce152b" category="inline-link-macro">서식 파일의 복사본을 만드는 방법을 알아봅니다</block>
+  <block id="d8297eba97a5465d726b7dfc48cc13ea" category="paragraph">기존 템플릿과 매우 유사한 새 템플릿을 만들려는 경우 복제본을 만들면 많은 시간을 절약할 수 있습니다. 새 이름으로 복제한 다음 서식 파일을 고유하게 만드는 두 개의 항목을 변경하기만 하면 됩니다. <block ref="f91157bfd2bb5cbf5e539da6f97e4710" category="inline-link-macro-rx"></block>.</block>
+  <block id="d440557ac106d95fbf19b42c851e2fd9" category="section-title">이제 템플릿을 사용하여 생성한 볼륨에서 서비스를 사용하는 것이 훨씬 쉬워졌습니다.</block>
+  <block id="0cb0eeda22a2ab5a3af95e330a22a74c" category="paragraph">작업을 수행하는 환경, 스토리지 VM 및 볼륨 이름을 식별하기 위해 변수를 선택해야 하기 전에 이제 템플릿에 이 정보가 추가됩니다. 따라서 Cloud Backup, Cloud Compliance 및 Replication 서비스를 새로 생성되는 볼륨에 간편하게 추가할 수 있습니다.</block>
+  <block id="91d5a3b2a51a086529628af9b87ef105" category="section-title">특정 GCP 리소스에 대한 레이블을 지정할 수 있도록 지원이 추가되었습니다.</block>
+  <block id="db1b81be614bd9a5ca7dc44b22c02310" category="inline-link-macro">라벨링할 수 있는 GCP 리소스를 참조하십시오</block>
+  <block id="e4e712eb035bdea737277dd1b8993a0a" category="paragraph">이제 Cloud Manager Tagging 서비스를 사용하여 GCP 리소스의 레이블을 관리할 수 있습니다. 리소스에 적용된 GCP 레이블 및 레이블 값을 볼 수 있으며, 이러한 레이블을 관리하는 다른 GCP 리소스에 적용할 수 있습니다. <block ref="409286efa16f3a61c8f6160b0cdd3b73" category="inline-link-macro-rx"></block>.</block>
+  <block id="3b7a1a77cdd08778e0827fbf312442b7" category="section-title">2021년 9월 2일</block>
+  <block id="bd96464dcc320a50a052dba445c1ddaa" category="section-title">이제 태깅 서비스를 사용하여 Azure 리소스의 태그를 관리할 수 있습니다.</block>
+  <block id="b4b08857877112938961aaa3e2a131f2" category="inline-link-macro">태그를 지정할 수 있는 Azure 리소스를 참조하십시오</block>
+  <block id="44e0789645e569abc1d8998ab3015e3d" category="paragraph">리소스에 적용된 Azure 태그 및 태그 값을 볼 수 있으며, 관리 중인 다른 Azure 리소스에 해당 태그를 적용할 수 있습니다. <block ref="566291be7033a26e1b235b2a2d2ef8ff" category="inline-link-macro-rx"></block>.</block>
+  <block id="beea1e5bb8f2f2bd9be93638d03e8b08" category="section-title">이제 몇 가지 추가 AWS EC2 리소스를 태깅할 수 있습니다.</block>
+  <block id="25a162aef74775e949e086ee904f94a8" category="section-title">2021년 8월 8일</block>
+  <block id="29c6c5f2894fd20d3b18533527bec317" category="section-title">이제 템플릿을 사용하여 Cloud Volumes ONTAP 작업 환경을 만들 수 있습니다.</block>
+  <block id="984956ca6b0ab2e60f484c9bada495b5" category="inline-link-macro">Cloud Volumes ONTAP 작업 환경에 대한 템플릿을 만듭니다</block>
+  <block id="05ef6a32f83373b0aaaab04a0cfb067e" category="paragraph">이 지원은 현재 AWS 환경에서만 제공되며 단일 노드 클러스터에만 제공됩니다. 자세한 내용은 를 참조하십시오 <block ref="b3c0e34ddc6f02981e8f634895a0f3cf" category="inline-link-macro-rx"></block>.</block>
+  <block id="5080a441e3384a34bcb118757e9e578f" category="section-title">새 기능을 사용하면 볼륨 템플릿의 볼륨에 태그를 추가할 수 있습니다.</block>
+  <block id="adb5f80ec3b6f1b0d9ad3b40327218db" category="paragraph">태그를 사용하면 여러 리소스를 그룹화하여 자동화를 수행하거나 특정 부서 또는 지역에 비용을 할당할 수 있도록 애플리케이션, 지역 또는 부서를 식별할 수 있습니다.</block>
+  <block id="de916a0d3ee8a38938e86c4a5f7624aa" category="section-title">이제 Cloud Manager에서 AWS EC2 인스턴스의 태그를 관리할 수 있습니다.</block>
+  <block id="587a3b529ee36768600b3185997270b8" category="inline-link-macro">태그 지정에 대해 자세히 알아보세요</block>
+  <block id="87c0200a60cc25f90f7d11c9af5852e4" category="paragraph">EC2 인스턴스에 적용된 AWS 태그 및 태그 값을 보고, 관리하는 다른 EC2 인스턴스에 해당 태그를 적용할 수 있습니다. <block ref="78bc354b5bc36ea6c1a33109df4c795e" category="inline-link-macro-rx"></block>.</block>
+  <block id="148ac7400035f34ce9532083a87fe872" category="section-title">2021년 7월 13일</block>
+  <block id="162b6bf7486ecd21043d4097434cc0c0" category="section-title">템플릿을 정의할 때 복제 서비스를 사용할 수 있도록 지원이 추가되었습니다.</block>
+  <block id="367ca1b4aadef246752fe5dc9dbfa720" category="inline-link-macro">생성 중인 볼륨의 데이터를 복제합니다</block>
+  <block id="bd78b220c8f6ffb11029e676aca762e1" category="inline-link">복제 서비스</block>
+  <block id="18b66794f04012b531d4cc5914f5f8f3" category="paragraph">이제 원하는 서식 파일을 추가할 수 있습니다 <block ref="6738ace5df735ae0ff117275f600ff2e" category="inline-link-macro-rx"></block> 를 사용하여 다른 볼륨으로 이동합니다<block ref="0cbc5a9fd380783b2e1491fb4decd0c8" category="inline-link-rx"></block>.</block>
+  <block id="b97e650c4494f3305ee0ac31ef6caa19" category="paragraph">데이터를 다른 NetApp 스토리지 시스템으로 복제하고 2차 데이터를 지속적으로 업데이트함으로써 데이터가 최신 상태로 유지되고 필요할 때마다 사용할 수 있고</block>
+  <block id="25a58af15883a08e4b6d4b8172538f5a" category="section-title">템플릿 설정에서 "표류된" 모든 볼륨이 포함된 보고서를 다운로드합니다.</block>
+  <block id="8b521b3330e37ed57ab6eea2702514ff" category="inline-link-macro">변경 사항 보고서를 다운로드하는 방법</block>
+  <block id="d995a583774874e6dfba85f30dc14514" category="paragraph">이러한 방식으로 이러한 볼륨을 식별하고 볼륨을 규정 준수 상태로 되돌릴 사람을 할당할 수 있습니다. 을 참조하십시오 <block ref="3861ce04d0fce9eae63955cfc17ca34d" category="inline-link-macro-rx"></block>.</block>
+  <block id="9664d641acdd3bc45e6d8085c3ffe14d" category="section-title">새 태그 지정 서비스가 해제되었습니다.</block>
+  <block id="b2c5f55555590a4c06851e0098a9fbbd" category="paragraph">새로운 Cloud Manager 기능을 사용하면 기존 ONTAP 리소스에 태그를 적용하여 리소스를 구성 및 관리할 수 있습니다. 태그는 리소스를 그룹화하여 애플리케이션, 환경, 지역, 청구 코드, 클라우드 공급자 등을 식별하는 데 사용할 수 있는 메타데이터입니다. 있습니다.</block>
+  <block id="bef30da0bb60a2c21060e5694267abfe" category="paragraph"><block ref="78bc354b5bc36ea6c1a33109df4c795e" category="inline-link-macro-rx"></block>.</block>
+  <block id="945fb8f32f58d1cc36cb9f1e9e4c6fe5" category="section-title">2021년 6월 7일</block>
+  <block id="62b85539ed6ee5532da4e1a797b67ee6" category="section-title">이제 사용자가 템플릿을 실행할 때 특정 작업을 조건부로 활성화할 수 있습니다.</block>
+  <block id="a1b4bb66baa87c6181574db8b88c8d3d" category="paragraph">예를 들어, Cloud Volumes ONTAP 스토리지 효율성을 활성화한 상태에서 NetApp 볼륨을 생성한 경우 Cloud Backup도 해당 볼륨에 활성화됩니다. 스토리지 효율성이 설정되지 않으면 Cloud Backup이 활성화되지 않습니다.</block>
+  <block id="264a2b52fa92c42819a82c4ea6445d6a" category="section-title">이제 템플릿을 사용하여 온프레미스 ONTAP 시스템에서 볼륨을 생성할 수 있습니다.</block>
+  <block id="4cf9c1afc78ae2e8f1491942ce078eb8" category="section-title">템플릿을 만들 때 "드리프트"라는 새로운 기능이 옵션으로 추가되었습니다.</block>
+  <block id="011741db456ebe1ea2d73d2c43f93efc" category="paragraph">Cloud Manager는 이 기능을 사용하여 템플릿의 매개 변수에 대해 입력한 하드 코딩된 값을 모니터링할 수 있습니다. 스토리지 관리자가 해당 템플릿을 사용하여 볼륨을 생성한 후 나중에 Cloud Manager가 템플릿 정의에 더 이상 맞춰지지 않도록 매개 변수 값이 변경되었다고 볼 경우, 설계된 템플릿에서 "표류된" 모든 볼륨을 볼 수 있습니다. 이러한 방식으로 이러한 볼륨을 식별하고 변경하여 규정을 준수할 수 있습니다.</block>
+  <block id="824b76af9549cb14fd2443aa485afb15" category="section-title">2021년 5월 2일</block>
+  <block id="9a1219498574a089f3be1a4a45143586" category="section-title">이제 볼륨 템플릿을 생성할 때 Cloud Data Sense를 통합할 수 있습니다.</block>
+  <block id="96e3f6826df4638ccb92b90bd780b773" category="paragraph">이제 새로 생성된 각 볼륨에 대해 Data Sense를 활성화하거나 새로 생성된 각 볼륨에 대해 Cloud Backup을 활성화하거나 생성된 볼륨에서 백업과 규정 준수를 모두 사용할 수 있는 템플릿을 생성할 수 있습니다.</block>
+  <block id="ce21e7ae4271271294ccbf54c8fd6864" category="summary">NetApp은 다양한 방법으로 Cloud Manager를 지원합니다. 기술 자료(KB) 기사 및 커뮤니티 포럼과 같은 광범위한 무료 셀프 지원 옵션이 24x7 제공됩니다. 지원 등록에는 웹 티켓팅을 통한 원격 기술 지원이 포함됩니다.</block>
+  <block id="fabfc25ef8996fd90836e58a4c0b26b6" category="doc">도움을 받으십시오</block>
+  <block id="d41d8cd98f00b204e9800998ecf8427e" category="inline-link-macro"></block>
+  <block id="7ccaf84febc0ed633fbdbadb8d488a7e" category="paragraph"><block ref="7ccaf84febc0ed633fbdbadb8d488a7e" category="inline-link-macro-rx"></block></block>
+  <block id="cc371045494864a1be09aecf8486813b" category="summary">NetApp에서 제공하는 "작업" 중 하나 이상을 선택하고 조직에서 리소스 생성을 최적화하는 데 사용할 수 있는 애플리케이션 템플릿을 신속하게 구축합니다.</block>
+  <block id="7b7aa0d4bd1d1332a50f445e21889bc8" category="doc">조직을 위한 응용 프로그램 서식 파일 작성</block>
+  <block id="06ad314b340900d226b1196e1fe289e9" category="section-title">빠른 시작</block>
+  <block id="91e06e9a9ef97681b798e2e5e007ba97" category="paragraph">다음 단계를 따라 빠르게 시작하거나 나머지 섹션을 아래로 스크롤하여 자세한 내용을 확인하십시오.</block>
+  <block id="a6a9590c22384e37e4e414bf579a3278" category="list-title">span class="image"&gt;&lt;img src=<block ref="0c3becc25d95e48b9ca863002a042824" category="inline-link-rx"></block> Alt="One"&gt;&lt;/span&gt; 필수 사전 요구 사항을 확인합니다</block>
+  <block id="53eecd7f53fddfec88f1dbaf29600d72" category="list-text">사용자가 템플릿을 사용하여 Cloud Volumes ONTAP, 사내 ONTAP 또는 Azure NetApp Files 시스템의 볼륨을 생성하기 전에 볼륨이 구축될 적절한 작업 환경에 액세스할 수 있는지 확인합니다.</block>
+  <block id="dad57e95fc9a5390302ad830888cbdb9" category="inline-link">클라우드 백업</block>
+  <block id="d882bf73cd5caf1e5aa39edbf893ad74" category="inline-link">클라우드 데이터 감지</block>
+  <block id="45ebff704e28730c0e631bb5f09b2205" category="list-text">등의 클라우드 서비스 "작업"을 템플릿에 추가하려는 경우<block ref="65043dfb781746b8fde5bfddb319eb97" category="inline-link-rx"></block> 또는<block ref="4af4db8698c4a0998b2c93dbadcf8efe" category="inline-link-rx"></block>에서 서비스가 활성화되어 있고 사용 중인 환경에서 라이센스가 부여되었는지 확인합니다.</block>
+  <block id="42ad9e938d3f22547c490ccfc69261fe" category="paragraph">AppTemplate * 서비스를 선택하고 * Editor * 탭을 클릭한 다음 템플릿에 사용할 작업을 선택합니다.</block>
+  <block id="ba13d007a4f76ded358c0280157f648b" category="paragraph">생성 단계에 따라 템플릿에서 수행할 작업을 정의합니다.</block>
+  <block id="5a2ebfb8baa378cfcfcba58bbb1380c2" category="section-title">요구 사항</block>
+  <block id="4b09bdd4ca435f6a4b77b142f9481573" category="paragraph">다음 요구 사항을 읽고 지원되는 구성이 있는지 확인합니다.</block>
+  <block id="23e0e07c56fc07b2d6bc44d30e5187d4" category="inline-link">커넥터를 만드는 방법을 참조하십시오</block>
+  <block id="880e0da9ea31d472fa96b1ad7e4be6ad" category="list-text">커넥터가 없는 경우<block ref="0e90a2191f59a8f46190195b37c75156" category="inline-link-rx"></block> AWS, Azure 및 GCP의 경우.</block>
+  <block id="45ef42d49d3545c2dc4c85b1084a47e4" category="list-text">Cloud Volumes ONTAP 볼륨 템플릿을 생성할 때 사용자에게 Cloud Volumes ONTAP 작업 환경을 사용할 수 있는지 확인합니다. 에서 Cloud Volumes ONTAP 시스템을 시작하는 방법을 확인하십시오<block ref="9d7ce7d64938e2f7608d2bb2edf0463c" category="inline-link-rx"></block>,<block ref="24f9dba5182403aa08072eb715753c19" category="inline-link-rx"></block>, 또는 in<block ref="50ded4108906004e3a51ae63e78f7f8d" category="inline-link-rx"></block>.</block>
+  <block id="b927c65793ede8840d859f745c1070b4" category="inline-link">사내 ONTAP 시스템에 대해 알아보십시오</block>
+  <block id="c8901a7a496874759b4b8b60b0de5c3d" category="list-text">온-프레미스 ONTAP 볼륨 템플릿을 만들 때 사용자에게 온-프레미스 ONTAP 작업 환경을 사용할 수 있는지 확인합니다. 자세한 내용은 를 참조하십시오<block ref="73a5fece0c926f1d97e300f9e1e63b86" category="inline-link-rx"></block> 않습니다.</block>
+  <block id="89bbeb90a25e5540f1875c6148fc07a6" category="inline-link">Azure NetApp Files 작업 환경을 만듭니다</block>
+  <block id="9d2d3321463aff7e73ef30b5a3ce32a8" category="list-text">Azure NetApp Files 볼륨 템플릿을 생성할 때 사용자에게 Azure NetApp Files 작업 환경을 사용할 수 있는지 확인합니다. 자세한 내용은 를 참조하십시오<block ref="4701cc78270032c8498a3da46c645bc0" category="inline-link-rx"></block> 않습니다.</block>
+  <block id="e6ed2b3f4bf8b70c7dffd440bfa20748" category="list-text">Cloud Backup을 사용하여 템플릿의 볼륨을 백업하려는 경우 환경에서 Cloud Backup을 활성화했는지 확인합니다.</block>
+  <block id="375fb9ecf54511eed57c23439aba8fa9" category="list-text">Cloud Data Sense를 사용하여 템플릿의 볼륨을 스캔하려는 경우 환경에서 Cloud Data Sense가 활성화되어 있는지 확인하십시오.</block>
+  <block id="b2db245c1e7b0de62f61003787ba3eb2" category="list-text">템플릿에서 복제를 사용할 계획이고 템플릿이 온-프레미스 ONTAP 볼륨에 대한 것이라면 ONTAP 클러스터에 활성 SnapMirror 라이센스가 있어야 합니다.</block>
+  <block id="ec83027c05d71f4e7343616a10e8b48e" category="section-title">템플릿을 사용하여 리소스를 만드는 예</block>
+  <block id="54efaa09fa271348667d3925486f25d8" category="paragraph">리소스 템플릿을 사용하여 새 볼륨이나 새 Cloud Volumes ONTAP 작업 환경을 생성할 수 있습니다.</block>
+  <block id="030a036b48378de1f3003036be2d3597" category="section-title">Cloud Volumes ONTAP 볼륨에 대한 템플릿을 생성합니다</block>
+  <block id="ab93b13353c035a51f382bda0bfbed96" category="inline-link">Cloud Volumes ONTAP 볼륨 프로비저닝 방법</block>
+  <block id="95fc8ac0e9e615981015162965b46e17" category="paragraph">을 참조하십시오<block ref="b4d90a018392b441728748f197c63579" category="inline-link-rx"></block> Cloud Volumes ONTAP 볼륨 템플릿에서 완료해야 하는 모든 매개변수에 대한 자세한 내용은 를 참조하십시오.</block>
+  <block id="e9e4c331008e320c9b03b119f438ec84" category="paragraph">이 예에서는 "CVO volume for database"라는 이름의 템플릿을 생성하고 다음 두 가지 작업을 포함합니다.</block>
+  <block id="6115c1aa690e31fcf33eef72f8accb32" category="list-text">Cloud Volumes ONTAP 볼륨을 생성합니다</block>
+  <block id="4611422bf9a4ff570849e7d651f9c0a2" category="paragraph">AWS 환경의 볼륨을 만들고 100GB의 스토리지로 구성한 다음 스냅샷 정책을 "기본값"으로 설정하고 스토리지 효율성을 설정합니다.</block>
+  <block id="d0285b972453920d44e9bfc537f86825" category="list-text">클라우드 백업 활성화</block>
+  <block id="0e7b1101bfe909f1f24d1bc082d8cb0b" category="paragraph">매일 30개, 매주 13개 및 3개의 월별 백업을 생성합니다(_3개월 Retention_policy 사용).</block>
+  <block id="f3a29486bed19a90f2da6d007818b427" category="list-title">단계</block>
+  <block id="e4b455f83d8a2cbf227e5a6b6bd7ed8c" category="list-text">AppTemplate * 서비스를 선택하고 * Templates * 탭을 클릭한 다음 * Add New Template * 을 클릭합니다.</block>
+  <block id="12800accdcea8213a17428d96d3f650b" category="paragraph">Select_a Template_page가 출력된다.</block>
+  <block id="ac454ecfe801e40640fcab274d8376c7" category="inline-image-macro">이 템플릿을 사용하여 수행할 기본 작업을 선택하는 방법을 보여 주는 스크린샷</block>
+  <block id="badf0b64af7e4dbccc924f1b86d16441" category="paragraph"><block ref="badf0b64af7e4dbccc924f1b86d16441" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e9d6286a0d87815f2dfb97a9d19be924" category="list-text">생성할 리소스 유형으로 Cloud Volumes ONTAP + 백업 * 용 * 볼륨 을 선택하고 * 시작하기 * 를 클릭합니다.</block>
+  <block id="2e40b56b7fa804a6923caf652b7c25aa" category="paragraph">Cloud Volumes ONTAP 작업 정의 _ 페이지에 _ 볼륨 생성 이 표시됩니다.</block>
+  <block id="99d5fcac810e0357f1ce55dabd9aadfd" category="inline-image-macro">입력해야 하는 빈 CVO 템플릿이 표시된 스크린샷</block>
+  <block id="c300df2aa9b635b7e59061b7084d3807" category="paragraph"><block ref="c300df2aa9b635b7e59061b7084d3807" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="801e9079b48c523d52a05513463997fe" category="list-text">* 작업 이름 *: 필요에 따라 기본값 대신 사용자 지정된 작업 이름을 입력합니다.</block>
+  <block id="7cbfd40e0aecc60c4a4efbc45ba21139" category="list-text">* 컨텍스트: * 필요한 경우 Cloud Volumes ONTAP 작업 환경 컨텍스트를 입력합니다.</block>
+  <block id="059515978a375903c4b939adacaa923b" category="paragraph">사용자가 기존 작업 환경에서 서식 파일을 시작하면 이 정보가 자동으로 입력됩니다.</block>
+  <block id="9723c14ceead0bcb4a1db0b77671f08a" category="paragraph">사용자가 작업 환경 컨텍스트가 아닌 Templates Dashboard에서 템플릿을 시작하면 작업 환경과 볼륨이 생성될 SVM을 선택해야 합니다. 이러한 필드가 "편집 가능"으로 표시되는 이유가 바로 여기에 있습니다.</block>
+  <block id="5ea98d0d0acbef5bd9f5c07ca7a061be" category="list-text">* 세부 정보: * 볼륨 이름과 크기를 입력합니다.</block>
+  <block id="6f16a5f8ff5d75ab84c018adacdfcbb7" category="cell">필드에 입력합니다</block>
+  <block id="b5a7adde1af5c87d7fd797b6245c2a39" category="cell">설명</block>
+  <block id="5a33fdd3ad048388d676b3cfe62a76b4" category="cell">볼륨 이름</block>
+  <block id="2883dfc230f7a5fee0fceab3e724eed1" category="cell">필드를 클릭하고 5가지 옵션 중 하나를 선택합니다. 관리자가 * 자유 텍스트 * 를 선택하여 원하는 이름을 입력하도록 하거나, 볼륨 이름에 특정 접두사나 접미사가 있거나, 해당 접두사나 접미사가 _contains_특정 문자이거나, 사용자가 입력한 정규식(regex)의 규칙을 따르도록 지정할 수 있습니다. 예를 들어 "db"가 필요한 접두사, 접미사 또는 포함으로 지정할 수 있습니다. 이 경우 사용자는 "db_vol1", "vol1_db" 또는 "vol_db_1"과 같은 볼륨 이름을 추가해야 합니다.</block>
+  <block id="191fac23c2b2ea4e948178972521292f" category="cell">볼륨 크기</block>
+  <block id="00c8763f564b8663e70d7c5282bfb116" category="cell">허용 가능한 값의 범위를 지정하거나 고정 크기를 지정할 수 있습니다. 이 값은 GB 단위로 표시됩니다. 이 예에서는 고정 값 * 100 * 을 추가할 수 있습니다.</block>
+  <block id="189f63f277cd73395561651753563065" category="cell">태그</block>
+  <block id="5c383dfd487b893537243d1ff2b9c575" category="cell">이 볼륨과 연결할 태그의 이름과 값 쌍을 입력합니다. 예를 들어 "비용 센터"를 태그 이름으로 추가하고 비용 센터 코드 "6655829"를 값으로 추가할 수 있습니다. 태그 이름 및 값 쌍을 더 추가하여 여러 태그를 볼륨에 연결할 수 있습니다.</block>
+  <block id="8cb0ac47c325f07198a8d894befe84b4" category="list-text">* 보호: * 이 볼륨에 "기본값" 또는 다른 정책을 선택하여 생성된 스냅샷 복사본이 있는지 여부를 선택하거나, 스냅샷 복사본을 생성하지 않으려면 "없음"을 선택하십시오.</block>
+  <block id="14e9a0afe9a24320a6cbef6a736df90e" category="list-text">* 사용 프로필: * NetApp 스토리지 효율성 기능을 볼륨에 적용할지 여부를 선택합니다. 여기에는 씬 프로비저닝, 중복제거, 압축이 포함됩니다. 예를 들어, 스토리지 효율성을 사용하도록 설정합니다.</block>
+  <block id="9a58906a5890a61a2ba00a2bc5f6a847" category="list-text">* 디스크 유형: * 클라우드 스토리지 공급자와 디스크 유형을 선택합니다. 일부 디스크를 선택할 경우 최소 및 최대 IOPS 또는 처리량(MB/s) 값을 선택할 수도 있습니다. 기본적으로 특정 서비스 품질(QoS)을 정의합니다.</block>
+  <block id="8a199052157229eefe6d69b9e724047a" category="list-text">* 프로토콜 옵션: * NFS * 또는 * SMB * 를 선택하여 볼륨의 프로토콜을 설정합니다. 프로토콜 세부 정보를 제공합니다.</block>
+  <block id="5dc73c128ec631156d8581bb645e55cc" category="cell">NFS 필드</block>
+  <block id="8aaaedc342a0dce1d73d33f3fb69a2af" category="cell">액세스 제어</block>
+  <block id="4a3d2f4e3aa9bd79e413c5b9fa744ab3" category="cell">볼륨에 액세스하는 데 액세스 제어가 필요한지 여부를 선택합니다.</block>
+  <block id="8dadce9de6b5f104b9f1990b73f191f0" category="cell">엑스포트 정책</block>
+  <block id="565e7c939f0a1769928e7ea0649f804b" category="cell">볼륨을 액세스할 수 있는 서브넷의 클라이언트를 정의하는 엑스포트 정책을 생성합니다.</block>
+  <block id="97e382ecf7e6f1064476764cbcc5b429" category="cell">NFS 버전</block>
+  <block id="7d357e387e1a68e43d79ca61a0b67fb9" category="cell">볼륨의 NFS 버전(_NFSv3_ 또는 _NFSv4_)을 선택하거나 둘 다 선택할 수 있습니다.</block>
+  <block id="ba1dcdd66cd4d8a61910f9d39950817a" category="cell">SMB 필드</block>
+  <block id="d30b23c0886d5712f5995a7793376942" category="cell">공유 이름</block>
+  <block id="6e94b2e72c0376574fc6b13ca0384876" category="cell">필드를 클릭하고 5가지 옵션 중 하나를 선택합니다. 관리자가 임의의 이름(자유 텍스트)을 입력하도록 하거나 공유 이름에 특정 접두사 또는 접미사가 있어야 하거나, 공유 이름에 _contains_특정 문자가 포함되어야 하거나, 입력한 정규식(regex)의 규칙을 따르도록 지정할 수 있습니다.</block>
+  <block id="d08ccf52b4cdd08e41cfb99ec42e0b29" category="cell">권한</block>
+  <block id="81075cbf19436268ea82309abe5e2fbf" category="cell">사용자 및 그룹의 공유에 대한 액세스 수준(액세스 제어 목록 또는 ACL라고도 함)을 선택합니다.</block>
+  <block id="3d0a35be70eebb15d947ea1010db1320" category="cell">사용자/그룹</block>
+  <block id="ea73180f9c8cb441163847f36b7e315b" category="cell">로컬 또는 도메인 Windows 사용자 또는 그룹, UNIX 사용자 또는 그룹을 지정합니다. 도메인 Windows 사용자 이름을 지정하는 경우 domain\username 형식을 사용하여 사용자의 도메인을 포함해야 합니다.</block>
+  <block id="979ea4704bcee326b5ea5d2bc6a4a89b" category="list-text">* 계층화: * 이 볼륨에서 오브젝트 스토리지로 콜드 데이터를 계층화하지 않으려면 볼륨에 적용할 계층화 정책을 선택하거나 "없음"으로 설정합니다.</block>
+  <block id="e8ef245792950f46479876f766e2e142" category="inline-link">볼륨 계층화 정책</block>
+  <block id="b0e17b25c2ac5fdfcde0ef543eb85101" category="inline-link">비활성 데이터를 오브젝트 스토리지로 계층화</block>
+  <block id="ee33f204180d62cfb217e1aec2a2f775" category="paragraph">을 참조하십시오<block ref="51ba3de2fe0f2a8abd8380ab98f33811" category="inline-link-rx"></block> 개요를 보려면 를 참조하십시오<block ref="d98e4cd2c7e92258651d80578af83733" category="inline-link-rx"></block> 환경을 계층화용으로 설정해야 합니다.</block>
+  <block id="dcbae1cdee8a3f08d129ff3de6884125" category="list-text">이 작업에 필요한 매개 변수를 정의한 후 * 적용 * 을 클릭합니다.</block>
+  <block id="7566e7b2ebc49252e3a55e0d5dd8d796" category="paragraph">템플릿 값이 올바르게 완료되면 "Cloud Volumes ONTAP에 볼륨 생성" 상자에 녹색 확인 표시가 추가됩니다.</block>
+  <block id="edabbad74c4bab7275b00df22d1795fb" category="list-text">Enable Cloud Backup on Volume * 상자를 클릭하면 Cloud Backup 세부 정보를 입력할 수 있도록 _Enable Cloud Backup on Volume Action Definition_ 대화 상자가 표시됩니다.</block>
+  <block id="e7b2940e4c4ae2261e85a3d7a22c8cb5" category="inline-image-macro">생성된 볼륨에 추가할 수 있는 추가 작업을 보여 주는 스크린샷</block>
+  <block id="1d52e1ed02fe4b810c04939e74af1f18" category="paragraph"><block ref="1d52e1ed02fe4b810c04939e74af1f18" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f558391a06df755ed33bfad6325d0441" category="list-text">3개월 보존 * 백업 정책을 선택하여 매일 30개, 매주 13개 및 3개의 월별 백업을 생성합니다.</block>
+  <block id="ee90c4ccb63dcb129be28139926904d8" category="inline-xref">이 필드를 작성하는 방법</block>
+  <block id="ec713828140b03b149e442465903607d" category="list-text">Working Environment(작업 환경) 및 Volume Name(볼륨 이름) 필드 아래에는 백업을 활성화할 볼륨을 나타내는 세 가지 선택 항목이 있습니다. 을 참조하십시오 <block ref="2ed015b52e0ac4a30a046a0842ac9c50" category="inline-xref-macro-rx"></block>.</block>
+  <block id="0728b4f74021dc704fab300222094c8b" category="list-text">Apply * 를 클릭하면 Cloud Backup 대화 상자가 저장됩니다.</block>
+  <block id="46725495896c458f104f504d53b4b320" category="list-text">왼쪽 상단에 * CVO volume for database * (이 예에서는)라는 템플릿 이름을 입력합니다.</block>
+  <block id="d69be6c531037f06436630d128988a41" category="list-text">이 템플릿이 다른 유사한 템플릿과 구별될 수 있도록 보다 자세한 설명을 제공하려면 * 설정 및 드리프트 * 를 클릭하고 전체 템플릿에 대해 드리프트를 활성화한 다음 * 적용 * 을 클릭합니다.</block>
+  <block id="7d1cada9a49f8783660b223f3fef2678" category="paragraph">드리프트를 사용하면 Cloud Manager가 이 템플릿을 생성할 때 매개변수에 대해 입력한 하드 코드된 값을 모니터링할 수 있습니다.</block>
+  <block id="069cf34ab6ca64e85728193a5aab0a4e" category="list-text">템플릿 저장 * 을 클릭합니다.</block>
+  <block id="8b8745414ffb4d1bc70671bfa839ed7d" category="paragraph">서식 파일이 만들어지고 새 서식 파일이 표시되는 서식 파일 대시보드로 돌아갑니다.</block>
+  <block id="5e0cbbeb0c7fbcd015cc8264aa380cf6" category="inline-xref">사용자에게 템플릿에 대해 말해야 할 사항</block>
+  <block id="0a45425eb0911358963a7a4da437beeb" category="paragraph">을 참조하십시오 <block ref="2fb234aaf0c174d8c17b6003cc9fc11d" category="inline-xref-macro-rx"></block>.</block>
+  <block id="0723f0287083e700309ab63bd37a0c33" category="section-title">Azure NetApp Files 볼륨에 대한 템플릿을 생성합니다</block>
+  <block id="38c68ceb833297ed3631cc6cc44141ab" category="paragraph">Azure NetApp Files 볼륨에 대한 템플릿 생성은 Cloud Volumes ONTAP 볼륨에 대한 템플릿을 생성하는 것과 동일한 방식으로 수행됩니다.</block>
+  <block id="98165316f4a6a7eb3b2eea00a7c71656" category="inline-link">Azure NetApp Files 볼륨 프로비저닝 방법</block>
+  <block id="1dcec9f35c7e20c4011388d6173a9a3e" category="paragraph">을 참조하십시오<block ref="71642e13367a6341a10e13f459821e6e" category="inline-link-rx"></block> ANF 볼륨 템플릿에서 완료해야 하는 모든 매개변수에 대한 자세한 내용은</block>
+  <block id="31ea9a5156da1667ca8c913660cb04e8" category="paragraph"><block ref="31ea9a5156da1667ca8c913660cb04e8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b1198c02b1425b74b6391ffd99cbc74b" category="list-text">빈 템플릿 * 을 선택하고 * 시작하기 * 를 클릭합니다.</block>
+  <block id="ddc839fd59d3af096b5f24caa0aac73e" category="list-text">만들려는 리소스 유형으로 * Azure NetApp Files * 에서 볼륨 생성 * 을 선택하고 * 적용 * 을 클릭합니다.</block>
+  <block id="d7f05890785a6be968f73b8eaead7a27" category="paragraph">Azure NetApp Files 작업 정의 _ 페이지에 _ 볼륨 생성 이 표시됩니다.</block>
+  <block id="d64e3f9a180b7c834241b44a88d16f4d" category="inline-image-macro">입력해야 하는 빈 ANF 템플릿을 보여 주는 스크린샷</block>
+  <block id="bea9505dd83d12b3dd7397d8682eb37b" category="paragraph"><block ref="bea9505dd83d12b3dd7397d8682eb37b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="09ff1b3fa74cf72dc0a62eaa7242effd" category="list-text">* 볼륨 세부 정보: * 볼륨 이름과 크기를 입력하고 선택적으로 볼륨의 태그를 지정합니다.</block>
+  <block id="c44953330b995fcda50e59d40ea3a049" category="cell">허용 가능한 값의 범위를 지정하거나 고정 크기를 지정할 수 있습니다. 이 값은 GB 단위로 표시됩니다.</block>
+  <block id="f727b1e918e496981ef541497e02f03e" category="list-text">* 프로토콜: * NFSv3 *, * NFSv4.1 * 또는 * SMB * 를 선택하여 볼륨의 프로토콜을 설정합니다. 프로토콜 세부 정보를 제공합니다.</block>
+  <block id="cb4d2c1623299b4c2878da3019af962f" category="cell">볼륨 경로</block>
+  <block id="377c42289584cc56d1ca3a47af882648" category="cell">5가지 옵션 중 하나를 선택합니다. 관리자가 * 자유 텍스트 * 를 선택하여 경로를 입력하도록 하거나, 경로 이름에 특정 접두사나 접미사가 있거나, 해당 접두사나 접미사가 _contains_특정 문자이거나, 사용자가 입력한 정규식(regex)의 규칙을 따르도록 지정할 수 있습니다.</block>
+  <block id="9f669007b0241e85f918bbf51c094ed1" category="cell">엑스포트 정책 규칙</block>
+  <block id="bcccd81c3a412f1013995a215560e6f4" category="list-text">* 컨텍스트: * Azure NetApp Files 작업 환경, 신규 또는 기존 Azure NetApp Files 계정에 대한 세부 정보 및 기타 세부 정보를 입력합니다.</block>
+  <block id="68049d5b86773fa123aee6b5162b46ba" category="cell">작업 환경</block>
+  <block id="66618d802ff15f9772bf7cabf1ccccd5" category="cell">스토리지 관리자가 기존 작업 환경에서 템플릿을 시작하면 이 정보가 자동으로 입력됩니다. 사용자가 작업 환경 컨텍스트가 아닌 Templates Dashboard에서 템플릿을 시작하면 볼륨을 생성할 작업 환경을 선택해야 합니다.</block>
+  <block id="baac6f97c8e7e8e6270cc894e6bdbe8c" category="cell">NetApp 계정 이름</block>
+  <block id="32fe392abad2a40de341773cc015c9ed" category="cell">계정에 사용할 이름을 입력합니다.</block>
+  <block id="5094b7a12b4988ad4d43027cff543c44" category="cell">Azure 구독 ID입니다</block>
+  <block id="9d50dad1baec8117f193564ab3e971b7" category="cell">Azure 구독 ID를 입력합니다. 이것은 "2b04f26-7de6-42eb-9234-e2903d7s327"과 유사한 형식의 전체 ID입니다.</block>
+  <block id="f447ac856e7e72435904956e3b15f433" category="cell">지역</block>
+  <block id="bc24e6fad764484fb6365689ca4d656e" category="inline-link">내부 영역 이름입니다</block>
+  <block id="db11e34ee53f07b67134b18d34ea5869" category="cell">를 사용하여 영역을 입력합니다<block ref="982c814c46363bccb479e928a36b737e" category="inline-link-rx"></block>.</block>
+  <block id="a35ce6a7b02cbfd98e9837032a457dd5" category="cell">리소스 그룹 이름</block>
+  <block id="01652266b6c049dc9e680639d9932631" category="cell">사용할 리소스 그룹의 이름을 입력합니다.</block>
+  <block id="0941eb13d6f2381bd092f5083e63aed8" category="cell">용량 풀 이름입니다</block>
+  <block id="4fd739db287e5a16b75e3489f92360b2" category="cell">기존 용량 풀의 이름을 입력합니다.</block>
+  <block id="9770c6469e9d27585d6c0c389ede7bc3" category="cell">서브넷</block>
+  <block id="4c695379c0a2d8fa6d7f8c59bda94b06" category="cell">VNET 및 서브넷을 입력합니다. 이 값은 전체 경로를 "/subscription/&lt;subscription_id&gt;/resourceGroups/&lt;resource_group&gt;/providers/Microsoft.Network/virtualNetworks/&lt;vpc_name&gt;/subnets/&lt;subhet_name&gt;" 와 유사한 형식으로 포함합니다.</block>
+  <block id="c8cef9ee8b7303419027647a212fda91" category="list-text">* 스냅샷 복사본: * 기존 볼륨의 특성을 사용하여 이 새 볼륨을 생성하려는 경우 기존 볼륨 스냅숏의 스냅샷 ID를 입력합니다.</block>
+  <block id="18801e3c62d625d360e2e7ea2b62c1b7" category="list-text">왼쪽 위에 템플릿에 사용할 이름을 입력합니다.</block>
+  <block id="56b6bad4ad8b3fcc1c2572a38f72bbbc" category="section-title">온-프레미스 ONTAP 볼륨에 대한 템플릿을 만듭니다</block>
+  <block id="d3a13fb50cc9406d1e6091d1a798ff8a" category="inline-link">사내 ONTAP 볼륨을 프로비저닝하는 방법</block>
+  <block id="2ae042576bd53fa925dc0c175ec115a2" category="paragraph">을 참조하십시오<block ref="66f502a6d6407b2e7db3bd3d647a7434" category="inline-link-rx"></block> 온-프레미스 ONTAP 볼륨 템플릿에서 완료해야 하는 모든 매개 변수에 대한 자세한 내용은 를 참조하십시오.</block>
+  <block id="abea42b586bcc6693bfcf53290293b41" category="paragraph">새 작업 추가_페이지가 표시됩니다.</block>
+  <block id="4f58f599c7e133b39a2f56df4f449c81" category="inline-image-macro">새 작업 추가 페이지에서 기본 작업을 선택하는 방법을 보여 주는 스크린샷</block>
+  <block id="b9a9d1475979d9d1c4cd0440dd88810d" category="paragraph"><block ref="b9a9d1475979d9d1c4cd0440dd88810d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6c6e50215d08a8e2a4d4b3b967318d88" category="list-text">생성할 리소스 유형으로 * Create Volume in On-Premises ONTAP * 를 선택하고 * Apply * 를 클릭합니다.</block>
+  <block id="a00fd358a9eee9d23c91c9d79c7b6e51" category="paragraph">온-프레미스 ONTAP 작업 정의 _ 페이지에 볼륨 생성 이 표시됩니다.</block>
+  <block id="75ded3aff94ceea416f4a8ab89a32002" category="inline-image-macro">입력해야 하는 빈 온프레미스 ONTAP 템플릿을 보여주는 스크린샷</block>
+  <block id="89035127115cb3301d3a94b49531ed51" category="paragraph"><block ref="89035127115cb3301d3a94b49531ed51" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b30775865ed56b7c2909b414f5bb5416" category="list-text">* 컨텍스트: * 필요한 경우 온-프레미스 ONTAP 작업 환경 컨텍스트를 입력합니다.</block>
+  <block id="27ca463515b4c83e76d5222e013a0079" category="paragraph">사용자가 작업 환경이 아닌 Templates Dashboard에서 템플릿을 시작할 때 작업 환경, SVM 및 볼륨을 생성할 애그리게이트를 선택해야 합니다.</block>
+  <block id="6b8f1d602895dd119fb811094bedb73b" category="list-text">* 사용 프로필: * NetApp 스토리지 효율성 기능을 볼륨에 적용할지 여부를 선택합니다. 여기에는 씬 프로비저닝, 중복제거, 압축이 포함됩니다.</block>
+  <block id="40e5030f72431662e47f324512075e1a" category="paragraph">템플릿 값이 올바르게 완료되면 "Create Volume in On-Premises ONTAP(온-프레미스 볼륨 생성)" 상자에 녹색 확인 표시가 추가됩니다.</block>
+  <block id="b74bc7581cece8a120da088eb00d917f" category="list-text">왼쪽 위에 템플릿 이름을 입력합니다.</block>
+  <block id="679e23d213be6214a99d26fb979d6001" category="paragraph">템플릿이 생성되고 새 템플릿이 표시되는 템플릿 대시보드로 돌아갑니다.</block>
+  <block id="216d716a4c08d31f3e40260ee58f2904" category="section-title">Cloud Volumes ONTAP 작업 환경에 대한 템플릿을 만듭니다</block>
+  <block id="0d489881f98fefa7f8b791c4f4e7d7a1" category="paragraph">템플릿을 사용하여 단일 노드 또는 고가용성 Cloud Volumes ONTAP 작업 환경을 생성할 수 있습니다.</block>
+  <block id="07b221aacb78d81a6389d6512f7b46cc" category="list-text">이 지원은 현재 AWS 환경에 대해서만 제공됩니다.</block>
+  <block id="cc46cd379c9c1e14c8c28bca9392395f" category="list-text">이 템플릿은 작업 환경에서 첫 번째 볼륨을 생성하지 않습니다. 볼륨을 생성하려면 템플릿에 "Cloud Volumes ONTAP에 볼륨 생성" 작업을 추가해야 합니다.</block>
+  <block id="af78f376877c8c8c70d830fc500a2cca" category="inline-link">AWS에서 단일 노드 Cloud Volumes ONTAP 시스템을 시작하는 방법</block>
+  <block id="27b91813df07253f9b34c2c33a28dc25" category="inline-link">AWS의 Cloud Volumes ONTAP HA 쌍</block>
+  <block id="418f4922cc1e2119f950d8b304057241" category="paragraph">을 참조하십시오<block ref="17218100ebd265ac766a5fc208b6c6f8" category="inline-link-rx"></block> 또는 a<block ref="fdfa6348617f66045251f1495e58b8bb" category="inline-link-rx"></block> 필수 구성 요소 및 이 템플릿에 정의해야 하는 모든 매개 변수에 대한 자세한 내용은 를 참조하십시오.</block>
+  <block id="982967d26b8426889a4c2982331cbefe" category="paragraph"><block ref="982967d26b8426889a4c2982331cbefe" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="40bb655abcddd337fbc3dc9a23c1c92b" category="list-text">만들려는 리소스 유형으로 * Create Working Environment in AWS(단일 노드) * 또는 * Create Working Environment in AWS(고가용성) * 를 선택하고 * Apply * 를 클릭합니다.</block>
+  <block id="e8547bfeacec12f30aa5d7de4fbd86b4" category="paragraph">이 예에서는 _Create Working Environment in AWS(단일 노드)_페이지가 표시됩니다.</block>
+  <block id="d70355e885e82b6e2a9347467809fc82" category="inline-image-macro">입력해야 하는 빈 Cloud Volumes ONTAP 작업 환경 서식 파일을 보여 주는 스크린샷</block>
+  <block id="3232ff2033d10cf395332723ec31481e" category="paragraph"><block ref="3232ff2033d10cf395332723ec31481e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ab59d67e05a3f51373ba331faa69f02e" category="list-text">* 세부 정보 및 자격 증명 *: 사용할 AWS 자격 증명을 선택하고 작업 환경 이름을 입력한 다음 필요한 경우 태그를 추가합니다.</block>
+  <block id="09eb13e81cc007418ee8fa04feb8088f" category="paragraph">이 페이지의 일부 필드는 설명이 필요 없습니다. 다음 표에서는 지침이 필요한 필드를 설명합니다.</block>
+  <block id="2daf1cb573c2c61422faf64610cf9402" category="cell">자격 증명</block>
+  <block id="64917fe8c1577c91426bd43a4aef38db" category="cell">Cloud Volumes ONTAP 클러스터 관리자 계정의 자격 증명입니다. 이러한 자격 증명을 사용하여 ONTAP 시스템 관리자 또는 CLI를 통해 Cloud Volumes ONTAP에 연결할 수 있습니다.</block>
+  <block id="2cebc28eab2cacd2695a37777c14a93f" category="cell">작업 환경 이름</block>
+  <block id="98fed17197f2edc82ba68578c571fdbe" category="cell">Cloud Manager에서는 작업 환경 이름을 사용하여 Cloud Volumes ONTAP 시스템과 Amazon EC2 인스턴스 이름을 모두 지정합니다. 또한 이 옵션을 선택하면 미리 정의된 보안 그룹의 접두사로 이름이 사용됩니다. 필드를 클릭하고 5가지 옵션 중 하나를 선택합니다. 관리자가 * 자유 텍스트 * 를 선택하여 원하는 이름을 입력하도록 하거나 작업 환경 이름에 특정 접두사나 접미사가 있거나, 해당 접두사나 접미사가 _contains_특정 문자이거나, 사용자가 입력한 정규식(regex)의 규칙을 따르도록 지정할 수 있습니다.</block>
+  <block id="b94b3141dd708a0d291780bdda339320" category="cell">AWS 태그는 AWS 리소스에 대한 메타데이터입니다. Cloud Manager에서 Cloud Volumes ONTAP 인스턴스와 해당 인스턴스에 연결된 각 AWS 리소스에 태그를 추가합니다. 태그에 대한 자세한 내용은 을 참조하십시오<block ref="9bd250e03cdf80384a24635f16673602" category="inline-link-rx"></block>.</block>
+  <block id="6101eef8fd3b11affed5baa0379eb7b5" category="inline-link">AWS 워크시트</block>
+  <block id="21e39bab34fec6294e31fe4e65b232c7" category="list-text">* 위치 및 연결 *: 에 기록한 네트워크 정보를 입력합니다<block ref="837a3d1b1486e7cc7dba08a5d4a77996" category="inline-link-rx"></block>. 여기에는 AWS 지역, VPC, 서브넷 및 보안 그룹이 포함됩니다.</block>
+  <block id="6f27ddf091b10f1dfd4ab13be0759ec7" category="paragraph">AWS 아웃포스트가 있는 경우 아웃포스트 VPC를 선택하여 해당 아웃포스트에 단일 노드 Cloud Volumes ONTAP 시스템을 구축할 수 있습니다. 이러한 경험은 AWS에 상주하는 다른 VPC와 동일합니다.</block>
+  <block id="e01401f96474df4861317e5b4493deca" category="list-text">* 인증 방법 *: 사용할 SSH 인증 방법을 선택합니다(암호 또는 키 쌍).</block>
+  <block id="94b720129da1fad395a78adb9dd8004f" category="list-text">* 데이터 암호화 *: 데이터 암호화 또는 AWS로 관리되는 암호화를 선택하지 않습니다.</block>
+  <block id="8d4e0ae3c5be71d9c725659a6203fb6f" category="paragraph">AWS로 관리되는 암호화의 경우 사용자 계정 또는 다른 AWS 계정에서 다른 CMK(Customer Master Key)를 선택할 수 있습니다.</block>
+  <block id="7238e3ed6732433c6a3fc43c882f2749" category="inline-link">Cloud Volumes ONTAP용 AWS KMS를 설정하는 방법에 대해 알아보십시오</block>
+  <block id="2dff4bc0654f658707793fc687e4a17f" category="paragraph"><block ref="aab3f238743393f06eea77a640671e14" category="inline-link-rx"></block>.</block>
+  <block id="84fee0ef7a3aad23dfb27e9c3b17b961" category="list-text">* 충전 방법 *: 이 시스템에서 사용할 충전 옵션을 지정합니다.</block>
+  <block id="9dbd3ac8bddbf4313a163e34e79476bf" category="inline-link">이러한 충전 방법에 대해 자세히 알아보십시오</block>
+  <block id="c2e9e869bf938477d84b552043f7a81a" category="paragraph"><block ref="0cc5783cded63ddb149e3f9f53e8f86e" category="inline-link-rx"></block>.</block>
+  <block id="8ac4cd210de5bd5fe91a871c186e8be3" category="list-text">* NetApp Support 사이트 계정 *: NetApp Support 사이트 계정을 선택합니다.</block>
+  <block id="f6b1eeef6a894819bc1138daa571ecaa" category="list-text">* 사전 구성된 패키지 *: 작업 환경에서 생성된 볼륨의 여러 요소를 결정하는 사전 구성된 4개의 패키지 중 하나를 선택합니다.</block>
+  <block id="cb2bbd3723ec0171f93e30cb1d35ebc4" category="list-text">* SMB 구성 *: 이 작업 환경에서 SMB를 사용하여 볼륨을 배포하려는 경우 CIFS 서버 및 관련 구성 요소를 설정할 수 있습니다.</block>
+  <block id="80a0d065fe120a53a92d1cbae6bd3fa2" category="paragraph">템플릿 값이 올바르게 완료되면 "Create Working Environment in AWS (single node)(AWS에서 작업 환경 생성(단일 노드))" 상자에 녹색 확인 표시가 추가됩니다.</block>
+  <block id="daa7684c9693e9b5412a05c7d060a1ef" category="inline-image-macro">더하기 버튼</block>
+  <block id="abd25867aae2404fdbef96ae0b0057ee" category="inline-xref">Cloud Volumes ONTAP 볼륨에 대한 템플릿을 생성합니다</block>
+  <block id="520d34c754a3e963e32a0fc19ab1421c" category="list-text">이 작업 환경에 대한 볼륨을 생성하기 위해 이 템플릿에 다른 작업을 추가할 수 있습니다. 이 경우 를 클릭합니다 <block ref="f928d2751b49d5f69d575bc7f78c5aae" category="inline-image-macro-rx" type="image"></block> 그런 동작을 추가합니다. 자세한 내용은 를 참조하십시오 <block ref="f498f1e6b10c72f9f04179db4da15305" category="inline-xref-macro-rx"></block> 를 참조하십시오.</block>
+  <block id="6375b33aa338dc1017d6313b28a3c363" category="section-title">템플릿을 사용하여 기존 리소스를 찾고 서비스를 활성화하는 예</block>
+  <block id="68f7b83818f20b7e8979e2dda6a61b21" category="paragraph">Find Existing Resources_action을 사용하여 특정 작업 환경을 찾거나 기존 볼륨을 찾아 해당 볼륨에서 클라우드 서비스를 활성화할 수 있습니다. 이 작업은 다양한 필터를 제공하므로 관심 있는 리소스만으로 검색 범위를 좁힐 수 있습니다.</block>
+  <block id="595f244394c7e3873ac213fc3b4a7521" category="admonition">현재 Cloud Volumes ONTAP, 사내 ONTAP 및 Azure NetApp Files 시스템 내에서만 볼륨을 찾을 수 있습니다. Cloud Volumes ONTAP 및 사내 ONTAP 볼륨에서만 클라우드 백업을 설정할 수 있습니다. 추가 리소스 및 서비스는 나중에 사용할 수 있습니다.</block>
+  <block id="3f20fe561065439fa56df3c9ca94e6ed" category="section-title">기존 볼륨을 찾고 Cloud Backup을 활성화합니다</block>
+  <block id="0ba4ecc2c8a2452e16fbf3776c91fda1" category="paragraph">Current_Find Existing Resources_action 기능을 사용하면 현재 클라우드 백업이 활성화되어 있지 않은 Cloud Volumes ONTAP 및 온-프레미스 ONTAP 작업 환경에서 볼륨을 찾을 수 있습니다. 특정 볼륨에서 Cloud Backup을 사용하도록 설정하면 이 작업은 사용자가 구성한 백업 정책을 해당 작업 환경의 기본 정책으로 설정합니다. 따라서 이러한 작업 환경에서 이후의 모든 볼륨에서 동일한 백업 정책을 사용할 수 있습니다.</block>
+  <block id="6d0c20318ee7bcc13d58fa262e33c7d2" category="inline-image-macro">새 작업 추가 페이지에서 기존 자원 찾기 작업을 선택하는 방법을 보여 주는 스크린샷</block>
+  <block id="0e9d27a36a1187dea1616df501ce108d" category="paragraph"><block ref="0e9d27a36a1187dea1616df501ce108d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="11c981e1d4ed40ea0925d9ae06dae41f" category="list-text">정의할 작업 유형으로 * 기존 자원 찾기 * 를 선택하고 * 적용 * 을 클릭합니다.</block>
+  <block id="1b733abaf243d15600d33f844e9bdc13" category="paragraph">기존 자원 찾기 작업 정의_페이지가 표시됩니다.</block>
+  <block id="10798727522d9d9973a80cddbbd083ac" category="inline-image-macro">입력해야 하는 빈 기존 자원 찾기 서식 파일을 보여 주는 스크린샷</block>
+  <block id="23b2538202f81713f750e06e99508701" category="paragraph"><block ref="23b2538202f81713f750e06e99508701" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d453807788f3b6bbd3ea47f9cbe56875" category="list-text">* 작업 이름 *: 기본값 대신 사용자 정의된 작업 이름을 입력합니다. 예를 들어 "Find Large volumes on cluster ABC and enable Backup"과 같이 입력합니다.</block>
+  <block id="463c18d84d5e845ea1d485923b7349ce" category="list-text">* 리소스 유형: * 찾으려는 리소스 유형을 선택합니다. 이 경우 Cloud Volumes ONTAP*에서 * 볼륨 을 선택할 수 있습니다.</block>
+  <block id="7d61d7a876b512b9951ebcd6b058cc77" category="paragraph">이 작업에 필요한 유일한 항목입니다. 지금 * 계속 * 을 클릭하면 사용자 환경의 모든 Cloud Volumes ONTAP 시스템에 있는 모든 볼륨 목록이 표시됩니다.</block>
+  <block id="af2373ef86f3287751a203259821db48" category="paragraph">대신 몇 개의 필터를 채워 Cloud Backup 작업을 적용할 결과 수(이 경우 볼륨)를 줄이는 것이 좋습니다.</block>
+  <block id="759a269bf5c05fa6647b728a4b6acab7" category="list-text">context_area에서 특정 작업 환경과 해당 작업 환경에 대한 기타 세부 사항을 선택할 수 있습니다.</block>
+  <block id="70b9fbef4c70dff460de52b0d7c1eb40" category="inline-image-macro">기존 자원 찾기 서식 파일에 적용할 수 있는 컨텍스트 필터를 보여 주는 스크린샷</block>
+  <block id="7a978f856247996229928441e0d8ef1d" category="paragraph"><block ref="7a978f856247996229928441e0d8ef1d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7ce9821e289ff97c6897cdf26f259fa8" category="list-text">Details_area에서 볼륨 이름과 볼륨 크기를 선택할 수 있습니다.</block>
+  <block id="f3ab419ac906615be19ae0d551c2ddd6" category="paragraph">볼륨 이름의 경우 필드를 클릭하고 5가지 옵션 중 하나를 선택합니다. 관리자가 * 자유 텍스트 * 를 선택하여 원하는 이름을 입력하도록 하거나, 볼륨 이름에 특정 접두사나 접미사가 있거나, 해당 접두사나 접미사가 _contains_특정 문자이거나, 사용자가 입력한 정규식(regex)의 규칙을 따르도록 지정할 수 있습니다.</block>
+  <block id="8567823797f59455548dc8dd1f03f80e" category="paragraph">볼륨 크기의 경우 범위를 지정할 수 있습니다. 예를 들어 모든 볼륨 크기가 100GiB에서 500GiB로 지정할 수 있습니다.</block>
+  <block id="be9642dda4ebe2b728f2c474b3d3a411" category="inline-image-macro">기존 자원 찾기 서식 파일에 적용할 수 있는 세부 정보 필터를 보여 주는 스크린샷</block>
+  <block id="817d077440da0b77af9b35e673301360" category="paragraph"><block ref="817d077440da0b77af9b35e673301360" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c253b1193d9cac2bb6fdffc90caab002" category="list-text">계속 * 을 클릭하면 페이지가 업데이트되어 서식 파일에 정의한 검색 조건이 표시됩니다.</block>
+  <block id="9fc88e3f72037f83544b6dc4a0f0e114" category="inline-image-macro">기존 자원 찾기 서식 파일에 대해 정의한 검색 조건을 보여 주는 스크린샷</block>
+  <block id="7dd1bb02dcba000872f2025a15ad1520" category="paragraph"><block ref="7dd1bb02dcba000872f2025a15ad1520" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a8bf8eaff65aa0f4ae0660056e385701" category="list-text">지금 검색 조건 테스트 * 를 클릭하여 현재 결과를 확인합니다.</block>
+  <block id="27d7b10352920ea311d933853a157434" category="inline-image-macro">연필 아이콘을 편집합니다</block>
+  <block id="33e49b40585f164240484bc804e648ef" category="list-text">결과가 예상과 다른 경우 를 클릭합니다 <block ref="8e860c5cca0144ac9d126d75205476b6" category="inline-image-macro-rx" type="image"></block> 검색 기준 _ 옆에 있는 을(를) 클릭하고 검색을 더 구체화합니다.</block>
+  <block id="95d491c21e0c934c6282c13d886a25c9" category="list-text">결과가 양호하면 * 완료 * 를 클릭합니다.</block>
+  <block id="902215290e82837ad3918c6de3db9e64" category="paragraph">Completed_Find Existing Resources_action이 편집기 창에 나타납니다.</block>
+  <block id="9979d1ff76d2ea7068844b0cfd0bdb76" category="list-text">더하기 기호를 클릭하여 다른 작업을 추가하고 * Enable Cloud Backup on Volume * 을 선택한 다음 * Apply * 를 클릭합니다.</block>
+  <block id="7ebacdda898134e4d1b0a44a8ce8b373" category="paragraph">Enable Cloud Backup on Volume _ 작업이 창에 추가됩니다.</block>
+  <block id="bbc24d39829a188624fd31cd99972f84" category="inline-image-macro">Cloud Backup 작업을 템플릿에 추가하는 단계를 보여 주는 스크린샷</block>
+  <block id="a4cbf43d9463d6f510a4d2c7af8800f2" category="paragraph"><block ref="a4cbf43d9463d6f510a4d2c7af8800f2" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="629026899287206b23bf1b8d05d2e57c" category="inline-xref">볼륨에 백업 기능 추가</block>
+  <block id="0864e2983319d781f957de96128569d4" category="list-text">이제 에 설명된 대로 백업 기준을 정의할 수 있습니다 <block ref="567736f0dbefe603b86c06be6821957e" category="inline-xref-macro-rx"></block> 따라서 템플릿이 _Find Existing Resources_action에서 선택한 볼륨에 올바른 백업 정책을 적용하도록 합니다.</block>
+  <block id="2cd168ea59a502ef9e27e6003134ad57" category="list-text">적용 * 을 클릭하여 백업 작업에 적용한 사용자 지정을 저장한 다음 완료되면 * 템플릿 저장 * 을 클릭합니다.</block>
+  <block id="fb88189ee911a47d2e0e233fefd1523c" category="section-title">기존 작업 환경을 찾습니다</block>
+  <block id="1399c696c7891af3d1972a47be151f0a" category="paragraph">기존 자원 찾기_ 동작을 사용하면 작업 환경을 찾은 다음 볼륨 만들기와 같은 다른 템플릿 작업을 사용하여 기존 작업 환경에서 쉽게 작업을 수행할 수 있습니다.</block>
+  <block id="ee14a216e8a337c2bb79d6d82521a077" category="paragraph"><block ref="ee14a216e8a337c2bb79d6d82521a077" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="68ad7010ce50e08f51cc603a02813591" category="list-text">* 작업 이름 *: 기본값 대신 사용자 정의된 작업 이름을 입력합니다. 예를 들어 "Dallas가 포함된 작업 환경 찾기"를 선택합니다.</block>
+  <block id="d12d07cdc05a227cd72eb672e87e4f6a" category="list-text">* 리소스 유형: * 찾으려는 리소스 유형을 선택합니다. 이 경우 * 작업 환경 * 을 선택합니다.</block>
+  <block id="293a4f358df2db5ec8b84c40b989f884" category="paragraph">이 작업에 필요한 유일한 항목입니다. 지금 * 계속 * 을 클릭하면 작업 환경의 모든 작업 환경 목록이 표시됩니다.</block>
+  <block id="8be93188ada53e1878b3d730f33c567d" category="paragraph">대신 몇 개의 필터를 채워 결과 수를 줄이는 것이 좋습니다(이 경우 작업 환경).</block>
+  <block id="8a6cf07a7afb6950374a6137dd3207ed" category="list-text">Details_area에서 몇 개의 필터를 정의한 후 특정 작업 환경을 선택할 수 있습니다.</block>
+  <block id="e4b9d87ee0a05c6ace352d34259ff623" category="list-text">계속 * 을 클릭하여 설정을 저장하고 * 완료 * 를 클릭합니다.</block>
+  <block id="04589f02205d83ab5273554763f29cef" category="list-text">왼쪽 위에 템플릿 이름을 입력한 다음 * 템플릿 저장 * 을 클릭합니다</block>
+  <block id="1c2460f99ff766a130c121d2511fc817" category="section-title">템플릿을 사용하여 서비스를 활성화하는 예</block>
+  <block id="411375f96ccfa37e0dbc3d0cc4f2819d" category="paragraph">서비스 템플릿을 사용하여 새로 생성한 볼륨에서 Cloud Backup, Cloud Data Sense 또는 Replication(SnapMirror) 서비스를 활성화할 수 있습니다.</block>
+  <block id="d09587f155f4de501e417ae05bd6c246" category="section-title">볼륨에 백업 기능을 추가합니다</block>
+  <block id="1ccabcbf7b43011ff18a0521cbf426d2" category="paragraph">볼륨 템플릿을 생성할 때 를 사용하여 정기적으로 볼륨의 백업을 생성하려는 템플릿을 추가할 수 있습니다<block ref="65043dfb781746b8fde5bfddb319eb97" category="inline-link-rx"></block> 서비스.</block>
+  <block id="8e50b75e57684da1ad2c63f7281c1bb2" category="admonition">이 작업은 Azure NetApp Files 볼륨에 적용되지 않습니다.</block>
+  <block id="cc7c4a3dbe40e7192b900e2b4a3f22d4" category="inline-image-macro">볼륨에 대한 백업 기능을 활성화하는 페이지의 스크린샷.</block>
+  <block id="3a5623787eadb0de7109dbf1472e4723" category="paragraph"><block ref="3a5623787eadb0de7109dbf1472e4723" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="390ceefd694c59851dd3cce7b5560a77" category="list-text">* 정책 *: 사용할 백업 정책을 선택합니다.</block>
+  <block id="2ec2f9ba216ad598e0f2a06ca8613ab2" category="list-text">* 컨텍스트 *: 기본적으로 작업 환경, 스토리지 VM 및 볼륨에 대해 변수가 채워지며, 이 동일한 템플릿에서 이전에 생성된 볼륨에 대한 백업을 생성할 것임을 나타냅니다. 따라서 원하는 작업을 모두 수행할 수 있습니다.</block>
+  <block id="45c479a3827985134b6c11fc5b56fe19" category="inline-link-macro">컨텍스트 필드를 작성합니다</block>
+  <block id="55ec93141dffeda07c8ca26ba1fa8f75" category="paragraph">다른 볼륨에 대한 백업을 생성하려면 해당 세부 정보를 수동으로 입력할 수 있습니다. 자세한 내용은 를 참조하십시오 <block ref="be096e16163144495d696eb6dce624e2" category="inline-link-macro-rx"></block> 다른 볼륨을 나타냅니다.</block>
+  <block id="1af1dabe0aa1f41e5209035cdc7e766d" category="list-text">변경 사항을 저장하려면 * 적용 * 을 클릭합니다.</block>
+  <block id="b5c5217c35ca5ffa37ec218b349e4d8e" category="section-title">볼륨에 데이터 감지 기능을 추가합니다</block>
+  <block id="7da7de40922950422b249e15e2c3102a" category="paragraph">볼륨 템플릿을 생성할 때 를 사용하여 준수 및 분류를 위해 볼륨을 스캔하려는 템플릿을 추가할 수 있습니다<block ref="4af4db8698c4a0998b2c93dbadcf8efe" category="inline-link-rx"></block> 서비스.</block>
+  <block id="b6af640e26399bc8467a4465b802ea47" category="inline-image-macro">볼륨의 스캔 기능을 활성화하는 페이지의 스크린샷.</block>
+  <block id="3f95813bf3f9fe4ef1653df2a79b2b7d" category="paragraph"><block ref="3f95813bf3f9fe4ef1653df2a79b2b7d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="273ef973fddf0605397f60b2a725e43e" category="list-text">* 컨텍스트 *: 기본적으로 작업 환경, 볼륨 이름, 볼륨 UUID, 볼륨 경로 및 프로토콜에 대한 변수가 채워지며, 이 동일한 템플릿에서 이전에 생성된 볼륨의 데이터를 스캔할 것임을 나타냅니다. 따라서 원하는 작업을 모두 수행할 수 있습니다.</block>
+  <block id="38c9050a05ab7ae3bc16a77a1ce8e787" category="paragraph">다른 볼륨에 대한 데이터를 스캔하려면 해당 세부 정보를 수동으로 입력할 수 있습니다. 자세한 내용은 를 참조하십시오 <block ref="be096e16163144495d696eb6dce624e2" category="inline-link-macro-rx"></block> 다른 볼륨을 나타냅니다.</block>
+  <block id="e0c791fcd9f870d36b0118528bd195c2" category="section-title">볼륨에 복제 기능을 추가합니다</block>
+  <block id="8c340dc334134096f68b880b42a8692c" category="inline-link">복제</block>
+  <block id="df4d3e197dd1d9726bb6d04f4f1e8c3b" category="paragraph">볼륨 템플릿을 생성할 때 를 사용하여 볼륨의 데이터를 다른 볼륨으로 복제하려는 템플릿을 추가할 수 있습니다<block ref="cce583fd996b3229b9a775a453c32d13" category="inline-link-rx"></block> 서비스. 데이터를 Cloud Volumes ONTAP 클러스터 또는 온프레미스 ONTAP 클러스터로 복제할 수 있습니다.</block>
+  <block id="8dcc2a374ce8c093526cc5152324230d" category="paragraph">복제 기능은 소스 볼륨 선택, 대상 볼륨 선택 및 복제 설정 정의라는 세 부분으로 구성됩니다. 각 섹션은 아래에 설명되어 있습니다.</block>
+  <block id="4da2d6a9396d0b82185925638b423b25" category="list-text">* 소스 세부 정보 *: 복제할 소스 볼륨에 대한 세부 정보를 입력합니다.</block>
+  <block id="cfae220ef6bc70299c0d06988e12e0b6" category="inline-image-macro">복제 소스 볼륨 위치를 정의하는 페이지의 스크린 샷</block>
+  <block id="db81be12438b4e3c3bdf3beca6e831f7" category="paragraph"><block ref="db81be12438b4e3c3bdf3beca6e831f7" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a91218a8b9b25c1cc8cec554d31e45c0" category="list-text">기본적으로 작업 환경, 스토리지 VM 및 볼륨에 대해 처음 세 개의 변수가 채워져 있으므로 이 동일한 템플릿에서 이전에 생성된 볼륨을 복제할 것임을 나타냅니다. 따라서 원하는 작업을 모두 수행할 수 있습니다.</block>
+  <block id="7983c642c200e679fc182d6cda6332be" category="paragraph">다른 볼륨을 복제하려는 경우 이러한 세부 정보를 수동으로 입력할 수 있습니다. 자세한 내용은 를 참조하십시오 <block ref="be096e16163144495d696eb6dce624e2" category="inline-link-macro-rx"></block> 다른 볼륨을 나타냅니다.</block>
+  <block id="f5eccf7ec10f562fd7945167b11881ca" category="list-text">복제를 수행하려면 소스 및 대상 작업 환경이 인터클러스터 LIF를 통해 연결되어 있어야 합니다. 소스 작업 환경의 인터클러스터 LIF IP 주소를 입력합니다.</block>
+  <block id="174102b086067ead19a50d7ce2f8211a" category="paragraph">이 정보를 보려면 작업 환경을 두 번 클릭하고 메뉴 아이콘을 클릭한 다음 정보 를 클릭합니다.</block>
+  <block id="af686206beaeefe98fe2a5a5cac4ffec" category="list-text">* 대상 세부 정보 *: 복제 작업에 의해 생성될 대상 볼륨에 대한 세부 정보를 입력합니다.</block>
+  <block id="c5c1dec1eb73121500306c6b9b8bd6c6" category="inline-image-macro">복제 대상 볼륨 위치를 정의하는 페이지의 스크린 샷</block>
+  <block id="5cf0c8384bbad7232646ccbe04ed32b0" category="paragraph"><block ref="5cf0c8384bbad7232646ccbe04ed32b0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="99b3d3bf418d271f350304cf1acdcd45" category="list-text">볼륨을 생성할 작업 환경을 선택합니다.</block>
+  <block id="faccd2324eec8e1960bb88fd7aa8cdb6" category="list-text">볼륨이 상주할 스토리지 VM을 선택합니다.</block>
+  <block id="34a5bd93b44b1a265bd952eb2c9f4c52" category="list-text">볼륨을 온프레미스 ONTAP 클러스터가 아닌 Cloud Volumes ONTAP 클러스터에 복제할 때 대상 공급자(AWS, Azure 또는 GCP)를 지정해야 합니다.</block>
+  <block id="744304af5427c93a0de90b14d5d0a697" category="list-text">Cloud Volumes ONTAP 클러스터로 볼륨을 복제할 때 타겟 볼륨에서 볼륨 계층화를 사용할 수 있는지 여부를 지정할 수 있습니다.</block>
+  <block id="8658f363929ef58e4d7bb3ba3dfa8f72" category="list-text">대상 볼륨 이름의 경우 필드를 클릭하고 5개 옵션 중 하나를 선택합니다. 관리자가 * 자유 텍스트 * 를 선택하여 원하는 이름을 입력하도록 하거나, 볼륨 이름에 특정 접두사나 접미사가 있거나, 해당 접두사나 접미사가 _contains_특정 문자이거나, 사용자가 입력한 정규식(regex)의 규칙을 따르도록 지정할 수 있습니다.</block>
+  <block id="5fa8f034006e1b96b6e2a47890b3ae33" category="list-text">복제를 수행하려면 소스 및 대상 작업 환경이 인터클러스터 LIF를 통해 연결되어 있어야 합니다. 대상 작업 환경의 인터클러스터 LIF IP 주소를 입력합니다.</block>
+  <block id="7fcd5d25a42a71b6edb4a94ce9593493" category="list-text">볼륨이 상주할 애그리게이트를 선택합니다.</block>
+  <block id="cd5d05c14061b6263cc650d83d3d5659" category="list-text">볼륨을 온프레미스 ONTAP 클러스터가 아닌 Cloud Volumes ONTAP 클러스터로 복제하는 경우 새 볼륨에 사용할 디스크 유형을 지정해야 합니다.</block>
+  <block id="4d10b6637923bf1b343d93d2f5f97467" category="list-text">* 복제 세부 정보 *: 복제 작업의 유형 및 빈도에 대한 세부 정보를 입력합니다.</block>
+  <block id="e735bf2a268997d317453aed9b1e1464" category="inline-image-macro">관계의 복제 설정을 정의하는 페이지의 스크린샷입니다.</block>
+  <block id="6903a733d838513debd657e6e4b52918" category="paragraph"><block ref="6903a733d838513debd657e6e4b52918" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2e05b02199241577d21f467e3a216fc1" category="inline-link">복제 정책</block>
+  <block id="23647b4aee667229f438bac6d37c6f14" category="list-text">를 선택합니다<block ref="fce626f96b8a582bd914af9774e3f4bd" category="inline-link-rx"></block> 사용할 수 있습니다.</block>
+  <block id="28b7ceda6afe52e7cddb056ae1cc1b42" category="list-text">1회 복제 또는 반복 복제 일정을 선택합니다.</block>
+  <block id="a890fcd17657bbd0255d609a9ac66f87" category="inline-link-macro">변경 사항 보고서에서 이 내용이 어떻게 표시되는지 확인합니다</block>
+  <block id="550aba8dd2351fcca6220e9726d1b0b4" category="list-text">변경 사항 보고서에 지연 시간, 상태 및 마지막 전송 시간과 함께 SnapMirror 관계의 복제 상태가 포함되도록 하려면 복제 상태 모니터링을 설정합니다. <block ref="e9afe1d61d7f4e2024b782abd0cbb1af" category="inline-link-macro-rx"></block>.</block>
+  <block id="a17ec67a32a0998705df91c25c3b8420" category="list-text">전송 속도 제한을 설정할지 여부를 선택한 다음 데이터를 전송할 수 있는 최대 속도(KB/초)를 입력합니다. 고정 값을 입력하거나, 최소 및 최대 를 제공하고, 스토리지 관리자가 해당 범위에서 값을 선택하도록 할 수 있습니다.</block>
+  <block id="e03c4d2a8455ec2482acf1f509382257" category="section-title">서식 파일을 만든 후 수행할 작업</block>
+  <block id="856a9d1850ea33e764f9c6e201455be4" category="paragraph">템플릿을 생성한 후에는 스토리지 관리자에게 새 작업 환경 및 볼륨을 생성할 때 템플릿을 사용할 것을 알려야 합니다.</block>
+  <block id="73d6735a0765fae8b09bab1a9aa14293" category="inline-link-macro">템플릿을 사용하여 리소스 만들기</block>
+  <block id="916d7a2812bff61e120f6cb051a97f08" category="paragraph">이 두 사용자를 가리킬 수 있습니다 <block ref="00987a40189f413ef051200970901187" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
+  <block id="a0aa6f0787dc9e06db535b8b92d3da0a" category="section-title">템플릿을 편집하거나 삭제합니다</block>
+  <block id="ffb2a1eed8ad8c67507aad3d1a39caa3" category="paragraph">매개 변수를 변경해야 하는 경우 템플릿을 수정할 수 있습니다. 변경 내용을 저장한 후 템플릿에서 생성된 모든 이후 리소스에는 새 매개 변수 값이 사용됩니다.</block>
+  <block id="47ea4ecfbdf34424db879d30ee9d311b" category="paragraph">서식 파일이 더 이상 필요하지 않으면 삭제할 수도 있습니다. 서식 파일을 삭제해도 해당 서식 파일로 만든 자원에는 영향을 주지 않습니다. 그러나 템플릿을 삭제한 후에는 변경 사항 준수 검사를 수행할 수 없습니다.</block>
+  <block id="b44b7e1f0ab25d2be436ede5d937b8c0" category="inline-image-macro">템플릿을 수정하거나 템플릿을 삭제하는 방법을 보여 주는 스크린샷</block>
+  <block id="e11c8770592f0241028d35b02f4f9619" category="paragraph"><block ref="e11c8770592f0241028d35b02f4f9619" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d3b35f794b6029f799ac51ebc0e6aa73" category="section-title">서식 파일의 복사본을 만듭니다</block>
+  <block id="03332676c38cbd1189f2240710881e3a" category="paragraph">기존 템플릿의 복사본을 만들 수 있습니다. 이렇게 하면 기존 템플릿과 매우 유사한 새 템플릿을 만들려는 경우에 많은 시간을 절약할 수 있습니다. 새 이름으로 복제한 다음 서식 파일을 편집하여 서식 파일을 고유하게 만드는 두 개의 항목을 변경할 수 있습니다.</block>
+  <block id="763165e5bc9a9a1c445da7d2ef9edaf1" category="inline-image-macro">서식 파일을 복제하는 방법을 보여 주는 스크린샷</block>
+  <block id="45a0059a48c059287929332e05648327" category="paragraph"><block ref="45a0059a48c059287929332e05648327" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">법적 고지</block>
+  <block id="c59ae8d7beeb519a23478ab048af482c" category="paragraph"><block ref="c59ae8d7beeb519a23478ab048af482c" category="inline-link-macro-rx"></block></block>
+  <block id="6f2ac1cf1da8ec34232c651d4bba0149" category="paragraph"><block ref="6f2ac1cf1da8ec34232c651d4bba0149" category="inline-link-macro-rx"></block></block>
+  <block id="4940124e8487cb4ea36f1511a195cf66" category="inline-link-macro">Cloud Manager 3.9에 대한 고지 사항</block>
+  <block id="c069fcc68c5dfa73ccc99924c836cae9" category="list-text"><block ref="c069fcc68c5dfa73ccc99924c836cae9" category="inline-link-macro-rx"></block></block>
+  <block id="b5b938da8856a26053eadd6c64760087" category="inline-link-macro">애플리케이션 템플릿에 대한 고지 사항</block>
+  <block id="c5339dceaf3a5c5a6c1b7dc27a40604b" category="list-text"><block ref="c5339dceaf3a5c5a6c1b7dc27a40604b" category="inline-link-macro-rx"></block></block>
+  <block id="f56a22734fbef43dcef97b492e9cd352" category="summary">볼륨 이름과 같은 작업 사이에 값을 전달할 수 있는 템플릿을 만들 때, 작업을 함께 연결할 조건부 분기(새 볼륨에서 백업 사용)를 사용할 때, 사용자가 템플릿을 사용할 때 리소스를 사용자 지정하는 데 도움이 되는 특정 기능이 있습니다.</block>
+  <block id="889ecb758e53f24c9efd4553bc09c14a" category="doc">템플릿 구성 요소</block>
+  <block id="4312f94678a5f3a99677eff317710d96" category="section-title">특수 템플릿 컨트롤</block>
+  <block id="d5e78bfdae44e43da50bb405d5cd401f" category="paragraph">서식 파일을 만들기 전에 서식 파일의 매개 변수 값을 미리 채울 때 설정할 수 있는 몇 가지 특수 옵션을 이해해야 합니다.</block>
+  <block id="f7951f72b872a8abe85b8d46142331e7" category="inline-image-macro">매개 변수 값에 설정할 수 있는 옵션에 대한 편집 가능 및 드리프트의 스크린샷.</block>
+  <block id="f20206d79ec146d281beed50d8e29708" category="paragraph"><block ref="f20206d79ec146d281beed50d8e29708" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="92c1f46b9da02a5d7bbcff6543bd9588" category="section-title">편집 가능 확인란</block>
+  <block id="3f8e4e6365aa394b3479fdef75fe9f72" category="paragraph">스토리지 관리자가 템플릿에 입력한 값을 덮어쓸 수 있도록 하려면 이 확인란을 선택합니다. 이렇게 하면 스토리지 관리자가 값을 제안하지만 리소스를 생성할 때 값을 사용자 지정할 수 있습니다.</block>
+  <block id="c1740fe5b39f93f6c892f09718e037b2" category="paragraph">이 옵션을 선택하지 않으면 사용자가 값을 변경할 수 없으며 관리자가 리소스를 배포할 때 템플릿의 하드 코드된 값이 항상 사용됩니다.</block>
+  <block id="c476134c72fb48531290a4040a823edc" category="section-title">드리프트 확인란</block>
+  <block id="85ae8cb8d8b796e60de4989a08de70c5" category="paragraph">이 확인란을 선택하면 Cloud Manager가 템플릿으로 리소스를 생성할 때 매개 변수에 대해 입력한 하드 코딩된 값을 모니터링합니다. 나중에 변경 사항 보고서를 실행하여 변경 사항 으로 구성된 필드가 더 이상 템플릿 설정과 호환되지 않는 필드를 확인할 수 있습니다.</block>
+  <block id="b24825d81b9d78c2ec0b3766ce0f0e29" category="paragraph">이 옵션을 선택하지 않으면 사용자가 리소스를 만든 후 값을 원하는 값으로 변경할 수 있습니다.</block>
+  <block id="dc61d8962272ba87fc289d3611028a92" category="admonition">드리프트 기능이 작동하려면 템플릿의 일부 매개변수에 대해 드리프트를 정의한 후 템플릿에 대해 드리프트 기능을 활성화해야 합니다. 이 단계는 템플릿을 생성할 때 마지막 단계입니다. 드리프트는 매개 변수에 대해 활성화되었지만 템플릿에서 활성화되지 않은 경우 작동하지 않습니다.</block>
+  <block id="14425fa948dd33c64b1ac596d827664d" category="section-title">필드에 정규식(regex) 사용</block>
+  <block id="789deba0d8cee492441e0edbdd3b1443" category="paragraph">템플릿 내에 regex를 입력하여 관리자가 필드에 입력할 수 있는 값(예: "볼륨 이름" 및 "공유 이름")을 정의할 수 있는 몇 가지 필드가 있습니다.</block>
+  <block id="92d0236acb01b23304b36e13b20df879" category="inline-image-macro">볼륨 이름에 대해 허용된 값을 정의하기 위해 regex를 사용하는 스크린샷.</block>
+  <block id="8618076424bfb56bff4b8d378642afb7" category="paragraph"><block ref="8618076424bfb56bff4b8d378642afb7" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="bd79c94f5c040103b6ee92a27142a209" category="paragraph">예를 들어, 볼륨 이름에 대한 regex로 "^[a-zA-Z][0-9a-zA-Z_]{0,149}$"를 입력하면 "_이름은 알파벳 문자로 시작해야 하며 숫자, 문자 또는 밑줄만 포함할 수 있으며 길이는 150자 이하여야 합니다."라는 의미입니다.</block>
+  <block id="d9b7b2a8c18514b566365444476ee67b" category="section-title">템플릿 작업 사이에 값을 전달합니다</block>
+  <block id="49c2ea485e68d2177e58bb2d451473c8" category="paragraph">템플릿은 이전 작업의 정보를 사용하여 향후 작업에서 필드를 채울 수 있습니다. 예를 들어, 클라우드 백업 기능을 사용할 볼륨의 이름을 정의할 때 Cloud Volumes ONTAP 생성 작업에서 스토리지 관리자가 볼륨 이름으로 입력한 값을 사용하도록 백업 조치를 지시할 수 있습니다.</block>
+  <block id="317d9ac287a0bb30f0b154a9372237b4" category="paragraph">AppTemplate 서비스에서 사용할 수 있는 정보에는 세 가지 유형이 있습니다.</block>
+  <block id="79bc4a04a5f308a67f608558bf0e314a" category="list-text">입력 값 - 이전 템플릿 작업의 필드에 스토리지 관리자가 입력한 실제 값입니다.</block>
+  <block id="86d263367d069f32b10ed5bb15d5876b" category="list-text">출력 값 - 이전 템플릿 작업에서 리소스를 생성한 후 Cloud Manager에서 생성하는 값입니다.</block>
+  <block id="cb1be534cc7a13fb27acf340f07c83b6" category="list-text">사용자 지정 값 입력 - 이 값은 사용자가 입력한 값이며 템플릿의 이전 작업에서 액세스할 수 없습니다.</block>
+  <block id="fc8fb6e55d63eccfe4d2093ef3d494bf" category="paragraph">예를 들어, 볼륨에 대한 규정 준수 검사를 활성화하려면 Cloud Data Sense 서비스에 스토리지 관리자가 입력하는 "볼륨 이름"(입력 값)과 Cloud Manager가 볼륨을 생성할 때 생성하는 "볼륨 uuid"(출력 값)가 모두 필요합니다.</block>
+  <block id="536e2c2dd1b0f2e4362deffc386760c4" category="paragraph">다음 그림에서는 템플릿의 클라우드 데이터 감지 작업 섹션에 이 정보를 입력하는 방법을 보여 줍니다.</block>
+  <block id="a4d99746ded90308d15ecf5dc8850229" category="inline-image-macro">이전 작업에서 입력한 값을 사용하여 다른 작업에서 필드를 채우는 방법을 보여 주는 그림</block>
+  <block id="eefa405d25c68122a3d10c7be99b3fed" category="paragraph"><block ref="eefa405d25c68122a3d10c7be99b3fed" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1e7ffb254a56e57a7a94185e202f98b7" category="section-title">조건을 사용하여 논리 문에 따라 다른 작업을 수행합니다</block>
+  <block id="933e850f0252230afcc3081c478f82cb" category="paragraph">조건은 스토리지 관리자가 템플릿을 실행할 때 조건이 참인지 거짓인지에 따라 다른 작업을 실행하도록 템플릿에 지정합니다. 다음과 같이 * Logical IF * 작업을 선택하여 조건을 추가합니다.</block>
+  <block id="80f465f960c99f0bf9c9dda68bd2ff80" category="inline-image-macro">서식 파일에 조건문을 추가하는 방법에 대한 스크린샷</block>
+  <block id="2f732de965d52c1cf23ba8cc9dbdc7b1" category="paragraph"><block ref="2f732de965d52c1cf23ba8cc9dbdc7b1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e7972af994bafc7ee1059b02b60c648d" category="paragraph">예를 들어, 볼륨에 50GB보다 큰 용량이 있는 경우 해당 볼륨에 대해 Cloud Backup을 활성화해야 한다는 지침이 있을 수 있습니다. 볼륨의 용량이 더 작은 경우 Cloud Backup이 활성화되지 않습니다. 아래 그림과 같이 템플릿에서 이 기능을 구현할 수 있습니다.</block>
+  <block id="af1dd10b1395740a8581cea239cb13fc" category="inline-image-macro">조건부로 클라우드 백업을 활성화하기 위해 템플릿에서 조건을 사용하는 방법을 보여 주는 스크린샷.</block>
+  <block id="81943cf2af4bc753aa5e517503f627e6" category="paragraph"><block ref="81943cf2af4bc753aa5e517503f627e6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d94635611474af73ec85b190b28449bd" category="paragraph">조건은 다음 두 부분으로 구성됩니다.</block>
+  <block id="01928da743a4e955b96a5b859c5f4bc4" category="list-text">규칙 - true 또는 false로 확인 중인 항목입니다.</block>
+  <block id="07876d2610f838d9cb19ae7aeadd98be" category="list-text">및/또는 구문 - 여러 규칙을 사용하여 추가 작업을 추가할지 여부를 더욱 구체화할 수 있습니다.</block>
+  <block id="c962626fb4ad9b65cc3a4217695f094c" category="paragraph">규칙은 다음 세 부분으로 구성됩니다.</block>
+  <block id="7960c7072233e2369dad8e54b3c23d04" category="paragraph">* 소스 필드 * - 비교할 값을 가져올 위치입니다.</block>
+  <block id="46b1885cab50ba7f852ee7e4296586b1" category="list-text">액션으로부터 입력 값 가져오기 - 스토리지 관리자가 이전 템플릿 작업의 필드에 입력한 실제 값입니다.</block>
+  <block id="2e1dd6450d9c9986cc77c74a7e699498" category="list-text">액션으로부터 출력 값 가져오기 - 이전 템플릿 작업에서 리소스를 생성한 후 Cloud Manager가 생성한 값입니다.</block>
+  <block id="ac2e89a4baae83530e11a9c64165f130" category="list-text">값 입력 - 입력한 값입니다. 템플릿의 이전 작업에서 액세스할 수 없습니다. 기존 볼륨 등 이미 존재하는 리소스의 값일 수 있습니다.</block>
+  <block id="f7d6dca310f4edc482b1d3bd0cdfb18f" category="paragraph">* 연산자 * - 비교에 사용되는 연산자입니다. 옵션은 * 같음 *, * 같지 않음 *, * 보다 큼 *, * 보다 작음 *, * 보다 크거나 같음 *, * 보다 작거나 같음 * 입니다.</block>
+  <block id="67547dca721bdbf95912a7906fe534d0" category="paragraph">* 필드 값 * - 비교할 실제 값입니다. 옵션은 _Source 필드 _ 와(과) 동일합니다.</block>
+  <block id="b0d1e1e2323f9c0a905de14efcf597fc" category="paragraph">및/또는 문을 사용하면 여러 규칙이 True 또는 False로 평가되는지 여부에 따라 템플릿을 실행할 때 사용자에게 추가 작업을 조건부로 추가할 수 있습니다. * 및 * 는 모든 규칙이 참 또는 거짓이어야 하며 * 또는 * 는 규칙 중 하나만 참 또는 거짓이어야 합니다.</block>
+  <block id="ebb6a65b01a975d2a1a81fadb941a41c" category="paragraph">규칙과 함께 및 및 또는 문을 모두 사용할 경우 평가 프로세스는 표준 수학 순서를 따릅니다. 여기서 "and"는 "or"가 됩니다. 예를 들면 다음과 같습니다.</block>
+  <block id="d53609834d8e761d8b38e21f9aa36fda" category="list-text">Rule1&gt; 또는 &lt;Rule2&gt; 및 &lt;rule3&gt;</block>
+  <block id="313a2072e1da794cb340b46d310d902f" category="paragraph">이 문은 &lt;Rule1&gt; 또는 (&lt;Rule2&gt; 및 &lt;rule3&gt;) 순서로 평가됩니다.</block>
+  <block id="56d67841b13dbb098570cf7a145dc5e2" category="summary">응용 프로그램 템플릿 서비스를 사용하면 작업 환경에서 리소스 생성을 표준화할 수 있습니다. 예를 들어, 스토리지 관리자가 템플릿을 사용하여 볼륨을 생성할 때 나중에 적용되는 "볼륨 템플릿"에서 필요한 매개 변수를 하드 코딩할 수 있습니다. 여기에는 필요한 디스크 유형, 크기, 프로토콜, 스냅샷 정책, 클라우드 공급자, 있습니다. 생성된 모든 볼륨에 대해 Cloud Backup과 같은 특정 서비스를 설정할 수도 있습니다.</block>
+  <block id="1e224f34533457876fc2705dd7d627b7" category="doc">애플리케이션 템플릿에 대해 자세히 알아보십시오</block>
+  <block id="02bd563567bb9af0bfe52e899eb30ab6" category="paragraph">애플리케이션 템플릿 서비스를 사용하면 작업 환경에서 리소스 생성을 표준화할 수 있습니다. 예를 들어, 스토리지 관리자가 템플릿을 사용하여 볼륨을 생성할 때 나중에 적용되는 "볼륨 템플릿"에서 필요한 매개 변수를 하드 코딩할 수 있습니다. 여기에는 필요한 디스크 유형, 크기, 프로토콜, 스냅샷 정책, 클라우드 공급자, 있습니다. 생성된 모든 볼륨에 대해 Cloud Backup과 같은 특정 서비스를 설정할 수도 있습니다.</block>
+  <block id="29c77a5a00dda7efae90c176f1eaa37b" category="paragraph">스토리지 관리자는 템플릿을 사용하여 데이터베이스, 이메일 또는 스트리밍 서비스와 같이 구축된 각 애플리케이션의 워크로드 요구사항에 최적화된 볼륨을 쉽게 생성할 수 있습니다. 또한 각 볼륨이 각 애플리케이션에 맞게 최적의 상태로 생성되므로 스토리지 설계자가 손쉽게 작업할 수 있습니다.</block>
+  <block id="210f5d9b5eb905e1dad5d3a9236d73af" category="paragraph">애플리케이션 템플릿은 다음과 같은 기능과 이점을 제공합니다.</block>
+  <block id="3a07949495aa0f10524a38b2f8b42ff9" category="list-text">인프라의 설계 및 개발을 자동화하고 개선합니다</block>
+  <block id="628898f2daed85c109f1e353f32ae510" category="list-text">클라우드 백업 및 클라우드 데이터 센스와 같은 다양한 NetApp 클라우드 서비스를 활성화할 수 있는 단일 위치를 제공합니다</block>
+  <block id="b56e74814d72e13b8bd9eb4561010dba" category="list-text">변경된 리소스와 더 이상 템플릿을 준수하지 않는 리소스 식별("드리프트" 기능 사용)</block>
+  <block id="8c1079a8c3d5e5b11329bf8605fb5f44" category="section-title">"드리프트"란 무엇입니까?</block>
+  <block id="118aedda50dccbbf52d8108f072f5aed" category="paragraph">"변경 사항"을 사용하면 Cloud Manager에서 템플릿을 사용하여 리소스를 생성할 때 사용되는 매개 변수 값을 모니터링할 수 있습니다. 이 때 "드리프트"는 자원이 변경된 시기를 식별할 수 있으므로 수동으로 조정하여 템플릿을 다시 준수하도록 할 수 있습니다. 나중에 자원이 규정 준수 상태가 아니면 사용자의 변경 내용을 반대로 변경하여 템플릿에서 생성된 모든 리소스가 규정 준수 상태로 자동 전환되도록 할 수 있습니다.</block>
+  <block id="535863b7811f106bde3e7f273a118764" category="inline-link-macro">드리프트에 대해 자세히 알아보십시오</block>
+  <block id="ab043d15e26e04a4e88771647e66f422" category="paragraph"><block ref="070f7b254d8faecc6fc5a699202bdab9" category="inline-link-macro-rx"></block>.</block>
+  <block id="04d8b8693a17205c619758eaa8d300e2" category="section-title">사용 가능한 템플릿 작업</block>
+  <block id="1521fcd4ef1bd7f293c2968ccf8c8162" category="paragraph">템플릿은 일부 미리 정의된 값이 있는 "작업" 체인입니다. 다음 작업을 포함하는 템플릿을 작성할 수 있습니다.</block>
+  <block id="d7b818155971ac6a308c49db2d58706d" category="paragraph">* 리소스 작업: *</block>
+  <block id="afc7000b969456a3160fc4505fb2cc0b" category="list-text">Cloud Volumes ONTAP 볼륨 생성(AWS, Azure 또는 GCP)</block>
+  <block id="13a5ac55db7d05c915e23a24a2096643" category="list-text">Azure NetApp Files 볼륨을 생성합니다</block>
+  <block id="aa2021a9b8c47541aa967f65a329bdea" category="list-text">온프레미스 ONTAP 볼륨을 생성합니다</block>
+  <block id="4850ffe766acbb8beb6c7c24ebcfaf4b" category="list-text">Cloud Volumes ONTAP 작업 환경(AWS에 단일 노드 또는 HA 시스템) 생성</block>
+  <block id="d1287a3b275ab8ba01a5fff6e4888348" category="list-text">특정 기준을 충족하는 기존 리소스 찾기(기존 리소스에 "서비스" 작업 적용 가능)</block>
+  <block id="de66c35536cd0fdc78f33d76a51b81ab" category="paragraph">* 서비스 조치: *</block>
+  <block id="c7f54fc101fff8114fd0bab318e81454" category="list-text">활성화<block ref="65043dfb781746b8fde5bfddb319eb97" category="inline-link-rx"></block> 볼륨(Azure NetApp Files에는 적용되지 않음)</block>
+  <block id="b691f77f5b87583a1ecac4f114cb70cf" category="list-text">활성화<block ref="4af4db8698c4a0998b2c93dbadcf8efe" category="inline-link-rx"></block> 볼륨에</block>
+  <block id="99869d72f8362c5cb7e7d08bc7a9ad39" category="list-text">활성화<block ref="f2bb37938a60ba7c308705367c1f4d0b" category="inline-link-rx"></block> 볼륨(Azure NetApp Files에는 적용되지 않음)</block>
+  <block id="1872302bd774dd65cb025cb6c760357c" category="paragraph">예를 들어, Cloud Volumes ONTAP 볼륨을 생성하는 템플릿을 생성할 수 있습니다. 또는 Cloud Volumes ONTAP 볼륨을 생성한 다음 해당 볼륨에서 클라우드 백업을 사용하도록 설정합니다. 또는 Cloud Volumes ONTAP 볼륨을 생성한 다음 해당 볼륨에서 Cloud Backup_and_Cloud Data Sense를 사용할 수 있습니다.</block>
+  <block id="3fb67d827d434a38ea3f2b8aca181ada" category="paragraph">NetApp은 시간이 지남에 따라 더 많은 조치를 취할 것입니다.</block>
+  <block id="1374295994ebaaa886b32c9c6c0e7031" category="section-title">응용 프로그램 템플릿의 작동 방식</block>
+  <block id="587ef6992d7b60381821e833b1402f19" category="paragraph">응용 프로그램 템플릿 서비스는 3개 부분으로 구성됩니다. 템플릿 실행 결과 사용 가능한 템플릿 "작업", 사용자 지정된 애플리케이션 템플릿 및 배포된 리소스 다음 이미지는 각 구성 요소 간의 관계를 보여줍니다.</block>
+  <block id="f5afa7cf8be08a4f697b8293dad144b2" category="inline-image-macro">응용 프로그램 템플릿을 만들고 사용하는 데 관련된 여러 사용자의 다이어그램</block>
+  <block id="ecfa39b6560418cfe2345a90c8e7e31b" category="paragraph"><block ref="ecfa39b6560418cfe2345a90c8e7e31b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="fed74dbc8e98acceae8b4538b3ad2067" category="paragraph">높은 수준에서 템플릿은 다음과 같이 작동합니다.</block>
+  <block id="83fe213d4e31bface1f9e62afb1dec57" category="list-text">NetApp은 사용 가능한 템플릿 "조치"를 정의합니다.</block>
+  <block id="d5faf5a6584d91a0f5b4616090f2ec8c" category="paragraph">예를 들어, Cloud Volumes ONTAP 볼륨 또는 Azure NetApp Files 볼륨을 생성하는 "작업".</block>
+  <block id="1ad8e87e4651a2cc69c46159a02233b3" category="list-text">스토리지 설계자는 애플리케이션 템플릿을 생성하는 데 사용할 "작업"을 선택한 다음 나열된 매개 변수에 대해 특정 값을 하드 코딩합니다.</block>
+  <block id="2c0f798d8b592eb8938ac2f2c3e3a12a" category="paragraph">예를 들어, Oracle 데이터베이스의 워크로드를 처리하는 데 사용되는 Cloud Volumes ONTAP 볼륨의 고속 디스크와 대용량 RAM을 선택합니다. 또한 각 볼륨에 대해 백업을 수행해야 합니다.</block>
+  <block id="480b6a5d9ee4db8a0ae283b6de8df01f" category="list-text">스토리지 관리자는 템플릿을 사용하여 사용할 애플리케이션에 최적화된 리소스를 생성합니다.</block>
+  <block id="f8f85ac75a9d32ac7e4bd19a88c88489" category="paragraph">예를 들어 데이터베이스에 대해 생성된 볼륨 템플릿을 사용하여 Oracle 데이터베이스에 사용할 볼륨을 생성합니다.</block>
+  <block id="537f35739e01ac333f01ac9b4cbc3e9f" category="list-text">이 서비스는 스토리지 설계자가 지정한 "변경 사항" 기능을 사용하여 템플릿에 정의된 특정 리소스 설정을 추적합니다.</block>
+  <block id="918477379facc98d5afa72e735ec908b" category="paragraph">애플리케이션 템플릿 기능을 사용하려면 라이센스가 필요하지 않으며 모든 Cloud Manager 사용자가 무료로 사용할 수 있습니다.</block>
+  <block id="2aa9db43c73bb2f52c729395f9446dd5" category="admonition">템플릿을 사용하여 생성된 리소스에 클라우드 서비스를 적용할 수 있습니다. 예를 들어, 모든 볼륨에서 Cloud Backup을 사용하도록 설정할 수 있습니다. 이 경우 백업 서비스를 사용하는 비용과 백업 파일이 사용하는 오브젝트 스토리지 공간에 대한 비용이 있습니다.</block>
+  <block id="e646e16bee8b32e6ea29e30d01970a6c" category="section-title">제한 사항</block>
+  <block id="2dac04d6ed3555b2d2d489b2bc8c35cd" category="list-text">응용 프로그램 템플릿 서비스는 Gov 클라우드 지역 또는 인터넷 액세스 권한이 없는 사이트에서 지원되지 않습니다.</block>
+  <block id="5853165343224a78fee94389519a9b28" category="list-text">템플릿을 사용하여 기존 애그리게이트에 Cloud Volumes ONTAP 볼륨을 생성할 수는 없습니다. 새 볼륨이 새 Aggregate에 생성됩니다.</block>
+  <block id="cbabd9bfcb3ce90ea05504c320db481e" category="summary">조직에서 특정 워크로드 및 애플리케이션에 최적화된 작업 환경 또는 볼륨을 생성하기 위해 구축한 애플리케이션 템플릿 중 하나를 선택합니다. 또한 템플릿을 사용하여 볼륨 또는 기존 볼륨에서 Cloud Backup, Cloud Data Sense 및 복제(SnapMirror)를 활성화할 수도 있습니다.</block>
+  <block id="2d26910773af1a0f9d4d48400c5c93b1" category="doc">템플릿을 사용하여 리소스를 만들거나 수정합니다</block>
+  <block id="c66b8415e6c06857c4a2df8e4beb665d" category="inline-link">복제(SnapMirror)</block>
+  <block id="9552710f5d08d8e046e5e38b40dd0754" category="paragraph">조직에서 특정 워크로드 및 애플리케이션에 최적화된 작업 환경 또는 볼륨을 생성하기 위해 구축한 애플리케이션 템플릿 중 하나를 선택합니다. 템플릿을 사용하여 를 활성화할 수도 있습니다<block ref="65043dfb781746b8fde5bfddb319eb97" category="inline-link-rx"></block>,<block ref="4af4db8698c4a0998b2c93dbadcf8efe" category="inline-link-rx"></block>, 및<block ref="7b4b255123bb321e706fd8a6488dad10" category="inline-link-rx"></block> 생성된 볼륨 또는 기존 볼륨에 대해 선택합니다.</block>
+  <block id="5f29105c4fcb4fd7664c9b573f2325b4" category="paragraph">템플릿을 사용하여 Cloud Volumes ONTAP, Azure NetApp Files 및 사내 ONTAP 시스템에 대한 볼륨을 생성할 수 있습니다.</block>
+  <block id="e0fb2c2abefd11630ebc42b8a6eb3570" category="list-text">템플릿을 사용하여 Cloud Volumes ONTAP, 온프레미스 ONTAP 또는 Azure NetApp Files 시스템의 볼륨을 생성하기 전에 볼륨이 구축될 적절한 작업 환경에 액세스할 수 있는지 확인하십시오.</block>
+  <block id="e04a6c526d4b3218b5b39dab077db37c" category="list-text">템플릿이 같은 볼륨에 클라우드 서비스를 활성화하는 경우<block ref="65043dfb781746b8fde5bfddb319eb97" category="inline-link-rx"></block> 또는<block ref="4af4db8698c4a0998b2c93dbadcf8efe" category="inline-link-rx"></block>에서 서비스가 활성화되어 있고 사용 중인 환경에서 라이센스가 부여되었는지 확인합니다.</block>
+  <block id="f931f9fe2a71453ad570183c341aa8ad" category="paragraph">AppTemplate * 서비스를 선택하고 * Templates * 탭을 클릭합니다.</block>
+  <block id="8e11a084ad23a73bf5ea573d54dded8e" category="paragraph">템플릿을 선택하고 * 템플릿 실행 * 을 클릭한 다음 편집 가능한 필드에 값을 입력하여 리소스를 생성합니다.</block>
+  <block id="72e3ca24265542fce89dd834f12f4619" category="list-text">Cloud Volumes ONTAP 볼륨을 생성할 때 Cloud Volumes ONTAP 작업 환경을 사용할 수 있는지 확인합니다.</block>
+  <block id="be34f1201bb3e74c3a66c39a92d09bee" category="list-text">온-프레미스 ONTAP 볼륨을 만들 때 온-프레미스 ONTAP 작업 환경을 사용할 수 있는지 확인합니다.</block>
+  <block id="05c907c9bac7ddec874ec0fcb09aad0c" category="list-text">Azure NetApp Files 볼륨을 생성할 때 Azure NetApp Files 작업 환경을 사용할 수 있는지 확인합니다.</block>
+  <block id="a499c28f4eb5f5209b3bea27baae8295" category="list-text">템플릿이 같은 볼륨에 클라우드 서비스를 활성화하는 경우 <block ref="65043dfb781746b8fde5bfddb319eb97" category="inline-link-rx"></block>,<block ref="4af4db8698c4a0998b2c93dbadcf8efe" category="inline-link-rx"></block>, 또는<block ref="7b4b255123bb321e706fd8a6488dad10" category="inline-link-rx"></block>에서 서비스가 활성화되어 있고 사용 중인 환경에서 라이센스가 부여되었는지 확인합니다.</block>
+  <block id="b2da214653ffb084521bfa6c178ff811" category="section-title">볼륨 템플릿을 선택하여 실행합니다</block>
+  <block id="7e74b3cdfd5537c5b51af1069f462892" category="paragraph">템플릿을 선택하고 실행하여 새 볼륨을 생성하는 방법은 여러 가지가 있습니다.</block>
+  <block id="41ff95e1ea070071cb2436d312ea3115" category="list-text">작업 환경에서 볼륨 템플릿을 실행합니다</block>
+  <block id="7d732f0050089fa03a5ccaf0ef3972e8" category="list-text">Templates 대시보드에서 볼륨 템플릿을 실행합니다</block>
+  <block id="2b408048493f7891ab8a18339cbef7b1" category="paragraph">선택하는 방법에 관계없이 정의해야 하는 필수 볼륨 매개 변수에 대한 세부 정보는 다음 섹션에서 확인할 수 있습니다.</block>
+  <block id="1d4cf496ca25a3cab66cbc73d2b1c000" category="inline-link">Cloud Volumes ONTAP 볼륨 프로비저닝 방법</block>
+  <block id="fd2dc88b92570ea35c3a58cc7d5e0985" category="list-text"><block ref="fd2dc88b92570ea35c3a58cc7d5e0985" category="inline-link-rx"></block></block>
+  <block id="96483bf24dd5d282884c28a8c230bfde" category="inline-link">Azure NetApp Files 볼륨 프로비저닝 방법</block>
+  <block id="002a9d28d8b22f7755aac03a979f0a60" category="list-text"><block ref="002a9d28d8b22f7755aac03a979f0a60" category="inline-link-rx"></block></block>
+  <block id="df4a9164b01ccf35f74c9520638ad0b7" category="inline-link">사내 ONTAP 볼륨을 프로비저닝하는 방법</block>
+  <block id="34b8afcdd2d501d158f8dfa46a70068b" category="list-text"><block ref="34b8afcdd2d501d158f8dfa46a70068b" category="inline-link-rx"></block></block>
+  <block id="c07fd60a71244d7a4ab72c83beb068d6" category="section-title">작업 환경에서 볼륨 템플릿을 실행합니다</block>
+  <block id="2342f0281f4d2a90f7477ed651c18e7f" category="paragraph">Working Environment_페이지 및 _Volume Details_페이지에서 기존 작업 환경에 볼륨을 추가할 수 있습니다.</block>
+  <block id="847533f76f2539591f2ed541ef5ef72e" category="list-text">Working Environment_페이지 또는 _Volume Details_페이지에서 * 템플릿에서 볼륨 추가 * 를 클릭합니다.</block>
+  <block id="0ac913640e05ca365f5a393962934e01" category="inline-image-macro">사용자가 템플릿에서 새 볼륨을 생성하는 방법을 보여 주는 두 개의 스크린샷</block>
+  <block id="2d892e3cbbb0b29eb197061deb0539cd" category="paragraph"><block ref="2d892e3cbbb0b29eb197061deb0539cd" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="866e23a1c4ed5bf233d7e358044b8e25" category="paragraph">Templates Dashboard_가 표시되고 선택한 작업 환경에 적용할 수 있는 템플릿만 나열됩니다. 예를 들어, 이 템플릿에는 Cloud Volumes ONTAP 템플릿만 표시됩니다.</block>
+  <block id="8f0a75d2d5a82f31f2cf069c3b0ee684" category="inline-image-macro">추가 아이콘</block>
+  <block id="0107b14a93ef1d128a47eab0a257362b" category="list-text">을 클릭합니다 <block ref="50acd719b1954eb4890c002b3b5e71a6" category="inline-image-macro-rx" type="image"></block> 및 * 템플릿 실행 * 을 참조하십시오.</block>
+  <block id="ef7dd761a51f95d983604b03095ba47b" category="inline-image-macro">템플릿 대시보드에서 템플릿을 실행하는 방법을 보여 주는 스크린샷</block>
+  <block id="764523b69b476a762d8f6178a65eee14" category="paragraph"><block ref="764523b69b476a762d8f6178a65eee14" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f505856a4a971e934b73488d7faffec5" category="paragraph">Template_페이지에서 볼륨 추가 가 나타납니다.</block>
+  <block id="190737142dd783de87873656b362e980" category="list-text">편집 가능한 필드에 값을 입력하여 볼륨을 생성하고 * 템플릿 실행 * 을 클릭합니다.</block>
+  <block id="6e3b3a4e03da2c7a0fbae4147925038b" category="inline-image-macro">템플릿에서 볼륨을 생성하기 위해 정의해야 하는 매개 변수를 보여 주는 스크린샷</block>
+  <block id="3e4296163753c591705e041795661a6c" category="paragraph"><block ref="3e4296163753c591705e041795661a6c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="29dfbe5727531f456e16c418443650fb" category="section-title">템플릿 대시보드에서 볼륨 템플릿을 실행합니다</block>
+  <block id="79a5be6184496e04a800701c03275ada" category="paragraph">_Templates Dashboard_에서 기존 작업 환경에 볼륨을 추가할 수 있습니다.</block>
+  <block id="ab5def1a97337779a1bc393108327177" category="paragraph">Templates Dashboard_가 표시됩니다.</block>
+  <block id="596f8bd98917485511472f81dd61ef9e" category="list-text">사용할 서식 파일의 경우 을 클릭합니다 <block ref="50acd719b1954eb4890c002b3b5e71a6" category="inline-image-macro-rx" type="image"></block> 및 * 템플릿 실행 * 을 참조하십시오.</block>
+  <block id="034adad7c67d2e9a9dd3a8019b40eb84" category="paragraph"><block ref="034adad7c67d2e9a9dd3a8019b40eb84" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a918532ef256d4238d742eaee5308f7f" category="paragraph">Run Template_페이지가 나타납니다.</block>
+  <block id="80ff21e45244c476e2be6b71de223d38" category="list-text">편집 가능한 필드에 값을 입력하여 볼륨을 생성하고 * 템플릿 실행 * 을 클릭합니다.</block>
+  <block id="dbe672112d3378110db8fa7757b6ec30" category="paragraph"><block ref="dbe672112d3378110db8fa7757b6ec30" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0008e4b80c15d6d38bd1f6234a51330c" category="paragraph">대시보드에서 템플릿을 실행할 때는 작업 환경 및 기타 변수(예: 스토리지 VM 및/또는 애그리게이트)를 선택해야 합니다. 작업 환경에서 템플릿을 실행하면 작업 환경이 자동으로 채워집니다.</block>
+  <block id="9ab493f5de85b8e5a3705fe61fdf293d" category="section-title">작업 환경 템플릿을 선택하여 실행합니다</block>
+  <block id="01a2a85f3cd4ec0dcb3da1124102db42" category="paragraph">회사에서 이 기능에 대한 템플릿을 만든 경우 _Templates Dashboard_에서 새 작업 환경을 만들 수 있습니다.</block>
+  <block id="6602afb860a6cca23c3b75bf601365eb" category="inline-link">AWS에서 Cloud Volumes ONTAP 실행</block>
+  <block id="03fdeb1a058aa425a68019c66e34e6ca" category="paragraph">작업 환경을 만드는 데 필요한 세부 사항에 대한 질문이 있는 경우 를 참조하십시오<block ref="497bfdbba9caf2f6a6f7d799eda40dc3" category="inline-link-rx"></block>.</block>
+  <block id="6195381a3e6e204f9315912ad2e31d58" category="paragraph"><block ref="6195381a3e6e204f9315912ad2e31d58" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4532596496eaadd10e82985d53d942d9" category="list-text">편집 가능 필드에 값을 입력하여 작업 환경과 첫 번째 볼륨을 생성하고 * 템플릿 실행 * 을 클릭합니다.</block>
+  <block id="f208614ddd4a42d1fe01800107447f9d" category="inline-image-macro">템플릿에서 작업 환경을 만들기 위해 정의해야 하는 매개 변수를 보여 주는 스크린샷</block>
+  <block id="c1f52c2315cb68ab5da30355d493efa8" category="paragraph"><block ref="c1f52c2315cb68ab5da30355d493efa8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="798178653cd4f1b33a2dc3600f51d489" category="section-title">기존 자원을 찾는 템플릿을 선택하여 실행합니다</block>
+  <block id="8d320e289935a3bc0309b4430f10862f" category="paragraph">회사에서 이 기능을 사용하여 템플릿을 만든 경우 특정 리소스(예: 볼륨)를 찾은 템플릿을 실행한 다음 해당 리소스(예: Cloud Backup)에서 클라우드 서비스를 사용하도록 설정할 수 있습니다. 템플릿을 실행할 때 약간의 조정을 통해 클라우드 서비스를 적절한 리소스에만 적용할 수 있습니다.</block>
+  <block id="f256ffa6b4a4136dfb85dcf69983ada2" category="paragraph"><block ref="f256ffa6b4a4136dfb85dcf69983ada2" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="026ba222ebdf2fd2c82a0d12c610c566" category="paragraph">Run Template_페이지가 나타나고 템플릿에 정의된 검색을 즉시 실행하여 기준과 일치하는 볼륨을 찾습니다.</block>
+  <block id="89c185a4d78a8567859db775ed13246b" category="list-text">볼륨 결과 영역에서 반환된 볼륨 목록을 봅니다.</block>
+  <block id="b1fcd481a40253a09785803da0077de9" category="inline-image-macro">Find Resource(리소스 찾기) 검색 기준에서 반환된 볼륨이 표시되는 스크린샷.</block>
+  <block id="1dc5726bf39154cb21baff6b494f9fad" category="paragraph"><block ref="1dc5726bf39154cb21baff6b494f9fad" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ca98aa84984d29ab9e65eedb02a68ba7" category="list-text">결과가 예상과 같은 경우 템플릿의 _Enable Cloud Backup on Volume_부분에 있는 조건을 사용하여 Cloud Backup을 활성화하려는 각 볼륨에 대한 확인란을 선택하고 * 템플릿 실행 * 을 클릭합니다.</block>
+  <block id="f3b757371a9961d5ce7c320198eb268b" category="paragraph">결과가 예상과 다른 경우 를 클릭합니다 <block ref="8e860c5cca0144ac9d126d75205476b6" category="inline-image-macro-rx" type="image"></block> 검색 기준 _ 옆에 있는 을(를) 클릭하고 검색을 더 구체화합니다.</block>
+  <block id="c6eb5da2af16b1f095636b3b5fc6a252" category="paragraph">템플릿이 실행되고 검색 기준에서 선택한 각 볼륨에서 Cloud Backup이 활성화됩니다.</block>
+  <block id="ad065cba81dd0205f37aa602c122c6aa" category="paragraph">모든 오류는 _ 템플릿 실행 _ 페이지에서 호출되며 필요한 경우 문제를 해결할 수 있습니다.</block>
+  <block id="ea71cf04f7239c133ac6882358bee38e" category="summary">Cloud Manager 태그 지정 서비스를 사용하여 기존 리소스에 할당된 태그를 확인, 추가, 수정, 삭제할 수 있습니다. 따라서 리소스 관리를 구성하고 단순화할 수 있습니다.</block>
+  <block id="9b07b7a435eb3748887ec84eac33cf64" category="doc">리소스의 태그를 관리합니다</block>
+  <block id="f02ce38105e0bd4e1492a696a42fc111" category="section-title">특정 태그가 있는 리소스를 검색합니다</block>
+  <block id="572b98a402ed12dbaca0370b0814a61c" category="paragraph">특정 태그 또는 특정 태그 및 태그 키 값이 있는 모든 리소스를 보려면 해당 태그를 검색할 수 있습니다. 모든 자원 또는 특정 자원 범주 내에서 검색할 수 있습니다.</block>
+  <block id="d021504cd210ca3c99557d4026f93fe9" category="list-text">AppTemplate * 서비스를 선택하고 * Tags * 탭을 클릭합니다.</block>
+  <block id="8a4ccdfb1d164c3e3a6da2758ea59afa" category="list-text">필요한 경우 * 자격 증명 선택 * 필드에서 특정 클라우드 공급자의 자격 증명을 선택합니다.</block>
+  <block id="f58ddfd9537b922f14de15f169e66a44" category="list-text">Resource Type_ 필드에서 리소스를 선택합니다. 예를 들어, 모든 Cloud Volumes ONTAP 볼륨을 검색하려면 * ONTAP:CVO:VOLUME * 을 선택합니다.</block>
+  <block id="55048905cb51ad2998c06b578a1e485e" category="list-text">Tag Key_field에서 태그를 선택합니다. 예를 들어, * Env * 를 선택하면 "Env" 태그가 있는 볼륨만 검색할 수 있습니다.</block>
+  <block id="57adb397c0fe3b63204853bc9186e49e" category="list-text">Tag value_field에서 키 값(예: * production *)을 선택하여 태그 이름이 "Env"이고 태그 값이 "production"인 볼륨으로 검색을 제한합니다.</block>
+  <block id="6b02683fa96542dc90cc0d413eec17d1" category="inline-image-macro">특정 태그 키 및 태그 값이 있는 리소스를 반환할 단일 검색 기준 집합을 선택하는 스크린샷</block>
+  <block id="901753ca5c92cd91b11940a9fac8569a" category="paragraph"><block ref="901753ca5c92cd91b11940a9fac8569a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="03e94c53a1f4fdaa62202db4528531d6" category="list-text">를 클릭합니다 <block ref="3fd7363714f2e2423924118bfd6b7147" category="inline-image-macro-rx" type="image"></block> 이 검색 기준을 검색 영역에 추가합니다.</block>
+  <block id="f0586e3a2b694cbeec93e35dd7f9e28e" category="inline-image-macro">검색 행에 추가된 태그 검색 조건 스크린샷.</block>
+  <block id="05f475f79d5cf10dced9154d17d0b41c" category="paragraph"><block ref="05f475f79d5cf10dced9154d17d0b41c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="604b0f66d5091b97f5e89f0d8da1d314" category="list-text">검색을 마치면 * 검색 * 을 클릭하면 검색 결과가 리소스 섹션에 나타납니다.</block>
+  <block id="88248f0ac65beba333e31aa507b13202" category="inline-image-macro">태그 검색 기준을 충족하는 리소스의 결과 스크린샷</block>
+  <block id="3e5ec3afb8a45d440659ebaabc265963" category="paragraph"><block ref="3e5ec3afb8a45d440659ebaabc265963" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="fb5a5dce727f3d71f986467d11667dcb" category="paragraph">추가 검색 기준을 추가하려면 3-6단계를 다시 수행한 다음 * 검색 * 을 클릭합니다.</block>
+  <block id="a6e513182fed1ef73b8c8b9327893161" category="section-title">검색 규칙</block>
+  <block id="b01996a98368a45c3a5d4d8738338eae" category="paragraph">검색을 정의할 때 다음 규칙이 적용됩니다.</block>
+  <block id="c3bdabf571c3082715580eb6be3e2ca2" category="list-text">리소스 유형을 선택한 후 키 및 키 값이 있는 모든 자원을 나열하려면 태그 키 필드와 태그 값 필드를 비워 둘 수 있습니다.</block>
+  <block id="f9b300b7e39032247e57d7ad64986d1d" category="list-text">단일 검색을 선택하거나 여러 검색을 정의하여 리소스 섹션의 결과를 구체화할 수 있습니다.</block>
+  <block id="659ca7552f6a8fe6a78aea2256b3c46f" category="list-text">여러 검색 기준 세트를 정의하는 경우:</block>
+  <block id="1545b6e4202e3be562a850752e48b452" category="list-text">두 검색 조건이 서로 다른 리소스 유형에 대한 경우 이 작업은 "OR" 연산으로 처리되고 결과는 두 검색 모두의 리소스를 표시합니다. 예를 들어, 다음 검색은 "환경:데모" 태그 값이 있는 모든 Azure NetApp Files 볼륨과 "환경:데모" 태그 값이 있는 모든 Cloud Volumes ONTAP 볼륨을 반환합니다.</block>
+  <block id="9213e2140560ed1d8608498467b31c23" category="paragraph"><block ref="9213e2140560ed1d8608498467b31c23" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="bbaf8508cb8ab19b7d4c993760f453ae" category="list-text">두 검색 조건이 동일한 리소스 유형에 대한 경우 이 조건은 "AND" 연산으로 간주되고 결과에 * Both * sources와 일치하는 리소스만 표시됩니다. 예를 들어 다음 검색은 "Environment:demo" 태그 값과 "Group:Finance" 태그 값이 모두 있는 Azure NetApp Files 볼륨을 반환합니다.</block>
+  <block id="8ae0853ee1ff58fc47451430f34aa261" category="paragraph"><block ref="8ae0853ee1ff58fc47451430f34aa261" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1e76587827a2c444b42731f500f5f7b9" category="list-text">여러 검색 조건을 정의한 다음 하나를 제거하려는 경우 을 클릭합니다 <block ref="45d4efe5d85352e2c35a12e8ace91564" category="inline-image-macro-rx" type="image"></block> 를 눌러 검색 영역에서 제거합니다.</block>
+  <block id="79eb09e7fc546bf99c72cd7650e9fbb4" category="section-title">기존 리소스에 태그 추가</block>
+  <block id="3e44cde650bf6f59b09127a99de693cc" category="paragraph">단일 리소스 또는 여러 리소스에 태그를 적용할 수 있습니다. 리소스에 기존 태그가 있거나 현재 태그가 없을 수 있습니다.</block>
+  <block id="4b6fca08a3864d4de4c51a0388dbf758" category="inline-link-macro">현재 태그를 지정할 수 있는 리소스 목록을 참고하십시오.</block>
+  <block id="77d77a7d08e31270683303811b271c71" category="paragraph"><block ref="77d77a7d08e31270683303811b271c71" category="inline-link-macro-rx"></block></block>
+  <block id="0625a37343409c38dad5c4f59fbd1548" category="list-text">태그 * 탭에서 검색 기준을 만들고 * 검색 * 을 클릭합니다.</block>
+  <block id="073ac7d814e9437e4970cec883c2f383" category="list-text">태그를 지정할 자원이나 자원을 선택합니다.</block>
+  <block id="527c3932c7cf0390db001df885ea8f28" category="list-text">페이지의 모든 자원을 선택하려면 제목 행(<block ref="b0be32365b13649b2a4ad63a5c5db9d7" category="inline-image-macro-rx" type="image"></block>)를 클릭합니다.</block>
+  <block id="af03b66389cfbec8c481c73a89728046" category="list-text">여러 자원을 선택하려면 각 자원에 대한 확인란을 선택합니다(<block ref="f3b0afa317fb06ade03449dd632d08e0" category="inline-image-macro-rx" type="image"></block>)를 클릭합니다.</block>
+  <block id="cb5c297ef8dc3fe424475fa62b79e3e8" category="list-text">단일 리소스를 선택하려면 를 클릭합니다 <block ref="e7e0e095d9ce72479b1102c3b9ff5a5b" category="inline-image-macro-rx" type="image"></block> 리소스의 아이콘입니다.</block>
+  <block id="cff1dfada6d6b7b98fd30ee02a0d1db9" category="inline-image-macro">단일 리소스, 여러 리소스 또는 모든 리소스를 선택하는 방법을 보여 주는 스크린샷</block>
+  <block id="b57ec2fd08f04b37b6a4067b53b493c2" category="paragraph"><block ref="b57ec2fd08f04b37b6a4067b53b493c2" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="953499073a80db33d37fc0e65d574cd3" category="list-text">Manage Tags * 를 클릭하면 _Resource Tags_ 대화 상자가 나타납니다. 이 대화 상자에 기존 태그가 나타납니다.</block>
+  <block id="6628e1b5975a42c2be2ff5186caf860c" category="inline-image-macro">현재 할당된 태그를 보고 새 태그를 추가할 수 있는 리소스 태그 대화 상자가 표시된 스크린샷</block>
+  <block id="9a25b58325689888cd22d9f62778dd88" category="paragraph"><block ref="9a25b58325689888cd22d9f62778dd88" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1fb12afa3bbd8081db730626d9cf128e" category="list-text">새 태그 추가 * 를 클릭하면 새 태그 키 및 태그 값 행이 대화 상자에 나타납니다.</block>
+  <block id="c69b390a7a1622a148e2febd4ca307bf" category="list-text">태그 키 및 태그 값을 입력합니다. 이 리소스에 더 많은 태그를 추가하려면 지금 태그를 추가하고 * 검토 및 적용 * 을 클릭합니다.</block>
+  <block id="fb8530a1e792fa11ae22927c4489794a" category="list-text">_reviewing_page에서 변경 내용이 올바르면 * 저장 * 을 클릭하면 새 태그가 자원 또는 선택한 모든 자원에 추가됩니다.</block>
+  <block id="55b2371e859e7dd661d62883c0e93f48" category="section-title">리소스의 태그 값을 변경합니다</block>
+  <block id="8500d002f3036b9ac76b10f3975fa5b6" category="paragraph">리소스에 할당된 태그를 변경할 수 있으며 기존 태그에 적용되는 태그 값을 변경할 수 있습니다.</block>
+  <block id="c6d44c78dac6303ee6c3d0525ffa451c" category="list-text">태그를 변경할 자원이나 자원을 선택합니다.</block>
+  <block id="96be093270f8207adaa28aaa45ee837b" category="list-text">Manage Tags * 를 클릭하면 _Resource Tags_ 대화 상자가 나타납니다.</block>
+  <block id="1400af94919e7ee1a09ca726e8b85d80" category="inline-image-macro">리소스 또는 여러 리소스의 태그를 수정하는 방법을 보여 주는 스크린샷</block>
+  <block id="ad331f4f30c579537be3c11e0e0dc081" category="paragraph"><block ref="ad331f4f30c579537be3c11e0e0dc081" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ac9723812108c87763a081c3ff4f1c08" category="list-text">태그 값에 대한 새 값을 입력하고 * Review and Apply * 를 클릭합니다.</block>
+  <block id="4cb2f4e76ebfa58ef36c58684a15abd0" category="list-text">_reviewing_page에서 변경 내용이 올바르면 * 저장 * 을 클릭하면 해당 자원이나 선택한 모든 자원에 대한 태그 값이 변경됩니다.</block>
+  <block id="06b4175113796fd327444f906e00e5b0" category="section-title">리소스에서 태그를 삭제합니다</block>
+  <block id="a3b429240e21705b5497678d9a1a450d" category="paragraph">단일 리소스 또는 여러 리소스에서 태그 키/값 쌍을 삭제할 수 있습니다.</block>
+  <block id="442b989d73b53c1398a30d27048bd411" category="list-text">태그를 제거할 자원이나 자원을 선택합니다.</block>
+  <block id="25aa36d137bcf84c1df93b9abee71af1" category="inline-image-macro">리소스 또는 여러 리소스에서 태그를 삭제하는 방법을 보여 주는 스크린샷</block>
+  <block id="01c2aeb5ca936bbe9aa0ad9699706a64" category="paragraph"><block ref="01c2aeb5ca936bbe9aa0ad9699706a64" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c2b9a18179af322bffbbd1fc093f0e6a" category="list-text">를 클릭합니다 <block ref="ccf4df3a8e9a80d7b6ff904049041296" category="inline-image-macro-rx" type="image"></block> 삭제하려는 태그 키/값 쌍의 경우 행이 제거된 다음 * 검토 및 적용 * 을 클릭합니다.</block>
+  <block id="6f195138d995bb3980eb20df6cd6b372" category="list-text">_reviewing_page에서 변경 내용이 올바르면 * 저장 * 을 클릭하면 태그 키/값 쌍이 자원이나 선택한 모든 리소스에서 제거됩니다.</block>
+  <block id="e1f059ce610c426bc048a916e53ae32d" category="summary">Cloud Manager는 "드리프트" 기능을 사용하여 템플릿을 사용하여 리소스를 생성할 때 사용되는 매개 변수 값을 모니터링할 수 있습니다. 변경 및 템플릿 설정과 더 이상 호환되지 않는 리소스를 식별합니다.</block>
+  <block id="738c328d0087a068339b3d63cd01f51a" category="doc">템플릿 규정 준수를 위한 리소스를 확인하십시오</block>
+  <block id="8e09fe4243173c7be4058a88ee5dccbe" category="paragraph">이때 드리프트는 리소스에서 변경된 매개 변수를 식별합니다. 즉, 템플릿을 다시 준수하기 위해 자원을 수동으로 조정해야 합니다.</block>
+  <block id="2ab3e4cd0d86d65f9d51ef66c0c979a1" category="section-title">드리프트의 작동 방식</block>
+  <block id="270a79863849b0f5a1fb6e3ca8c5e8cf" category="paragraph">드리프트는 다음과 같은 비준수 매개변수를 식별합니다.</block>
+  <block id="2f4767232b378f442b114c6df47c9e64" category="list-text">서식 파일을 만들 때 사용자가 변경하지 않으려는 특정 매개 변수에 대해 드리프트를 설정합니다. 예를 들어, 템플릿에서 생성된 모든 볼륨에 대해 "기본" 정책을 사용하여 스냅샷 복사본을 생성해야 할 수 있습니다.</block>
+  <block id="176d49d1e84215b444f439fea07a3329" category="inline-image-macro">템플릿의 단일 매개 변수에서 표류를 활성화하는 방법을 보여 주는 스크린샷</block>
+  <block id="311336fcea41c68a3d16c7293d66a166" category="paragraph"><block ref="311336fcea41c68a3d16c7293d66a166" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b1b69884668207d8257a2c199585d3c4" category="list-text">템플릿에 대해 표류를 설정한 다음 템플릿을 저장합니다.</block>
+  <block id="a58a17de18b8ff4081df6a8a029fddef" category="inline-image-macro">템플릿에 대한 드리프트를 활성화하는 방법을 보여 주는 스크린샷.</block>
+  <block id="65439c70b898804017251c3d89e4b9a1" category="paragraph"><block ref="65439c70b898804017251c3d89e4b9a1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a89edd795717fc5788fde97a150cdbfd" category="list-text">스토리지 관리자가 템플릿을 실행하여 볼륨을 생성합니다.</block>
+  <block id="702cc5e5b03abb2b13b06653993301cd" category="list-text">나중에 스토리지 관리자가 볼륨을 편집하고 스냅샷 복사본을 사용하지 않도록 설정합니다.</block>
+  <block id="e0ea1e6e9a11e8802d9e17bd8c65420e" category="list-text">모든 템플릿에 대해 변경 사항 확인을 실행하고 AppTemplates 서비스에서 Snapshot copies 템플릿 설정을 볼륨의 현재 설정과 비교합니다. 잘못된 설정을 수정할 수 있도록 모든 비준수 값에 플래그가 지정됩니다.</block>
+  <block id="6f1e06cdf469f6c9e2d5664f82d4cd46" category="section-title">변경 사항 대시보드</block>
+  <block id="eb00a81284bf83afa086db3e1e91383f" category="paragraph">변경 사항 대시보드에는 템플릿을 사용하여 생성한 총 리소스(예: 볼륨) 수, 템플릿을 준수한 수, 규정을 준수하지 않는 수(표류됨) 및 변경 해제된 상태로 생성된 수가 표시됩니다.</block>
+  <block id="55173c154995f28e9df46343a9ce0561" category="inline-image-macro">AppTemplates 서비스에 대한 변경 사항 대시보드 스크린샷</block>
+  <block id="a7e6e26f0a43b99c8a207a6d0a7bc773" category="paragraph"><block ref="a7e6e26f0a43b99c8a207a6d0a7bc773" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="812ce4d3a07734d12cdaa3ed2010e22f" category="list-text">각 열의 맨 위에 있는 컨트롤을 사용하여 결과를 숫자 또는 사전순으로 정렬할 수 있습니다.</block>
+  <block id="0359e3c0b32dfd6306bd3d50e3c2de03" category="list-text">를 클릭합니다 <block ref="3fd7363714f2e2423924118bfd6b7147" category="inline-image-macro-rx" type="image"></block> 템플릿 이름, 변경 사항 정책 및 상태, 작업 유형을 기준으로 결과를 필터링할 수 있습니다. 예를 들면 다음과 같습니다.</block>
+  <block id="dc2aed6b9b1f1b0a6c08ee34faba057f" category="inline-image-macro">필터 위젯을 사용하여 리소스 목록을 구체화하는 방법을 보여 주는 스크린샷</block>
+  <block id="226b350675cf80a6c8ef906f3d514866" category="paragraph"><block ref="226b350675cf80a6c8ef906f3d514866" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b50b58694b4498c8af71d92940ef4b4a" category="list-text">검색 표시줄에서 특정 볼륨 이름 또는 템플릿 이름을 검색할 수 있습니다.</block>
+  <block id="2289aac3f042b380f68ae94d3b80edcc" category="list-text">작업 환경 및 스토리지 VM과 같은 실제 리소스(또는 볼륨)에 대한 자세한 내용을 보려면 를 클릭합니다 <block ref="a74720392297d66ac1ab9a90296912c9" category="inline-image-macro-rx" type="image"></block>.</block>
+  <block id="b652d688fe7bd49013e097debd62377d" category="inline-image-macro">드리프트 대시보드에서 볼륨에 대한 세부 정보를 보여 주는 스크린샷</block>
+  <block id="f94f5da3d864a2802ec18ef34e31c632" category="paragraph"><block ref="f94f5da3d864a2802ec18ef34e31c632" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b6ce5c8ea7a5fe26d49cc620ef72e8bf" category="section-title">변경 사항 대시보드를 채웁니다</block>
+  <block id="5ae7cb61db9467082e9eea24cffa5c5d" category="paragraph">변경 사항 대시보드의 값을 채우기 전에 템플릿에서 변경 사항 확인을 실행해야 합니다.</block>
+  <block id="6f2802bd954a52da9413653f06974328" category="paragraph">템플릿 대시보드에서 모든 템플릿에 대한 변경 사항 확인을 실행할 수 있습니다.</block>
+  <block id="d3b285f784c0ba93aec0e96991c6426b" category="inline-image-macro">모든 템플릿에 대해 드리프트 확인을 실행하는 방법을 보여 주는 스크린샷</block>
+  <block id="6800c3ab10609f87e92b1c2d671d818a" category="paragraph"><block ref="6800c3ab10609f87e92b1c2d671d818a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="58e7eda3b48d7587cdb37980702881b8" category="paragraph">템플릿 대시보드에서 단일 템플릿에 대한 변경 사항 확인을 실행할 수 있습니다.</block>
+  <block id="30055c2914e5982a3d4520c8d7341dae" category="inline-image-macro">단일 템플릿에 대한 드리프트 확인을 실행하는 방법을 보여 주는 스크린샷</block>
+  <block id="09ba0e6ca6c933763f67961bc73d1c49" category="paragraph"><block ref="09ba0e6ca6c933763f67961bc73d1c49" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b36ada9c7c56f786c71fdfbea02d95d3" category="section-title">비준수 리소스에 대한 변경 사항 보고서를 만듭니다</block>
+  <block id="aeb389bbf15541824e09549764a991ad" category="paragraph">단일 자원에 대한 드리프트 보고서를 보거나 보고서를 실행하여 모든 자원에 대한 보고서를 다운로드할 수 있습니다. 이 보고서를 사용하면 시스템 관리자에게 작업을 할당하여 자원을 서식 파일에 다시 준수하도록 변경할 수 있습니다.</block>
+  <block id="a5a5986754b343a286af80fd084ea988" category="paragraph">변경 사항 대시보드에서 리소스에 대한 변경 사항 아이콘을 클릭하여 비준수 각 리소스의 매개 변수 목록을 볼 수 있습니다.</block>
+  <block id="ecbe0476f7995436a619fbec67b150ea" category="inline-image-macro">단일 자원에 대한 드리프트 보고서의 스크린샷.</block>
+  <block id="e278cbaa988c388eb4f070a874cc7c84" category="paragraph"><block ref="e278cbaa988c388eb4f070a874cc7c84" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f5aeece6a8367e0a2a950b59ac5d280f" category="paragraph">템플릿에서 만든 자원에 대한 변경 사항 보고서를 보려면 를 클릭합니다 <block ref="6ba48bcb767669a826177023eada095d" category="inline-image-macro-rx" type="image"></block> CSV 파일을 다운로드합니다. 드리프트 보고서는 페이지에 현재 필터링된 내용을 반영합니다. 페이지에 필터를 적용하지 않은 경우 모든 자원이 표시되지 않습니다.</block>
+  <block id="534c380a5cdca5610f18de17fa526847" category="section-title">변경 사항 보고서의 복제 상태 세부 정보입니다</block>
+  <block id="b5363a8f8717713698cd5f0ade6c4a83" category="inline-link-macro">템플릿을 사용하여 볼륨에서 복제 활성화</block>
+  <block id="6bb92fc8b301ed81b081eeb63f8c277d" category="paragraph">시기 <block ref="eef24c085d3101627e03570b2ef27e8a" category="inline-link-macro-rx"></block>"복제 상태 모니터링 활성화" 필드에서 표류를 활성화하여 변경 보고서에 보다 자세한 복제 정보를 표시하도록 선택할 수 있습니다. 활성화된 경우 드리프트 보고서는 SnapMirror 지연 시간, 상태 및 마지막 전송 시간과 함께 복제 관계의 상태가 정상 또는 비정상(이동됨)인지 여부를 표시합니다.</block>
+  <block id="6ffc1ecbaefdcfbed3ede7fdb124aa93" category="paragraph">이 스크린샷은 드리프트 보고서에서 상태가 불량한 SnapMirror 관계에 대한 복제 세부 정보를 보여줍니다.</block>
+  <block id="16c2c563a9c70bc38dcd5058d89852a7" category="inline-image-macro">상태가 불량한 SnapMirror 관계에 대한 복제 세부 정보를 보여 주는 변경 사항 보고서의 스크린샷</block>
+  <block id="dda535bed967fed0495f552c6c54b14e" category="paragraph"><block ref="dda535bed967fed0495f552c6c54b14e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a9986dfbd663475bd0b9a159d82e3587" category="paragraph">* 참고: * 복제가 처음에 볼륨에 적용되기 때문에 상태가 "거짓"으로 반환됩니다. 이는 상태가 정상이 아닙니다. 몇 분 후 실제 복제 상태가 표시됩니다.</block>
+  <block id="cb9d3e42cbdb6c83e7bbe5b75ae88380" category="summary">애플리케이션 템플릿 서비스를 사용하면 Cloud Manager 작업 환경의 리소스 생성을 표준화할 수 있습니다.</block>
+  <block id="91ee6aa91810fc059d494948432212cc" category="doc">AppTemplate 설명서</block>
+  <block id="3c10116b37b407ac79092a38ffb292e4" category="summary">NetApp 기술 지원으로 지원 케이스를 생성하기 전에 NetApp Support 사이트 계정을 Cloud Manager에 추가한 다음 지원을 위해 등록해야 합니다.</block>
+  <block id="42748df9eaa0be17ddc5cc1593cf57ab" category="doc">지원을 위해 등록하십시오</block>
+  <block id="d53e2559d6ace0e907fc57192bf286b6" category="paragraph"><block ref="d53e2559d6ace0e907fc57192bf286b6" category="inline-link-macro-rx"></block></block>
+  <block id="7ff191df90fac0fa94ab5c2b5101a5e9" category="sidebar">모든 Cloud Manager 설명서</block>
+  <block id="0a619ca9c1cd947e450850b3e7de049e" category="sidebar">애플리케이션 템플릿 문서</block>
+  <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">릴리스 정보</block>
+  <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">시작하십시오</block>
+  <block id="3b23feac64efacc5b166fdf0e70ca630" category="sidebar">애플리케이션 템플릿에 대해 자세히 알아보십시오</block>
+  <block id="e72ae81acd7c30885924cb51631b78d1" category="sidebar">애플리케이션 템플릿 사용</block>
+  <block id="d878dbf9ab702cfef892ea35b53108d3" category="sidebar">템플릿을 사용하여 리소스 생성을 표준화합니다</block>
+  <block id="52b2438a3d1515af5b3918e6d0fa443d" category="sidebar">조직에 맞는 서식 파일 만들기</block>
+  <block id="1ff123cfbf88ad9c58cfd44c2b72c291" category="sidebar">템플릿을 실행하여 리소스를 생성합니다</block>
+  <block id="4a37630008b707a26bac4e9b9d2d91bc" category="sidebar">태그를 사용하여 리소스를 구성합니다</block>
+  <block id="0460583622f03a52d7693094d6fa2452" category="sidebar">개념</block>
+  <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">지식 및 지원</block>
+  <block id="7bc0f94286bfd2cf27964ce6056732ac" category="sidebar">앱 템플릿에 대해 알아보십시오</block>
+  <block id="35f98b47133ad8954f63b25aef2dad3a" category="sidebar">태깅 에 대해 자세히 알아보십시오</block>
+  <block id="5fef629b836b60819e0c0ce49cd2b9d7" category="sidebar">새로운 기능</block>
+  <block id="12b8ed36a576a6d4769c8d350b438a8a" category="sidebar">템플릿 만들기</block>
+  <block id="59cccee54a9c1422dca33d7662d37b76" category="sidebar">Cloud Volumes ONTAP 작업 환경</block>
+  <block id="f829fef4575b38109cd246bafbd6718e" category="sidebar">Cloud Volumes ONTAP 볼륨</block>
+  <block id="217aec976bd66d37571f1fe0e44a4e77" category="sidebar">Azure NetApp Files 볼륨</block>
+  <block id="21dc3aafb4a3e393dccd900e9ba42118" category="sidebar">사내 ONTAP 볼륨</block>
+  <block id="c8ca3079f96c0e324b876d7055a67c46" category="sidebar">템플릿을 사용하여 리소스를 생성합니다</block>
+  <block id="70deba7f047a2bcc0d20e5ef94a2abf8" category="sidebar">CVO, 온프레미스, ANF의 볼륨</block>
+  <block id="f8de1ec8d7766950989e3205a63d91d9" category="sidebar">템플릿과 태그를 사용하여 리소스를 관리합니다</block>
+  <block id="e85920abe34a4184988f078bd1e73279" category="sidebar">템플릿 준수 리소스 확인(변경 사항)</block>
+  <block id="441c6d31d8063270a27b242c68cc0e6e" category="sidebar">기존 자원을 찾는 서식 파일을 실행합니다</block>
+  <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">블로그 커뮤니티</block>
+  <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">NetApp 커뮤니티</block>
+  <block id="ff6c37cbc252e306a6b4e390ec13cbc1" category="sidebar">Cloud Central 블로그</block>
+  <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">클라우드 웨비나</block>
+</blocks>

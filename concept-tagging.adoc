@@ -1,0 +1,181 @@
+---
+sidebar: sidebar 
+permalink: concept-tagging.html 
+keywords: tags, overview, conceptual, resource tags, volume tags, AWS tags, Azure tags 
+summary: Cloud Manager를 사용하면 _existing_resources에 태그를 적용하여 이러한 리소스를 구성 및 관리할 수 있습니다. 태그는 리소스를 그룹화하여 애플리케이션, 환경, 지역, 청구 코드, 클라우드 공급자 등을 식별하는 데 사용할 수 있는 메타데이터입니다. 있습니다. 
+---
+= 태그 지정에 대해 자세히 알아보세요
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Manager를 사용하면 _existing_resources에 태그를 적용하여 이러한 리소스를 구성 및 관리할 수 있습니다. 태그는 리소스를 그룹화하여 애플리케이션, 환경, 지역, 청구 코드, 클라우드 공급자 등을 식별하는 데 사용할 수 있는 메타데이터입니다. 있습니다.
+
+태그는 * 태그 키 * 와 * 태그 값 * 으로 구성됩니다. 예를 들어 "환경"이라는 태그 키를 만든 다음 "프로덕션" 및 "테스트"의 태그 값을 추가할 수 있습니다. 리소스에 적용한 후에는 키/값 쌍과 일치하는 리소스를 빠르게 검색하고 볼 수 있습니다.
+
+작업 환경 또는 Azure NetApp Files 볼륨을 생성할 때 태그 키/값 쌍을 _new_resources에 추가할 수 있습니다. 에서 태그 키/값 쌍을 정의할 수도 있습니다 link:task-define-templates.html["작성하는 Cloud Manager 서식 파일"] 스토리지 관리자 및 DevOps 엔지니어용
+
+태그 지정 서비스를 사용하여 새 태그를 추가할 수 있으며 기존 태그를 변경하거나 삭제할 수 있습니다.
+
+
+
+== 피처
+
+태깅 서비스는 다음과 같은 기능과 이점을 제공합니다.
+
+* 사용자 환경에서 사용하는 용어와 일치하는 태그 키 및 태그 값을 만듭니다
+* 환경의 리소스를 구성하여 보다 쉽게 모니터링하고 관리할 수 있습니다
+* 리소스 유형별로 태그 키와 태그 값을 추가, 제거 및 편집합니다
+* AWS 및 Azure에서 고객 환경에 있는 ONTAP 리소스 및 리소스에 태그를 지정합니다.
+
+
+
+
+== 가격 및 라이센스
+
+리소스에 태그를 지정하려면 라이센스가 필요하지 않으며 모든 Cloud Manager 사용자가 Account Admin 또는 Workspace Admin 역할을 사용하여 무료로 액세스할 수 있습니다.
+
+
+
+== 태그를 지정할 수 있는 리소스입니다
+
+다음 리소스에 태그를 적용할 수 있습니다.
+
+[cols="30,35,35"]
+|===
+| 제공합니다 | 서비스 | 리소스 
+
+
+.3+| ONTAP | Cloud Volumes ONTAP | 스토리지 VM 볼륨을 집계합니다 
+
+
+| 사내 ONTAP | 스토리지 VM 볼륨을 집계합니다 
+
+
+| Azure NetApp Files | 볼륨 
+
+
+| NetApp - 서비스 | 동기화 | 관계 
+
+
+| 설치하고 | EC2 | 인스턴스 보안 그룹 서브넷 볼륨 VPC 
+
+
+.4+| Azure를 지원합니다 | 컴퓨팅 | 스냅샷 가상 머신 
+
+
+| 네트워크 | 보안 그룹 가상 네트워크 
+
+
+| 리소스 | 리소스 그룹 
+
+
+| 스토리지 | 저장소 계정 
+
+
+.2+| GCP | 컴퓨팅 | 인스턴스 
+
+
+| 스토리지 | 버킷 
+|===
+AWS EC2 태그에 대한 자세한 내용은 을 참조하십시오 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html["AWS 문서: Amazon EC2 리소스에 태그 달기"^].
+
+Azure 태그에 대한 자세한 내용은 을 참조하십시오 https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources?tabs=json["Azure 문서: Azure 리소스에 태그 달기"^].
+
+Google 레이블에 대한 자세한 내용은 을 참조하십시오 https://cloud.google.com/compute/docs/labeling-resources["Google 클라우드 문서: Google Cloud 리소스에 태그 달기"^].
+
+
+
+== 필수 구성 요소
+
+
+
+=== AWS Connector 사용 권한을 확인합니다
+
+Cloud Manager 버전 3.9.10 이상을 사용하여 Connector를 만든 경우 모두 설정됩니다. 이전 버전의 Cloud Manager를 사용하여 Connector를 생성한 경우 Cloud Manager IAM 역할에 필요한 몇 가지 권한을 추가하여 AWS EC2 인스턴스에 태그를 지정해야 합니다.
+
+[source, json]
+----
+{
+  "Action": [
+    "ec2:CreateTags",
+    "ec2:DeleteTags",
+    "ec2:DescribeTags",
+    "tag:getResources",
+    "tag:getTagKeys",
+    "tag:getTagValues",
+    "tag:TagResources",
+    "tag:UntagResources"
+  ],
+  "Resource": "*",
+  "Effect": "Allow",
+  "Sid": "tagServicePolicy"
+}
+----
+
+
+=== Azure Connector 권한을 확인합니다
+
+Cloud Manager 버전 3.9.10 이상을 사용하여 Connector를 만든 경우 모두 설정됩니다. 이전 버전의 Cloud Manager를 사용하여 Connector를 생성한 경우 Cloud Manager Operator IAM 역할에 필요한 몇 가지 권한을 추가하여 Azure 리소스에 태그를 지정해야 합니다.
+
+[source, json]
+----
+{
+  "id": "<ID>",
+  "properties": {
+    "roleName": "Cloud Manager Operator-<ID>",
+    "description": "Cloud Manager Operator",
+    "assignableScopes": [
+      "/subscriptions/<SUBSCRIPTION-ID>"
+    ],
+    "permissions": [
+      {
+        "actions": [
+          "Microsoft.Resources/tags/read",
+          "Microsoft.Resources/tags/write",
+          "Microsoft.Resources/tags/delete",
+          "Microsoft.ClassicCompute/virtualMachines/read"
+        ],
+        "notActions": [],
+        "dataActions": [],
+        "notDataActions": []
+      }
+    ]
+  }
+}
+----
+
+
+== 태그 규칙 및 제한 사항
+
+태그 키 및 태그 값을 만들 때 다음 규칙이 적용됩니다.
+
+* 최대 키 길이: 128자
+* 최대 키 값 길이: 256자
+* 유효한 태그 및 태그 값 문자: 문자, 숫자, 공백 및 특수 문자(_, @, &, * 등)
+* 태그는 대/소문자를 구분합니다.
+* 리소스당 최대 태그 수: 30
+* 리소스별로 각 태그 키는 고유해야 합니다
+
+
+
+
+=== 태그 예제
+
+[cols="50,50"]
+|===
+| 키 | 값 
+
+
+| 봉투 | 운영 테스트 
+
+
+| 부서 | 재무 판매 엔지니어링 
+
+
+| 소유자 | 관리 스토리지 
+|===
