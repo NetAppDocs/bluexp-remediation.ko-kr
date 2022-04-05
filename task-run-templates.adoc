@@ -61,8 +61,8 @@ AppTemplate * 서비스를 선택하고 * Templates * 탭을 클릭합니다.
 
 선택하는 방법에 관계없이 정의해야 하는 필수 볼륨 매개 변수에 대한 세부 정보는 다음 섹션에서 확인할 수 있습니다.
 
-* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-provisioning-storage.html#creating-volumes-from-templates["Cloud Volumes ONTAP 볼륨 프로비저닝 방법"^]
-* https://docs.netapp.com/us-en/cloud-manager-azure-netapp-files/task-manage-anf-volumes.html#creating-volumes-from-templates["Azure NetApp Files 볼륨 프로비저닝 방법"^]
+* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-create-volumes.html#create-a-volume-from-a-template["Cloud Volumes ONTAP 볼륨 프로비저닝 방법"^]
+* https://docs.netapp.com/us-en/cloud-manager-azure-netapp-files/task-create-volumes.html#create-volumes-from-templates["Azure NetApp Files 볼륨 프로비저닝 방법"^]
 * https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-provisioning-ontap.html#creating-volumes-from-templates["사내 ONTAP 볼륨을 프로비저닝하는 방법"^]
 
 
