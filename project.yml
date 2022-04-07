@@ -18,11 +18,11 @@ sidebar:
     url: "/whats-new.html"
   - title: 시작하십시오
     entries:
-    - title: 애플리케이션 템플릿에 대해 자세히 알아보십시오
+    - title: AppTemplate에 대해 자세히 알아보십시오
       url: "/concept-resource-templates.html"
     - title: 태그 지정에 대해 자세히 알아보세요
       url: "/concept-tagging.html"
-  - title: 애플리케이션 템플릿 사용
+  - title: AppTemplate을 사용합니다
     entries:
     - title: 템플릿을 사용하여 리소스 생성을 표준화합니다
       entries:
@@ -52,7 +52,7 @@ homepage:
   tiles:
   - title: 시작하십시오
     links:
-    - title: 앱 템플릿에 대해 알아보십시오
+    - title: AppTemplate에 대해 자세히 알아보십시오
       url: concept-resource-templates.html
     - title: 태깅 에 대해 자세히 알아보십시오
       url: concept-tagging.html
@@ -68,12 +68,8 @@ homepage:
       url: task-define-templates.html#create-a-template-for-an-azure-netapp-files-volume
     - title: 사내 ONTAP 볼륨
       url: task-define-templates.html#create-a-template-for-an-on-premises-ontap-volume
-    - title: 볼륨에 백업 기능을 추가합니다
-      url: task-define-templates.html#add-backup-functionality-to-a-volume
-    - title: 볼륨에 데이터 감지 기능을 추가합니다
-      url: task-define-templates.html#add-data-sense-functionality-to-a-volume
-    - title: 볼륨에 복제 기능을 추가합니다
-      url: task-define-templates.html#add-replication-functionality-to-a-volume
+    - title: 볼륨에 백업, 데이터 감지 또는 복제 기능을 추가합니다
+      url: task-define-templates.html#examples-of-enabling-services-using-templates
   - title: 템플릿을 사용하여 리소스를 생성합니다
     links:
     - title: Cloud Volumes ONTAP 작업 환경
