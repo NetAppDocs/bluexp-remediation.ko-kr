@@ -6,6 +6,7 @@ summary: Cloud Manager 태그 지정 서비스를 사용하여 기존 리소스�
 ---
 = 리소스의 태그를 관리합니다
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

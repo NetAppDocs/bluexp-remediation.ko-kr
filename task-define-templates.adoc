@@ -6,6 +6,7 @@ summary: 'NetApp에서 제공하는 "작업" 중 하나 이상을 선택하고 �
 ---
 = 조직을 위한 응용 프로그램 서식 파일 작성
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

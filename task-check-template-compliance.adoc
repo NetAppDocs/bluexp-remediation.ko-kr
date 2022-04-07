@@ -6,6 +6,7 @@ summary: 'Cloud Manager는 "드리프트" 기능을 사용하여 템플릿을 �
 ---
 = 템플릿 규정 준수를 위한 리소스를 확인하십시오
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: '볼륨 이름과 같은 작업 사이에 값을 전달할 수 있는 �
 ---
 = 템플릿 구성 요소
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
