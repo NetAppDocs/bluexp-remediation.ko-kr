@@ -463,18 +463,18 @@ https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-licensin
 
 
 
-== 템플릿을 사용하여 기존 리소스를 찾고 서비스를 활성화하는 예
+== 템플릿을 사용하여 기존 리소스를 찾는 예
 
-Find Existing Resources_action을 사용하여 특정 작업 환경을 찾거나 기존 볼륨을 찾아 해당 볼륨에서 클라우드 서비스를 활성화할 수 있습니다. 이 작업은 다양한 필터를 제공하므로 관심 있는 리소스만으로 검색 범위를 좁힐 수 있습니다.
-
-
-NOTE: 현재 Cloud Volumes ONTAP, 사내 ONTAP 및 Azure NetApp Files 시스템 내에서만 볼륨을 찾을 수 있습니다. Cloud Volumes ONTAP 및 사내 ONTAP 볼륨에서만 클라우드 백업을 설정할 수 있습니다. 추가 리소스 및 서비스는 나중에 사용할 수 있습니다.
+기존 자원 찾기_ 동작을 사용하면 특정 작업 환경을 찾거나 다양한 필터를 제공하여 기존 볼륨을 찾을 수 있으므로 관심 있는 리소스만으로 검색 범위를 좁힐 수 있습니다. 올바른 리소스를 찾은 후 작업 환경에 볼륨을 추가하거나 결과 볼륨에서 클라우드 서비스를 활성화할 수 있습니다.
 
 
+NOTE: 현재 Cloud Volumes ONTAP, 사내 ONTAP 및 Azure NetApp Files 시스템 내에서 볼륨을 찾을 수 있습니다. Cloud Volumes ONTAP 및 사내 ONTAP 볼륨에서 클라우드 백업을 활성화할 수 있습니다. 추가 리소스 및 서비스는 나중에 사용할 수 있습니다.
 
-=== 기존 볼륨을 찾고 Cloud Backup을 활성화합니다
 
-Current_Find Existing Resources_action 기능을 사용하면 현재 클라우드 백업이 활성화되어 있지 않은 Cloud Volumes ONTAP 및 온-프레미스 ONTAP 작업 환경에서 볼륨을 찾을 수 있습니다. 특정 볼륨에서 Cloud Backup을 사용하도록 설정하면 이 작업은 사용자가 구성한 백업 정책을 해당 작업 환경의 기본 정책으로 설정합니다. 따라서 이러한 작업 환경에서 이후의 모든 볼륨에서 동일한 백업 정책을 사용할 수 있습니다.
+
+=== 기존 볼륨 찾기 및 클라우드 서비스 활성화
+
+Current_Find Existing Resources_action 기능을 사용하면 현재 클라우드 백업 또는 클라우드 데이터 센스를 사용하지 않는 Cloud Volumes ONTAP 및 사내 ONTAP 작업 환경에서 볼륨을 찾을 수 있습니다. 특정 볼륨에 Cloud Backup을 사용하도록 설정하면 이 작업은 해당 작업 환경에 대해 기본 정책으로 구성한 백업 정책도 설정하므로 해당 작업 환경의 모든 이후 볼륨에서 동일한 백업 정책을 사용할 수 있습니다.
 
 .단계
 . AppTemplate * 서비스를 선택하고 * Templates * 탭을 클릭한 다음 * Add New Template * 을 클릭합니다.
@@ -510,12 +510,15 @@ image:screenshot_define_find_resource_action1.png["입력해야 하는 빈 기�
 +
 image:screenshot_define_find_resource_filter_context.png["기존 자원 찾기 서식 파일에 적용할 수 있는 컨텍스트 필터를 보여 주는 스크린샷"]
 
-. Details_area에서 볼륨 이름과 볼륨 크기를 선택할 수 있습니다.
+. Details_area에서 볼륨 이름, 볼륨 크기 범위 및 볼륨에 할당된 태그를 선택할 수 있습니다.
 +
 볼륨 이름의 경우 필드를 클릭하고 5가지 옵션 중 하나를 선택합니다. 관리자가 * 자유 텍스트 * 를 선택하여 원하는 이름을 입력하도록 하거나, 볼륨 이름에 특정 접두사나 접미사가 있거나, 해당 접두사나 접미사가 _contains_특정 문자이거나, 사용자가 입력한 정규식(regex)의 규칙을 따르도록 지정할 수 있습니다.
 
 +
 볼륨 크기의 경우 범위를 지정할 수 있습니다. 예를 들어 모든 볼륨 크기가 100GiB에서 500GiB로 지정할 수 있습니다.
+
++
+태그의 경우 특정 태그 키/값 쌍이 있는 볼륨만 결과에 표시되도록 검색 범위를 더 좁힐 수 있습니다.
 
 +
 image:screenshot_define_find_resource_filter_details.png["기존 자원 찾기 서식 파일에 적용할 수 있는 세부 정보 필터를 보여 주는 스크린샷"]

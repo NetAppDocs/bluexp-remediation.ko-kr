@@ -280,11 +280,6 @@
   <block id="daa7684c9693e9b5412a05c7d060a1ef" category="inline-image-macro">더하기 버튼</block>
   <block id="abd25867aae2404fdbef96ae0b0057ee" category="inline-xref">Cloud Volumes ONTAP 볼륨에 대한 템플릿을 생성합니다</block>
   <block id="520d34c754a3e963e32a0fc19ab1421c" category="list-text">이 작업 환경에 대한 볼륨을 생성하기 위해 이 템플릿에 다른 작업을 추가할 수 있습니다. 이 경우 를 클릭합니다 <block ref="f928d2751b49d5f69d575bc7f78c5aae" category="inline-image-macro-rx" type="image"></block> 그런 동작을 추가합니다. 자세한 내용은 를 참조하십시오 <block ref="f498f1e6b10c72f9f04179db4da15305" category="inline-xref-macro-rx"></block> 를 참조하십시오.</block>
-  <block id="6375b33aa338dc1017d6313b28a3c363" category="section-title">템플릿을 사용하여 기존 리소스를 찾고 서비스를 활성화하는 예</block>
-  <block id="68f7b83818f20b7e8979e2dda6a61b21" category="paragraph">Find Existing Resources_action을 사용하여 특정 작업 환경을 찾거나 기존 볼륨을 찾아 해당 볼륨에서 클라우드 서비스를 활성화할 수 있습니다. 이 작업은 다양한 필터를 제공하므로 관심 있는 리소스만으로 검색 범위를 좁힐 수 있습니다.</block>
-  <block id="595f244394c7e3873ac213fc3b4a7521" category="admonition">현재 Cloud Volumes ONTAP, 사내 ONTAP 및 Azure NetApp Files 시스템 내에서만 볼륨을 찾을 수 있습니다. Cloud Volumes ONTAP 및 사내 ONTAP 볼륨에서만 클라우드 백업을 설정할 수 있습니다. 추가 리소스 및 서비스는 나중에 사용할 수 있습니다.</block>
-  <block id="3f20fe561065439fa56df3c9ca94e6ed" category="section-title">기존 볼륨을 찾고 Cloud Backup을 활성화합니다</block>
-  <block id="0ba4ecc2c8a2452e16fbf3776c91fda1" category="paragraph">Current_Find Existing Resources_action 기능을 사용하면 현재 클라우드 백업이 활성화되어 있지 않은 Cloud Volumes ONTAP 및 온-프레미스 ONTAP 작업 환경에서 볼륨을 찾을 수 있습니다. 특정 볼륨에서 Cloud Backup을 사용하도록 설정하면 이 작업은 사용자가 구성한 백업 정책을 해당 작업 환경의 기본 정책으로 설정합니다. 따라서 이러한 작업 환경에서 이후의 모든 볼륨에서 동일한 백업 정책을 사용할 수 있습니다.</block>
   <block id="6d0c20318ee7bcc13d58fa262e33c7d2" category="inline-image-macro">새 작업 추가 페이지에서 기존 자원 찾기 작업을 선택하는 방법을 보여 주는 스크린샷</block>
   <block id="0e9d27a36a1187dea1616df501ce108d" category="paragraph"><block ref="0e9d27a36a1187dea1616df501ce108d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="11c981e1d4ed40ea0925d9ae06dae41f" category="list-text">정의할 작업 유형으로 * 기존 자원 찾기 * 를 선택하고 * 적용 * 을 클릭합니다.</block>
@@ -298,7 +293,6 @@
   <block id="759a269bf5c05fa6647b728a4b6acab7" category="list-text">context_area에서 특정 작업 환경과 해당 작업 환경에 대한 기타 세부 사항을 선택할 수 있습니다.</block>
   <block id="70b9fbef4c70dff460de52b0d7c1eb40" category="inline-image-macro">기존 자원 찾기 서식 파일에 적용할 수 있는 컨텍스트 필터를 보여 주는 스크린샷</block>
   <block id="7a978f856247996229928441e0d8ef1d" category="paragraph"><block ref="7a978f856247996229928441e0d8ef1d" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="7ce9821e289ff97c6897cdf26f259fa8" category="list-text">Details_area에서 볼륨 이름과 볼륨 크기를 선택할 수 있습니다.</block>
   <block id="f3ab419ac906615be19ae0d551c2ddd6" category="paragraph">볼륨 이름의 경우 필드를 클릭하고 5가지 옵션 중 하나를 선택합니다. 관리자가 * 자유 텍스트 * 를 선택하여 원하는 이름을 입력하도록 하거나, 볼륨 이름에 특정 접두사나 접미사가 있거나, 해당 접두사나 접미사가 _contains_특정 문자이거나, 사용자가 입력한 정규식(regex)의 규칙을 따르도록 지정할 수 있습니다.</block>
   <block id="8567823797f59455548dc8dd1f03f80e" category="paragraph">볼륨 크기의 경우 범위를 지정할 수 있습니다. 예를 들어 모든 볼륨 크기가 100GiB에서 500GiB로 지정할 수 있습니다.</block>
   <block id="be9642dda4ebe2b728f2c474b3d3a411" category="inline-image-macro">기존 자원 찾기 서식 파일에 적용할 수 있는 세부 정보 필터를 보여 주는 스크린샷</block>
@@ -394,8 +388,6 @@
   <block id="6f2ac1cf1da8ec34232c651d4bba0149" category="paragraph"><block ref="6f2ac1cf1da8ec34232c651d4bba0149" category="inline-link-macro-rx"></block></block>
   <block id="4940124e8487cb4ea36f1511a195cf66" category="inline-link-macro">Cloud Manager 3.9에 대한 고지 사항</block>
   <block id="c069fcc68c5dfa73ccc99924c836cae9" category="list-text"><block ref="c069fcc68c5dfa73ccc99924c836cae9" category="inline-link-macro-rx"></block></block>
-  <block id="b5b938da8856a26053eadd6c64760087" category="inline-link-macro">애플리케이션 템플릿에 대한 고지 사항</block>
-  <block id="c5339dceaf3a5c5a6c1b7dc27a40604b" category="list-text"><block ref="c5339dceaf3a5c5a6c1b7dc27a40604b" category="inline-link-macro-rx"></block></block>
   <block id="f56a22734fbef43dcef97b492e9cd352" category="summary">볼륨 이름과 같은 작업 사이에 값을 전달할 수 있는 템플릿을 만들 때, 작업을 함께 연결할 조건부 분기(새 볼륨에서 백업 사용)를 사용할 때, 사용자가 템플릿을 사용할 때 리소스를 사용자 지정하는 데 도움이 되는 특정 기능이 있습니다.</block>
   <block id="889ecb758e53f24c9efd4553bc09c14a" category="doc">템플릿 구성 요소</block>
   <block id="4312f94678a5f3a99677eff317710d96" category="section-title">특수 템플릿 컨트롤</block>
@@ -656,7 +648,6 @@
   <block id="42748df9eaa0be17ddc5cc1593cf57ab" category="doc">지원을 위해 등록하십시오</block>
   <block id="d53e2559d6ace0e907fc57192bf286b6" category="paragraph"><block ref="d53e2559d6ace0e907fc57192bf286b6" category="inline-link-macro-rx"></block></block>
   <block id="7ff191df90fac0fa94ab5c2b5101a5e9" category="sidebar">모든 Cloud Manager 설명서</block>
-  <block id="0a619ca9c1cd947e450850b3e7de049e" category="sidebar">애플리케이션 템플릿 문서</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">릴리스 정보</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">시작하십시오</block>
   <block id="d878dbf9ab702cfef892ea35b53108d3" category="sidebar">템플릿을 사용하여 리소스 생성을 표준화합니다</block>
@@ -730,4 +721,14 @@
   <block id="98af7a1c0ade78de5b8dcbfc4ca16024" category="summary">AppTemplate 서비스를 사용하면 Cloud Manager 작업 환경의 리소스 생성을 표준화할 수 있습니다.</block>
   <block id="973d48daa10556f358647cfe1cc53216" category="sidebar">AppTemplate을 사용합니다</block>
   <block id="dc771c253d08d9cdafc72d7919e16d98" category="sidebar">볼륨에 백업, 데이터 감지 또는 복제 기능을 추가합니다</block>
+  <block id="45a406745a298842b185cafcdaedc62b" category="section-title">템플릿을 사용하여 기존 리소스를 찾는 예</block>
+  <block id="f7322605429ac37b6517eaccfdebcdfe" category="paragraph">기존 자원 찾기_ 동작을 사용하면 특정 작업 환경을 찾거나 다양한 필터를 제공하여 기존 볼륨을 찾을 수 있으므로 관심 있는 리소스만으로 검색 범위를 좁힐 수 있습니다. 올바른 리소스를 찾은 후 작업 환경에 볼륨을 추가하거나 결과 볼륨에서 클라우드 서비스를 활성화할 수 있습니다.</block>
+  <block id="18bc86c303dfcce839364dfb6f86c8d7" category="admonition">현재 Cloud Volumes ONTAP, 사내 ONTAP 및 Azure NetApp Files 시스템 내에서 볼륨을 찾을 수 있습니다. Cloud Volumes ONTAP 및 사내 ONTAP 볼륨에서 클라우드 백업을 활성화할 수 있습니다. 추가 리소스 및 서비스는 나중에 사용할 수 있습니다.</block>
+  <block id="38e15ec3e6bd73e018349ed1f0bf12bb" category="section-title">기존 볼륨 찾기 및 클라우드 서비스 활성화</block>
+  <block id="80252c15af311783e16e6d31bb72ca0b" category="paragraph">Current_Find Existing Resources_action 기능을 사용하면 현재 클라우드 백업 또는 클라우드 데이터 센스를 사용하지 않는 Cloud Volumes ONTAP 및 사내 ONTAP 작업 환경에서 볼륨을 찾을 수 있습니다. 특정 볼륨에 Cloud Backup을 사용하도록 설정하면 이 작업은 해당 작업 환경에 대해 기본 정책으로 구성한 백업 정책도 설정하므로 해당 작업 환경의 모든 이후 볼륨에서 동일한 백업 정책을 사용할 수 있습니다.</block>
+  <block id="ad47acd6a839d467d8e7d8cc0ab575bb" category="list-text">Details_area에서 볼륨 이름, 볼륨 크기 범위 및 볼륨에 할당된 태그를 선택할 수 있습니다.</block>
+  <block id="75aa65993e3f52840fc5b343dbb63651" category="paragraph">태그의 경우 특정 태그 키/값 쌍이 있는 볼륨만 결과에 표시되도록 검색 범위를 더 좁힐 수 있습니다.</block>
+  <block id="6fab7ff15514de4d3ca2883bd502b6e7" category="inline-link-macro">AppTemplate에 대한 고지 사항</block>
+  <block id="775a83959890feedd00e6dc592c3e60f" category="list-text"><block ref="775a83959890feedd00e6dc592c3e60f" category="inline-link-macro-rx"></block></block>
+  <block id="01861a2435910cac249c0a1eaea3e27b" category="sidebar">AppTemplate 문서</block>
 </blocks>

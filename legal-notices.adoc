@@ -14,5 +14,5 @@ link:https://raw.githubusercontent.com/NetAppDocs/common/main/_include/common-le
 link:https://raw.githubusercontent.com/NetAppDocs/common/main/_include/open-source-notice-intro.adoc[""]
 
 * link:media/notice_cloud_manager_3.9.pdf["Cloud Manager 3.9에 대한 고지 사항"^]
-* link:media/notice_application_templates.pdf["애플리케이션 템플릿에 대한 고지 사항"^]
+* link:media/notice_application_templates.pdf["AppTemplate에 대한 고지 사항"^]
 
