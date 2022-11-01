@@ -32,7 +32,7 @@ summary: '조직에서 특정 워크로드 및 애플리케이션에 최적화�
 
 
 [role="quick-margin-para"]
-AppTemplate * 서비스를 선택하고 * Templates * 탭을 클릭합니다.
+상태 > 수정 * 을 선택하고 * 템플릿 * 탭을 클릭합니다.
 
 [role="quick-margin-para"]
 템플릿을 선택하고 * 템플릿 실행 * 을 클릭한 다음 편집 가능한 필드에 값을 입력하여 리소스를 생성합니다.
@@ -101,7 +101,7 @@ image:screenshot_run_template_from_canvas.png["템플릿에서 볼륨을 생성�
 _Templates Dashboard_에서 기존 작업 환경에 볼륨을 추가할 수 있습니다.
 
 .단계
-. AppTemplate * 서비스를 선택하고 * Templates * 탭을 클릭합니다.
+. 상태 > 수정 * 을 선택하고 * 템플릿 * 탭을 클릭합니다.
 +
 Templates Dashboard_가 표시됩니다.
 
@@ -130,7 +130,7 @@ image:screenshot_run_template_from_dashboard.png["템플릿에서 볼륨을 생�
 작업 환경을 만드는 데 필요한 세부 사항에 대한 질문이 있는 경우 를 참조하십시오 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-aws.html["AWS에서 Cloud Volumes ONTAP 실행"^].
 
 .단계
-. AppTemplate * 서비스를 선택하고 * Templates * 탭을 클릭합니다.
+. 상태 > 수정 * 을 선택하고 * 템플릿 * 탭을 클릭합니다.
 +
 Templates Dashboard_가 표시됩니다.
 
@@ -154,7 +154,7 @@ image:screenshot_template_run_from_dashboard_we.png["템플릿에서 작업 환�
 회사에서 이 기능을 사용하여 템플릿을 만든 경우 특정 리소스(예: 볼륨)를 찾은 템플릿을 실행한 다음 해당 리소스(예: Cloud Backup)에서 클라우드 서비스를 사용하도록 설정할 수 있습니다. 템플릿을 실행할 때 약간의 조정을 통해 클라우드 서비스를 적절한 리소스에만 적용할 수 있습니다.
 
 .단계
-. AppTemplate * 서비스를 선택하고 * Templates * 탭을 클릭합니다.
+. 상태 > 수정 * 을 선택하고 * 템플릿 * 탭을 클릭합니다.
 +
 Templates Dashboard_가 표시됩니다.
 

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: concept-tagging.html 
 keywords: tags, overview, conceptual, resource tags, volume tags, AWS tags, Azure tags 
-summary: Cloud Manager를 사용하면 _existing_resources에 태그를 적용하여 이러한 리소스를 구성 및 관리할 수 있습니다. 태그는 리소스를 그룹화하여 애플리케이션, 환경, 지역, 청구 코드, 클라우드 공급자 등을 식별하는 데 사용할 수 있는 메타데이터입니다. 있습니다. 
+summary: BlueXP를 사용하면 _existing_resources에 태그를 적용하여 이러한 리소스를 구성하고 관리할 수 있습니다. 태그는 리소스를 그룹화하여 애플리케이션, 환경, 지역, 청구 코드, 클라우드 공급자 등을 식별하는 데 사용할 수 있는 메타데이터입니다. 있습니다. 
 ---
 = 태그 지정에 대해 자세히 알아보세요
 :hardbreaks:
@@ -14,11 +14,11 @@ summary: Cloud Manager를 사용하면 _existing_resources에 태그를 적용�
 
 
 [role="lead"]
-Cloud Manager를 사용하면 _existing_resources에 태그를 적용하여 이러한 리소스를 구성 및 관리할 수 있습니다. 태그는 리소스를 그룹화하여 애플리케이션, 환경, 지역, 청구 코드, 클라우드 공급자 등을 식별하는 데 사용할 수 있는 메타데이터입니다. 있습니다.
+BlueXP(이전의 Cloud Manager)를 사용하면 _existing_resources에 태그를 적용하여 이러한 리소스를 구성 및 관리할 수 있습니다. 태그는 리소스를 그룹화하여 애플리케이션, 환경, 지역, 청구 코드, 클라우드 공급자 등을 식별하는 데 사용할 수 있는 메타데이터입니다. 있습니다.
 
 태그는 * 태그 키 * 와 * 태그 값 * 으로 구성됩니다. 예를 들어 "환경"이라는 태그 키를 만든 다음 "프로덕션" 및 "테스트"의 태그 값을 추가할 수 있습니다. 리소스에 적용한 후에는 키/값 쌍과 일치하는 리소스를 빠르게 검색하고 볼 수 있습니다.
 
-작업 환경 또는 Azure NetApp Files 볼륨을 생성할 때 태그 키/값 쌍을 _new_resources에 추가할 수 있습니다. 에서 태그 키/값 쌍을 정의할 수도 있습니다 link:task-define-templates.html["작성하는 Cloud Manager 서식 파일"] 스토리지 관리자 및 DevOps 엔지니어용
+작업 환경 또는 Azure NetApp Files 볼륨을 생성할 때 태그 키/값 쌍을 _new_resources에 추가할 수 있습니다. 에서 태그 키/값 쌍을 정의할 수도 있습니다 link:task-define-templates.html["BlueXP 서식 파일을 만들 수 있습니다"] 스토리지 관리자 및 DevOps 엔지니어용
 
 태그 지정 서비스를 사용하여 새 태그를 추가할 수 있으며 기존 태그를 변경하거나 삭제할 수 있습니다.
 
@@ -38,7 +38,7 @@ Cloud Manager를 사용하면 _existing_resources에 태그를 적용하여 이�
 
 == 가격 및 라이센스
 
-리소스에 태그를 지정하려면 라이센스가 필요하지 않으며 모든 Cloud Manager 사용자가 Account Admin 또는 Workspace Admin 역할을 사용하여 무료로 액세스할 수 있습니다.
+리소스에 태그를 지정하는 기능은 라이센스가 필요하지 않으며 계정 관리자 또는 작업 영역 관리자 역할을 가진 모든 BlueXP 사용자가 무료로 사용할 수 있습니다.
 
 
 
@@ -97,7 +97,7 @@ Google 레이블에 대한 자세한 내용은 을 참조하십시오 https://cl
 
 === AWS Connector 사용 권한을 확인합니다
 
-Cloud Manager 버전 3.9.10 이상을 사용하여 Connector를 만든 경우 모두 설정됩니다. 이전 버전의 Cloud Manager를 사용하여 Connector를 생성한 경우 Cloud Manager IAM 역할에 필요한 몇 가지 권한을 추가하여 AWS EC2 인스턴스에 태그를 지정해야 합니다.
+BlueXP 버전 3.9.10 이상을 사용하여 커넥터를 만든 경우 모두 설정됩니다. 이전 버전의 BlueXP를 사용하여 Connector를 생성한 경우 BlueXP IAM 역할에 필요한 권한을 추가하여 AWS EC2 인스턴스에 태그를 지정해야 합니다.
 
 [source, json]
 ----
@@ -121,7 +121,7 @@ Cloud Manager 버전 3.9.10 이상을 사용하여 Connector를 만든 경우 �
 
 === Azure Connector 권한을 확인합니다
 
-Cloud Manager 버전 3.9.10 이상을 사용하여 Connector를 만든 경우 모두 설정됩니다. 이전 버전의 Cloud Manager를 사용하여 Connector를 생성한 경우 Cloud Manager Operator IAM 역할에 필요한 몇 가지 권한을 추가하여 Azure 리소스에 태그를 지정해야 합니다.
+BlueXP 버전 3.9.10 이상을 사용하여 커넥터를 만든 경우 모두 설정됩니다. 이전 버전의 BlueXP를 사용하여 Connector를 생성한 경우 BlueXP Operator IAM 역할에 필요한 몇 가지 권한을 추가하여 Azure 리소스에 태그를 지정해야 합니다.
 
 [source, json]
 ----

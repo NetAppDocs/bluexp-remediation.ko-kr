@@ -2,8 +2,8 @@
 layout: astra 
 sidebar: sidebar 
 permalink: index.html 
-lead: The AppTemplate service enables you to standardize resource creation for your Cloud Manager working environments. 
-summary: AppTemplate 서비스를 사용하면 Cloud Manager 작업 환경의 리소스 생성을 표준화할 수 있습니다. 
+lead: The AppTemplate service enables you to standardize resource creation for your BlueXP working environments. 
+summary: AppTemplate 서비스를 사용하면 BlueXP 작업 환경의 리소스 생성을 표준화할 수 있습니다. 
 ---
 = AppTemplate 설명서
 :hardbreaks:
