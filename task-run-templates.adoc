@@ -24,16 +24,20 @@ summary: '조직에서 특정 워크로드 및 애플리케이션에 최적화�
 
 다음 단계를 따라 빠르게 시작하거나 나머지 섹션을 아래로 스크롤하여 자세한 내용을 확인하십시오.
 
-.span class="image"><img src="https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png"[] Alt="One"></span> 필수 사전 요구 사항을 확인합니다
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png["1개"] 필수 사전 요구 사항을 확인합니다
+[role="quick-margin-list"]
 * 템플릿을 사용하여 Cloud Volumes ONTAP, 온프레미스 ONTAP 또는 Azure NetApp Files 시스템의 볼륨을 생성하기 전에 볼륨이 구축될 적절한 작업 환경에 액세스할 수 있는지 확인하십시오.
 
 
+[role="quick-margin-list"]
 * 템플릿이 같은 볼륨에 클라우드 서비스를 활성화하는 경우 https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-backup-to-cloud.html["클라우드 백업"^] 또는 https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html["클라우드 데이터 감지"^]에서 서비스가 활성화되어 있고 사용 중인 환경에서 라이센스가 부여되었는지 확인합니다.
 
 
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2개"] 애플리케이션 템플릿 서비스를 시작합니다
 [role="quick-margin-para"]
 상태 > 수정 * 을 선택하고 * 템플릿 * 탭을 클릭합니다.
 
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png["세 가지"] 템플릿을 실행하고 매개 변수를 정의하여 리소스를 빌드합니다
 [role="quick-margin-para"]
 템플릿을 선택하고 * 템플릿 실행 * 을 클릭한 다음 편집 가능한 필드에 값을 입력하여 리소스를 생성합니다.
 
@@ -175,6 +179,7 @@ image:screenshot_template_find_search_results.png["Find Resource(리소스 찾�
 
 
 
+.결과
 템플릿이 실행되고 검색 기준에서 선택한 각 볼륨에서 Cloud Backup이 활성화됩니다.
 
 모든 오류는 _ 템플릿 실행 _ 페이지에서 호출되며 필요한 경우 문제를 해결할 수 있습니다.
