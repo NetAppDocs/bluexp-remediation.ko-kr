@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: task-run-templates.html 
 keywords: templates, resource templates, services templates, volume templates, working environment templates 
-summary: '조직에서 특정 워크로드 및 애플리케이션에 최적화된 작업 환경 또는 볼륨을 생성하기 위해 구축한 애플리케이션 템플릿 중 하나를 선택합니다. 또한 템플릿을 사용하여 볼륨 또는 기존 볼륨에서 Cloud Backup, Cloud Data Sense 및 복제(SnapMirror)를 활성화할 수도 있습니다.' 
+summary: '조직에서 특정 워크로드 및 애플리케이션에 최적화된 작업 환경 또는 볼륨을 생성하기 위해 구축한 애플리케이션 템플릿 중 하나를 선택합니다. 또한 템플릿을 사용하면 볼륨 또는 기존 볼륨에서 BlueXP 백업 및 복구, BlueXP 분류 및 BlueXP 복제(SnapMirror)를 활성화할 수 있습니다.' 
 ---
 = 템플릿을 사용하여 리소스를 만들거나 수정합니다
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: '조직에서 특정 워크로드 및 애플리케이션에 최적화�
 
 
 [role="lead"]
-조직에서 특정 워크로드 및 애플리케이션에 최적화된 작업 환경 또는 볼륨을 생성하기 위해 구축한 애플리케이션 템플릿 중 하나를 선택합니다. 템플릿을 사용하여 를 활성화할 수도 있습니다 https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-backup-to-cloud.html["클라우드 백업"^], https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html["클라우드 데이터 감지"^], 및 https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication.html["복제(SnapMirror)"^] 생성된 볼륨 또는 기존 볼륨에 대해 선택합니다.
+조직에서 특정 워크로드 및 애플리케이션에 최적화된 작업 환경 또는 볼륨을 생성하기 위해 구축한 애플리케이션 템플릿 중 하나를 선택합니다. 템플릿을 사용하여 를 활성화할 수도 있습니다 https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html["BlueXP 백업 및 복구"^], https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html["BlueXP 분류"^], 및 https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication.html["BlueXP 복제"^] 생성된 볼륨 또는 기존 볼륨에 대해 선택합니다.
 
 템플릿을 사용하여 Cloud Volumes ONTAP, Azure NetApp Files 및 사내 ONTAP 시스템에 대한 볼륨을 생성할 수 있습니다.
 
@@ -30,7 +30,7 @@ summary: '조직에서 특정 워크로드 및 애플리케이션에 최적화�
 
 
 [role="quick-margin-list"]
-* 템플릿이 같은 볼륨에 클라우드 서비스를 활성화하는 경우 https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-backup-to-cloud.html["클라우드 백업"^] 또는 https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html["클라우드 데이터 감지"^]에서 서비스가 활성화되어 있고 사용 중인 환경에서 라이센스가 부여되었는지 확인합니다.
+* 템플릿이 같은 볼륨에 클라우드 서비스를 활성화하는 경우 https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html["BlueXP 백업 및 복구"^] 또는 https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html["BlueXP 분류"^]에서 서비스가 활성화되어 있고 사용 중인 환경에서 라이센스가 부여되었는지 확인합니다.
 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2개"] 애플리케이션 템플릿 서비스를 시작합니다
@@ -51,7 +51,7 @@ summary: '조직에서 특정 워크로드 및 애플리케이션에 최적화�
 * Cloud Volumes ONTAP 볼륨을 생성할 때 Cloud Volumes ONTAP 작업 환경을 사용할 수 있는지 확인합니다.
 * 온-프레미스 ONTAP 볼륨을 만들 때 온-프레미스 ONTAP 작업 환경을 사용할 수 있는지 확인합니다.
 * Azure NetApp Files 볼륨을 생성할 때 Azure NetApp Files 작업 환경을 사용할 수 있는지 확인합니다.
-* 템플릿이 같은 볼륨에 클라우드 서비스를 활성화하는 경우  https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-backup-to-cloud.html["클라우드 백업"^], https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html["클라우드 데이터 감지"^], 또는 https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication.html["복제(SnapMirror)"^]에서 서비스가 활성화되어 있고 사용 중인 환경에서 라이센스가 부여되었는지 확인합니다.
+* 템플릿이 같은 볼륨에 클라우드 서비스를 활성화하는 경우  https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html["BlueXP 백업 및 복구"^], https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html["BlueXP 분류"^], 또는 https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication.html["BlueXP 복제"^]에서 서비스가 활성화되어 있고 사용 중인 환경에서 라이센스가 부여되었는지 확인합니다.
 
 
 
@@ -68,7 +68,7 @@ summary: '조직에서 특정 워크로드 및 애플리케이션에 최적화�
 
 * https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-create-volumes.html#create-a-volume-from-a-template["Cloud Volumes ONTAP 볼륨 프로비저닝 방법"^]
 * https://docs.netapp.com/us-en/cloud-manager-azure-netapp-files/task-create-volumes.html#create-volumes-from-templates["Azure NetApp Files 볼륨 프로비저닝 방법"^]
-* https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-provisioning-ontap.html#creating-volumes-from-templates["사내 ONTAP 볼륨을 프로비저닝하는 방법"^]
+* https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-manage-ontap-connector.html#create-volumes-from-templates["사내 ONTAP 볼륨을 프로비저닝하는 방법"^]
 
 
 
@@ -155,7 +155,7 @@ image:screenshot_template_run_from_dashboard_we.png["템플릿에서 작업 환�
 
 == 기존 자원을 찾는 템플릿을 선택하여 실행합니다
 
-회사에서 이 기능을 사용하여 템플릿을 만든 경우 특정 리소스(예: 볼륨)를 찾은 템플릿을 실행한 다음 해당 리소스(예: Cloud Backup)에서 클라우드 서비스를 사용하도록 설정할 수 있습니다. 템플릿을 실행할 때 약간의 조정을 통해 클라우드 서비스를 적절한 리소스에만 적용할 수 있습니다.
+회사에서 이 기능을 사용하여 템플릿을 만든 경우 특정 리소스(예: 볼륨)를 찾은 템플릿을 실행한 다음 해당 리소스(예: BlueXP 백업 및 복구)에서 클라우드 서비스를 활성화할 수 있습니다. 템플릿을 실행할 때 약간의 조정을 통해 클라우드 서비스를 적절한 리소스에만 적용할 수 있습니다.
 
 .단계
 . 상태 > 수정 * 을 선택하고 * 템플릿 * 탭을 클릭합니다.
@@ -173,13 +173,13 @@ Run Template_페이지가 나타나고 템플릿에 정의된 검색을 즉시 �
 +
 image:screenshot_template_find_search_results.png["Find Resource(리소스 찾기) 검색 기준에서 반환된 볼륨이 표시되는 스크린샷."]
 
-. 결과가 예상과 같은 경우 템플릿의 _Enable Cloud Backup on Volume_부분에 있는 조건을 사용하여 Cloud Backup을 활성화하려는 각 볼륨에 대한 확인란을 선택하고 * 템플릿 실행 * 을 클릭합니다.
+. 결과가 예상과 다를 경우 템플릿의 _Volume_부분에 클라우드 백업 사용_의 기준을 사용하여 BlueXP 백업 및 복구를 활성화할 각 볼륨에 대한 확인란을 선택하고 * 템플릿 실행 * 을 클릭합니다.
 +
 결과가 예상과 다른 경우 를 클릭합니다 image:screenshot_edit_icon.gif["연필 아이콘을 편집합니다"] 검색 기준 _ 옆에 있는 을(를) 클릭하고 검색을 더 구체화합니다.
 
 
 
 .결과
-템플릿이 실행되고 검색 기준에서 선택한 각 볼륨에서 Cloud Backup이 활성화됩니다.
+템플릿이 실행되고 검색 기준에서 확인한 각 볼륨에서 BlueXP 백업 및 복구가 활성화됩니다.
 
 모든 오류는 _ 템플릿 실행 _ 페이지에서 호출되며 필요한 경우 문제를 해결할 수 있습니다.

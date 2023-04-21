@@ -2,10 +2,10 @@
 layout: astra 
 sidebar: sidebar 
 permalink: index.html 
-lead: The AppTemplate service enables you to standardize resource creation for your BlueXP working environments. 
-summary: AppTemplate 서비스를 사용하면 BlueXP 작업 환경의 리소스 생성을 표준화할 수 있습니다. 
+lead: 'The BlueXP remediation service (AppTemplate) enables you to standardize resource creation for your BlueXP working environments.' 
+summary: 'BlueXP 개선 서비스(AppTemplate)를 사용하면 BlueXP 작업 환경에 대한 리소스 생성을 표준화할 수 있습니다.' 
 ---
-= AppTemplate 설명서
+= BlueXP 개선 문서
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
