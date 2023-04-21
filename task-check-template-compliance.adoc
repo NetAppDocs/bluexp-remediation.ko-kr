@@ -87,7 +87,7 @@ image:screenshot_template_drift_report_one_resource.png["단일 자원에 대한
 
 === 변경 사항 보고서의 BlueXP 복제 상태 세부 정보
 
-시기 link:task-define-templates.html#add-replication-functionality-to-a-volume["템플릿을 사용하여 볼륨에서 BlueXP 복제를 활성화합니다"]"복제 상태 모니터링 활성화" 필드에서 표류를 활성화하여 변경 보고서에 보다 자세한 복제 정보를 표시하도록 선택할 수 있습니다. 활성화된 경우 변경 사항 보고서에는 SnapMirror 지연 시간, 상태 및 마지막 전송 시간과 함께 BlueXP 복제 관계의 상태가 정상 또는 비정상(표류됨)인지 여부가 표시됩니다.
+시기 link:task-define-templates.html#add-bluexp-classification-functionality-to-a-volume["템플릿을 사용하여 볼륨에서 BlueXP 복제를 활성화합니다"]"복제 상태 모니터링 활성화" 필드에서 표류를 활성화하여 변경 보고서에 보다 자세한 복제 정보를 표시하도록 선택할 수 있습니다. 활성화된 경우 변경 사항 보고서에는 SnapMirror 지연 시간, 상태 및 마지막 전송 시간과 함께 BlueXP 복제 관계의 상태가 정상 또는 비정상(표류됨)인지 여부가 표시됩니다.
 
 이 스크린샷은 드리프트 보고서에서 상태가 불량한 SnapMirror 관계에 대한 복제 세부 정보를 보여줍니다.
 
