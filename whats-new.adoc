@@ -24,13 +24,13 @@ BlueXP 개선 및 태깅 의 새로운 기능에 대해 알아보십시오.
 
 === 이제 템플릿을 만들어 특정 작업 환경을 찾을 수 있습니다
 
-"기존 자원 찾기" 작업을 사용하면 작업 환경을 확인한 다음 볼륨 만들기와 같은 다른 템플릿 작업을 사용하여 기존 작업 환경에서 쉽게 작업을 수행할 수 있습니다. https://docs.netapp.com/us-en/cloud-manager-app-template/task-define-templates.html#examples-of-finding-existing-resources-and-enabling-services-using-templates["자세한 내용을 보려면 여기를 클릭하십시오"].
+"기존 자원 찾기" 작업을 사용하면 작업 환경을 확인한 다음 볼륨 만들기와 같은 다른 템플릿 작업을 사용하여 기존 작업 환경에서 쉽게 작업을 수행할 수 있습니다. https://docs.netapp.com/us-en/bluexp-remediation/task-define-templates.html#examples-of-finding-existing-resources-and-enabling-services-using-templates["자세한 내용을 보려면 여기를 클릭하십시오"].
 
 
 
 === AWS에서 Cloud Volumes ONTAP HA 작업 환경을 구축할 수 있는 역량
 
-AWS에서 Cloud Volumes ONTAP 작업 환경을 구축하기 위한 기존 지원이 확장되어 단일 노드 시스템 외에 고가용성 시스템을 구축할 수 있습니다. https://docs.netapp.com/us-en/cloud-manager-app-template/task-define-templates.html#create-a-template-for-a-cloud-volumes-ontap-working-environment["Cloud Volumes ONTAP 작업 환경에 대한 템플릿을 만드는 방법을 알아봅니다"].
+AWS에서 Cloud Volumes ONTAP 작업 환경을 구축하기 위한 기존 지원이 확장되어 단일 노드 시스템 외에 고가용성 시스템을 구축할 수 있습니다. https://docs.netapp.com/us-en/bluexp-remediation/task-define-templates.html#create-a-template-for-a-cloud-volumes-ontap-working-environment["Cloud Volumes ONTAP 작업 환경에 대한 템플릿을 만드는 방법을 알아봅니다"].
 
 
 
@@ -42,7 +42,7 @@ AWS에서 Cloud Volumes ONTAP 작업 환경을 구축하기 위한 기존 지원
 
 새로운 "리소스 찾기" 작업을 사용하면 Cloud Backup을 설정할 모든 볼륨을 식별한 다음 클라우드 백업 작업을 사용하여 해당 볼륨에 대한 백업을 설정할 수 있습니다.
 
-현재 Cloud Volumes ONTAP 및 온프레미스 ONTAP 시스템의 볼륨에 대한 지원이 제공됩니다. https://docs.netapp.com/us-en/cloud-manager-app-template/task-define-templates.html#find-existing-volumes-and-activate-bluexp-backup-and-recovery["자세한 내용을 보려면 여기를 클릭하십시오"].
+현재 Cloud Volumes ONTAP 및 온프레미스 ONTAP 시스템의 볼륨에 대한 지원이 제공됩니다. https://docs.netapp.com/us-en/bluexp-remediation/task-define-templates.html#find-existing-volumes-and-activate-bluexp-backup-and-recovery["자세한 내용을 보려면 여기를 클릭하십시오"].
 
 
 
@@ -52,4 +52,4 @@ AWS에서 Cloud Volumes ONTAP 작업 환경을 구축하기 위한 기존 지원
 
 === 이제 동기화 관계에 태그를 지정하여 쉽게 액세스할 수 있도록 관계를 그룹화하거나 분류할 수 있습니다
 
-https://docs.netapp.com/us-en/cloud-manager-app-template/concept-tagging.html["리소스 태깅에 대해 자세히 알아보십시오"].
+https://docs.netapp.com/us-en/bluexp-remediation/concept-tagging.html["리소스 태깅에 대해 자세히 알아보십시오"].

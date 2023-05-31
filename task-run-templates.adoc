@@ -14,7 +14,7 @@ summary: '조직에서 특정 워크로드 및 애플리케이션에 최적화�
 
 
 [role="lead"]
-조직에서 특정 워크로드 및 애플리케이션에 최적화된 작업 환경 또는 볼륨을 생성하기 위해 구축한 애플리케이션 템플릿 중 하나를 선택합니다. 템플릿을 사용하여 를 활성화할 수도 있습니다 https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html["BlueXP 백업 및 복구"^], https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html["BlueXP 분류"^], 및 https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication.html["BlueXP 복제"^] 생성된 볼륨 또는 기존 볼륨에 대해 선택합니다.
+조직에서 특정 워크로드 및 애플리케이션에 최적화된 작업 환경 또는 볼륨을 생성하기 위해 구축한 애플리케이션 템플릿 중 하나를 선택합니다. 템플릿을 사용하여 를 활성화할 수도 있습니다 https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-ontap-backup-to-cloud.html["BlueXP 백업 및 복구"^], https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["BlueXP 분류"^], 및 https://docs.netapp.com/us-en/bluexp-replication/concept-replication.html["BlueXP 복제"^] 생성된 볼륨 또는 기존 볼륨에 대해 선택합니다.
 
 템플릿을 사용하여 Cloud Volumes ONTAP, Azure NetApp Files 및 사내 ONTAP 시스템에 대한 볼륨을 생성할 수 있습니다.
 
@@ -30,7 +30,7 @@ summary: '조직에서 특정 워크로드 및 애플리케이션에 최적화�
 
 
 [role="quick-margin-list"]
-* 템플릿이 같은 볼륨에 클라우드 서비스를 활성화하는 경우 https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html["BlueXP 백업 및 복구"^] 또는 https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html["BlueXP 분류"^]에서 서비스가 활성화되어 있고 사용 중인 환경에서 라이센스가 부여되었는지 확인합니다.
+* 템플릿이 같은 볼륨에 클라우드 서비스를 활성화하는 경우 https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-ontap-backup-to-cloud.html["BlueXP 백업 및 복구"^] 또는 https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["BlueXP 분류"^]에서 서비스가 활성화되어 있고 사용 중인 환경에서 라이센스가 부여되었는지 확인합니다.
 
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png["2개"] 애플리케이션 템플릿 서비스를 시작합니다
@@ -47,11 +47,11 @@ summary: '조직에서 특정 워크로드 및 애플리케이션에 최적화�
 
 다음 요구 사항을 읽고 지원되는 구성이 있는지 확인합니다.
 
-* 커넥터가 없는 경우 https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["커넥터를 만드는 방법을 참조하십시오"^] AWS, Azure 및 GCP의 경우.
+* 커넥터가 없는 경우 https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html["커넥터를 만드는 방법을 참조하십시오"^] AWS, Azure 및 GCP의 경우.
 * Cloud Volumes ONTAP 볼륨을 생성할 때 Cloud Volumes ONTAP 작업 환경을 사용할 수 있는지 확인합니다.
 * 온-프레미스 ONTAP 볼륨을 만들 때 온-프레미스 ONTAP 작업 환경을 사용할 수 있는지 확인합니다.
 * Azure NetApp Files 볼륨을 생성할 때 Azure NetApp Files 작업 환경을 사용할 수 있는지 확인합니다.
-* 템플릿이 같은 볼륨에 클라우드 서비스를 활성화하는 경우  https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html["BlueXP 백업 및 복구"^], https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html["BlueXP 분류"^], 또는 https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication.html["BlueXP 복제"^]에서 서비스가 활성화되어 있고 사용 중인 환경에서 라이센스가 부여되었는지 확인합니다.
+* 템플릿이 같은 볼륨에 클라우드 서비스를 활성화하는 경우  https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-ontap-backup-to-cloud.html["BlueXP 백업 및 복구"^], https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["BlueXP 분류"^], 또는 https://docs.netapp.com/us-en/bluexp-replication/concept-replication.html["BlueXP 복제"^]에서 서비스가 활성화되어 있고 사용 중인 환경에서 라이센스가 부여되었는지 확인합니다.
 
 
 
@@ -66,9 +66,9 @@ summary: '조직에서 특정 워크로드 및 애플리케이션에 최적화�
 
 선택하는 방법에 관계없이 정의해야 하는 필수 볼륨 매개 변수에 대한 세부 정보는 다음 섹션에서 확인할 수 있습니다.
 
-* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-create-volumes.html#create-a-volume-from-a-template["Cloud Volumes ONTAP 볼륨 프로비저닝 방법"^]
-* https://docs.netapp.com/us-en/cloud-manager-azure-netapp-files/task-create-volumes.html#create-volumes-from-templates["Azure NetApp Files 볼륨 프로비저닝 방법"^]
-* https://docs.netapp.com/us-en/cloud-manager-ontap-onprem/task-manage-ontap-connector.html#create-volumes-from-templates["사내 ONTAP 볼륨을 프로비저닝하는 방법"^]
+* https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-create-volumes.html#create-a-volume-from-a-template["Cloud Volumes ONTAP 볼륨 프로비저닝 방법"^]
+* https://docs.netapp.com/us-en/bluexp-azure-netapp-files/task-create-volumes.html#create-volumes-from-templates["Azure NetApp Files 볼륨 프로비저닝 방법"^]
+* https://docs.netapp.com/us-en/bluexp-ontap-onprem/task-manage-ontap-connector.html#create-volumes-from-templates["사내 ONTAP 볼륨을 프로비저닝하는 방법"^]
 
 
 
@@ -131,7 +131,7 @@ image:screenshot_run_template_from_dashboard.png["템플릿에서 볼륨을 생�
 
 회사에서 이 기능에 대한 템플릿을 만든 경우 _Templates Dashboard_에서 새 작업 환경을 만들 수 있습니다.
 
-작업 환경을 만드는 데 필요한 세부 사항에 대한 질문이 있는 경우 를 참조하십시오 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-aws.html["AWS에서 Cloud Volumes ONTAP 실행"^].
+작업 환경을 만드는 데 필요한 세부 사항에 대한 질문이 있는 경우 를 참조하십시오 https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-otc-aws.html["AWS에서 Cloud Volumes ONTAP 실행"^].
 
 .단계
 . 상태 > 수정 * 을 선택하고 * 템플릿 * 탭을 클릭합니다.

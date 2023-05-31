@@ -49,9 +49,9 @@ BlueXP 개선 작업은 다음과 같은 기능과 이점을 제공합니다.
 
 * 서비스 조치: *
 
-* 활성화 https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html["BlueXP 백업 및 복구"^] 볼륨(Azure NetApp Files에는 적용되지 않음)
-* 활성화 https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html["BlueXP 분류"^] 볼륨에
-* 활성화 https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication.html["BlueXP 복제"^] 볼륨(Azure NetApp Files에는 적용되지 않음)
+* 활성화 https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-ontap-backup-to-cloud.html["BlueXP 백업 및 복구"^] 볼륨(Azure NetApp Files에는 적용되지 않음)
+* 활성화 https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html["BlueXP 분류"^] 볼륨에
+* 활성화 https://docs.netapp.com/us-en/bluexp-replication/concept-replication.html["BlueXP 복제"^] 볼륨(Azure NetApp Files에는 적용되지 않음)
 
 
 예를 들어, Cloud Volumes ONTAP 볼륨을 생성하는 템플릿을 생성할 수 있습니다. 또는 Cloud Volumes ONTAP 볼륨을 생성한 다음 해당 볼륨에서 BlueXP 백업 및 복구를 수행할 수 있습니다. 또는 Cloud Volumes ONTAP 볼륨을 생성한 다음 해당 볼륨에 대해 BlueXP 백업 및 복구 _ 및 _BlueXP 분류를 사용할 수 있습니다.
