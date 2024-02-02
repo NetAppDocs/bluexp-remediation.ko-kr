@@ -530,20 +530,6 @@
   <block id="4a37630008b707a26bac4e9b9d2d91bc" category="sidebar">태그를 사용하여 리소스를 구성합니다</block>
   <block id="0460583622f03a52d7693094d6fa2452" category="sidebar">개념</block>
   <block id="0adc03eac86772ad2c75c8f140be417e" category="sidebar">지식 및 지원</block>
-  <block id="35f98b47133ad8954f63b25aef2dad3a" category="sidebar">태깅 에 대해 자세히 알아보십시오</block>
-  <block id="12b8ed36a576a6d4769c8d350b438a8a" category="sidebar">템플릿 만들기</block>
-  <block id="59cccee54a9c1422dca33d7662d37b76" category="sidebar">Cloud Volumes ONTAP 작업 환경</block>
-  <block id="f829fef4575b38109cd246bafbd6718e" category="sidebar">Cloud Volumes ONTAP 볼륨</block>
-  <block id="217aec976bd66d37571f1fe0e44a4e77" category="sidebar">Azure NetApp Files 볼륨</block>
-  <block id="21dc3aafb4a3e393dccd900e9ba42118" category="sidebar">사내 ONTAP 볼륨</block>
-  <block id="c8ca3079f96c0e324b876d7055a67c46" category="sidebar">템플릿을 사용하여 리소스를 생성합니다</block>
-  <block id="70deba7f047a2bcc0d20e5ef94a2abf8" category="sidebar">CVO, 온프레미스, ANF의 볼륨</block>
-  <block id="f8de1ec8d7766950989e3205a63d91d9" category="sidebar">템플릿과 태그를 사용하여 리소스를 관리합니다</block>
-  <block id="e85920abe34a4184988f078bd1e73279" category="sidebar">템플릿 준수 리소스 확인(변경 사항)</block>
-  <block id="441c6d31d8063270a27b242c68cc0e6e" category="sidebar">기존 자원을 찾는 서식 파일을 실행합니다</block>
-  <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">블로그 커뮤니티</block>
-  <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">NetApp 커뮤니티</block>
-  <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">클라우드 웨비나</block>
   <block id="983a4e7f5913304ec713a249baf7be47" category="section-title">2022년 3월 3일</block>
   <block id="17fc50243c5a80f407e83d268bcab18e" category="section-title">2022년 2월 9일</block>
   <block id="784044bd2af30d58bbb0dbcea3adbad6" category="section-title">2021년 10월 31일</block>
@@ -558,7 +544,6 @@
   <block id="ad47acd6a839d467d8e7d8cc0ab575bb" category="list-text">Details_area에서 볼륨 이름, 볼륨 크기 범위 및 볼륨에 할당된 태그를 선택할 수 있습니다.</block>
   <block id="75aa65993e3f52840fc5b343dbb63651" category="paragraph">태그의 경우 특정 태그 키/값 쌍이 있는 볼륨만 결과에 표시되도록 검색 범위를 더 좁힐 수 있습니다.</block>
   <block id="b50f0a46135bcb7083b1f2f82032fc26" category="inline-image-macro">도움말 메뉴의 스크린샷으로, 여기에서 지원은 첫 번째 옵션입니다</block>
-  <block id="19d089db572ee6a1e154a0c9c9e57bfd" category="paragraph">NetApp은 Microsoft Azure Active Directory를 지원 및 라이선싱과 관련된 인증 서비스의 ID 공급자로 사용합니다.</block>
   <block id="465ec6d5eafa3524c948c99d8bfcd306" category="list-text">로그인 페이지에서 인증 프로세스를 수행할 수 있도록 NetApp Support 사이트의 등록 이메일 주소와 암호를 제공합니다.</block>
   <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="paragraph">법적 고지 사항은 저작권 선언, 상표, 특허 등에 대한 액세스를 제공합니다.</block>
   <block id="6016a2b341113bf496b719905398ecd2" category="section-title">저작권</block>
@@ -574,7 +559,6 @@
   <block id="14526abd8bda5af347775025cd5342cf" category="inline-link">커뮤니티</block>
   <block id="410fdb9caa9c64da2ff3f88f4836960d" category="list-text"><block ref="410fdb9caa9c64da2ff3f88f4836960d" category="inline-link-rx"></block></block>
   <block id="5b6cf869265c13af8566f192b4ab3d2a" category="list-text">문서화</block>
-  <block id="80b1b0d2b1ebf2b3cba2d25759801afd" category="list-text">mailto:ng-cloudmanager-feedback@netapp.com [피드백 이메일]</block>
   <block id="214a61ce436e46b661501acdeee5221c" category="paragraph">이때 드리프트는 리소스에서 변경된 매개 변수를 식별합니다. 즉, 템플릿을 다시 준수하기 위해 자원을 수동으로 조정해야 합니다. 나중에 자원이 규정 준수 상태가 아니면 사용자의 변경 내용을 반대로 변경하여 템플릿에서 생성된 모든 리소스가 규정 준수 상태로 자동 전환되도록 할 수 있습니다.</block>
   <block id="5bd5bf968b8be74cc15838b062223bc7" category="paragraph">이때 자원을 서식 파일에 맞게 다시 조정하기 위해 수동으로 조정해야 합니다. <block ref="070f7b254d8faecc6fc5a699202bdab9" category="inline-link-macro-rx"></block>.</block>
   <block id="cfd52dcb30bb7d2ea88bc2c66e2ccc0f" category="summary">BlueXP를 사용하면 _existing_resources에 태그를 적용하여 이러한 리소스를 구성하고 관리할 수 있습니다. 태그는 리소스를 그룹화하여 애플리케이션, 환경, 지역, 청구 코드, 클라우드 공급자 등을 식별하는 데 사용할 수 있는 메타데이터입니다. 있습니다.</block>
@@ -621,7 +605,6 @@
   <block id="9a3db1abe5491d0eb9bb5d125981356c" category="paragraph">문제를 해결하는 데 도움이 되는 문서를 찾으려면 BlueXP 기술 자료를 검색하십시오.</block>
   <block id="00c5fef3bb9d593ae96bf5d2ee60354a" category="paragraph">BlueXP 커뮤니티에 가입하여 진행 중인 토론을 팔로우하거나 새 토론을 만드십시오.</block>
   <block id="a4a6c2ea0078252eac2d74ef3e6c917c" category="paragraph">현재 보고 있는 BlueXP 문서입니다.</block>
-  <block id="6702efec14563f45f1ee2f8c613b8ad8" category="paragraph">저희는 귀하의 의견을 소중하게 생각합니다. BlueXP 개선에 도움이 되는 피드백을 제출하십시오.</block>
   <block id="82812db645b6ff5e9c2a24ddfb66c8d6" category="paragraph">위의 자체 지원 옵션 외에도 NetApp 지원 전문가와 협력하여 지원을 활성화한 이후의 모든 문제를 해결할 수 있습니다.</block>
   <block id="d63bf50426f4c712554faec55b30c548" category="list-text">* 서비스 *: 문제와 관련된 서비스를 선택합니다. 예를 들어, 서비스 내의 워크플로우 또는 기능과 관련된 기술 지원 문제에 해당하는 BlueXP를 예로 들 수 있습니다.</block>
   <block id="2e50c5f85523f0aba9ff2db10f18279c" category="list-text">* 작업 환경 *: 스토리지에 적용 가능한 경우 * Cloud Volumes ONTAP * 또는 * On-Premise * 를 선택한 다음 관련 작업 환경을 선택합니다.</block>
@@ -644,8 +627,6 @@
   <block id="6d28d54ad9c4f6685bb752801088510b" category="summary">BlueXP 태그 지정 서비스를 사용하여 기존 리소스에 할당된 태그를 확인, 추가, 수정 및 삭제할 수 있습니다. 따라서 리소스 관리를 구성하고 단순화할 수 있습니다.</block>
   <block id="10b56653c6ddbf81d7d4419364238254" category="list-text">상태 &gt; 수정 * 을 선택하고 * 태그 * 탭을 클릭합니다.</block>
   <block id="c95623cd0395d5a6bb6105b9d32f197b" category="inline-link">BlueXP에 대한 고지 사항</block>
-  <block id="bd5465eb0e8cf8f303aee7ea9420c8b1" category="sidebar">BlueXP 블로그</block>
-  <block id="7a45e6298bb69116e2c6db653fb88884" category="sidebar">모든 BlueXP 설명서</block>
   <block id="8fece025a1a8fef7018449bf104a2527" category="paragraph-title">시작하기 전에</block>
   <block id="bd965e38a0c9cf27aa1bde099308e23f" category="paragraph-title">작업을 마친 후</block>
   <block id="e3cd99e4aa330ae6bdfb3754d83ae962" category="list-text">파트너 또는 리셀러 계정이 있는 경우 NSS 계정을 하나 이상 추가할 수 있지만 고객 수준 계정과 함께 추가할 수는 없습니다.</block>
@@ -701,7 +682,6 @@
   <block id="e7ec4c4152826f2deedfea467894a855" category="paragraph"><block ref="e7ec4c4152826f2deedfea467894a855" category="inline-image-macro-rx" type="image"></block></block>
   <block id="af859a8aacc30e0bb1648f64ed76f23d" category="section-title">변경 사항 보고서의 BlueXP 복제 상태 세부 정보</block>
   <block id="dccc80768bfca83f2c18a964a2ada6e0" category="inline-link-macro">템플릿을 사용하여 볼륨에서 BlueXP 복제를 활성화합니다</block>
-  <block id="ff1a821ec32f5470f851de8ef3edd6a9" category="summary">BlueXP 개선 서비스(AppTemplate)를 사용하면 BlueXP 작업 환경에 대한 리소스 생성을 표준화할 수 있습니다.</block>
   <block id="510f57bbfca743348ff245cb08dc02e3" category="doc">BlueXP 개선 문서</block>
   <block id="942c9249796cf6b78c981ebf15195809" category="list-text"><block ref="942c9249796cf6b78c981ebf15195809" category="inline-link-rx"></block></block>
   <block id="2603b912f5fde0329947b49c922b5a4d" category="summary">조직에서 특정 워크로드 및 애플리케이션에 최적화된 작업 환경 또는 볼륨을 생성하기 위해 구축한 애플리케이션 템플릿 중 하나를 선택합니다. 또한 템플릿을 사용하면 볼륨 또는 기존 볼륨에서 BlueXP 백업 및 복구, BlueXP 분류 및 BlueXP 복제(SnapMirror)를 활성화할 수 있습니다.</block>
@@ -757,8 +737,6 @@
   <block id="73d5b5afc4a2cdcc8daaa40ba4ef5910" category="list-text"><block ref="73d5b5afc4a2cdcc8daaa40ba4ef5910" category="inline-link-macro-rx"></block></block>
   <block id="c60b09ae2c96c9e21869de6d6df59453" category="sidebar">BlueXP 개선 문서</block>
   <block id="89bd41d8bc97392a23a93ae863b454bb" category="sidebar">BlueXP 개선 기능을 사용합니다</block>
-  <block id="91770f038cd944a1d3b9b347edeb2b10" category="sidebar">새로운 기능</block>
-  <block id="bdada2beda611e5479ba79eddd7f3b9f" category="sidebar">볼륨에 백업, 분류 또는 복제 기능을 추가합니다</block>
   <block id="3c66700164b4cb085d6e086bf6b7d73b" category="paragraph">시기 <block ref="438903b5e6182d9d4cc41396268e5cbc" category="inline-link-macro-rx"></block>"복제 상태 모니터링 활성화" 필드에서 표류를 활성화하여 변경 보고서에 보다 자세한 복제 정보를 표시하도록 선택할 수 있습니다. 활성화된 경우 변경 사항 보고서에는 SnapMirror 지연 시간, 상태 및 마지막 전송 시간과 함께 BlueXP 복제 관계의 상태가 정상 또는 비정상(표류됨)인지 여부가 표시됩니다.</block>
   <block id="8abfe8e6c06581937c37ec49be54c6d7" category="list-text">변경 사항 보고서에 지연 시간, 상태 및 마지막 전송 시간과 함께 SnapMirror 관계의 복제 상태가 포함되도록 하려면 복제 상태 모니터링을 설정합니다. <block ref="1eb00ed04881df5d17ae6b01acb7f8fb" category="inline-link-macro-rx"></block>.</block>
   <block id="8b6065ebfe1dc5ad36b1f573c520ca7b" category="list-text">활성화<block ref="238f65d8124d9fce2c3e9e1c7b70b0d8" category="inline-link-rx"></block> 볼륨(Azure NetApp Files에는 적용되지 않음)</block>
@@ -857,4 +835,6 @@
   <block id="522cbb900314aeb84eb5a961c5f94672" category="section-title">클라우드 공급자의 파일 서비스에 대한 지원을 받습니다</block>
   <block id="f6185bb12f5e53c800be8cda7fbca65b" category="paragraph">클라우드 공급자의 파일 서비스, 자체 인프라 또는 서비스를 사용하는 솔루션과 관련된 기술 지원은 해당 제품의 BlueXP 설명서에서 "도움말 얻기"를 참조하십시오.</block>
   <block id="3880ae5df9fdc4d0fc4a6d00a2239530" category="paragraph">BlueXP 및 해당 스토리지 솔루션 및 서비스에 관한 기술 지원을 받으려면 아래에 설명된 지원 옵션을 사용하십시오.</block>
+  <block id="d59e0b46782e48a01966e5c7ccc38d17" category="paragraph">NetApp는 지원 및 라이센스와 관련된 인증 서비스의 ID 공급자로 Microsoft Entra ID를 사용합니다.</block>
+  <block id="5010faf2ce0072bc73496fec6f09f024" category="summary">BlueXP 개선 서비스를 사용하여 BlueXP 작업 환경에 맞게 리소스 생성을 표준화할 수 있습니다.</block>
 </blocks>

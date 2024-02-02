@@ -47,50 +47,6 @@ sidebar:
       url: "/task-get-help.html"
   - title: 법적 고지
     url: "/legal-notices.html"
-homepage:
-  tiles:
-  - title: 시작하십시오
-    links:
-    - title: BlueXP 문제 해결에 대해 자세히 알아보십시오
-      url: concept-resource-templates.html
-    - title: 태깅 에 대해 자세히 알아보십시오
-      url: concept-tagging.html
-    - title: 새로운 기능
-      url: whats-new.html
-  - title: 템플릿 만들기
-    links:
-    - title: Cloud Volumes ONTAP 작업 환경
-      url: task-define-templates.html#create-a-template-for-a-cloud-volumes-ontap-working-environment
-    - title: Cloud Volumes ONTAP 볼륨
-      url: task-define-templates.html#create-a-template-for-a-cloud-volumes-ontap-volume
-    - title: Azure NetApp Files 볼륨
-      url: task-define-templates.html#create-a-template-for-an-azure-netapp-files-volume
-    - title: 사내 ONTAP 볼륨
-      url: task-define-templates.html#create-a-template-for-an-on-premises-ontap-volume
-    - title: 볼륨에 백업, 분류 또는 복제 기능을 추가합니다
-      url: task-define-templates.html#examples-of-enabling-services-using-templates
-  - title: 템플릿을 사용하여 리소스를 생성합니다
-    links:
-    - title: Cloud Volumes ONTAP 작업 환경
-      url: task-run-templates.html#select-and-run-a-working-environment-template
-    - title: CVO, 온프레미스, ANF의 볼륨
-      url: task-run-templates.html#select-and-run-a-volume-template
-  - title: 템플릿과 태그를 사용하여 리소스를 관리합니다
-    links:
-    - title: 템플릿 준수 리소스 확인(변경 사항)
-      url: task-check-template-compliance.html
-    - title: 기존 자원을 찾는 서식 파일을 실행합니다
-      url: task-run-templates.html#select-and-run-a-template-that-finds-existing-resources
-    - title: 리소스의 태그를 관리합니다
-      url: task-using-tags.html
-  - title: 블로그 커뮤니티
-    links:
-    - title: NetApp 커뮤니티
-      url: https://community.netapp.com/t5/BlueXP-and-Services/ct-p/CDS
-    - title: BlueXP 블로그
-      url: https://bluexp.netapp.com/blog
-    - title: 클라우드 웨비나
-      url: https://bluexp.netapp.com/events
 product-family:
   name: BlueXP
   repo: bluexp-family
